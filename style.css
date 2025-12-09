@@ -1,0 +1,103 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  width: 650px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.mode {
+  padding: 12px 20px;
+  margin: 5px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.mode:hover {
+  background: #145da0;
+}
+
+.answer {
+  background: #eee;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.answer.correct {
+  background: #4caf50;
+  color: white;
+}
+
+.answer.wrong {
+  background: #f44336;
+  color: white;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+}
+.review-item {
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.review-item ul {
+  margin-left: 20px;
+}
+#review-mode-box {
+  margin-top: 20px;
+}
+
+.review-mode {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #ef6c00;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.review-mode:hover {
+  background: #d35400;
+}
+
+#clear-wrong {
+  margin-top: 10px;
+  background: #c62828;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+#result-box button {
+  padding: 12px 15px;
+  margin: 10px;
+  background: #ef6c00;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+#result-box button:hover {
+  background: #d35400;
+}

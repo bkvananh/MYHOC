@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Mỹ học</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Quiz Mỹ học – Chọn Chế Độ</h1>
+
+    <div id="mode-box">
+      <button class="mode" data-count="10">10 câu</button>
+      <button class="mode" data-count="40">40 câu</button>
+      <button class="mode" data-count="60">60 câu</button>
+      <button class="mode" data-count="100">100 câu</button>
+      <button class="mode" data-count="150">150 câu</button>
+      <button class="mode" data-count="300">300 câu</button>
+    </div>
+
+    <div id="quiz-box" style="display:none;"></div>
+
+    <button id="next-btn" style="display:none;">Câu tiếp theo</button>
+
+    <div id="result-box"></div>
+    <div id="review-box"></div>
+
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
