@@ -1,1506 +1,1802 @@
 const QUESTIONS = [
   {
-    question: "M\u1ef9 h\u1ecdc l\u00e0 m\u1ed9t m\u00f4n khoa h\u1ecdc tri\u1ebft h\u1ecdc, ngh\u0129a l\u00e0 n\u00f3 ph\u1ea3i \u0111\u00f3ng vai tr\u00f2 g\u00ec?",
-    answers: ["A. Th\u1ebf gi\u1edbi quan", "B. Nh\u00e2n sinh quan", "C. Gi\u00e1c quan", "D. C\u1ea3 A v\u00e0 B \u0111\u1ec1u \u0111\u00fang."],
-    correct: 3
+    id: "CH001",
+    question: "Mỹ học là một môn khoa học triết học, nghĩa là nó phải đóng vai trò gì?",
+    answers: ["Thế giới quan", "Nhân sinh quan", "Giác quan", "Cả A và B đều đúng."],
+    correct: [3]
   },
   {
-    question: "M\u1ef9 h\u1ecdc kh\u00e1m ph\u00e1, ph\u00e1t sinh ra nh\u1eefng gi\u00e1 tr\u1ecb tr\u00ean c\u01a1 s\u1edf quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p, trong \u0111\u00f3 ngh\u1ec7 thu\u1eadt c\u00f3 gi\u00e1 tr\u1ecb nh\u01b0 th\u1ebf n\u00e0o",
-    answers: ["A. Gi\u00e1 tr\u1ecb trung b\u00ecnh", "B. Gi\u00e1 tr\u1ecb th\u1ea5p nh\u1ea5t", "C. Gi\u00e1 tr\u1ecb v\u1eeba cao v\u1eeba th\u1ea5p", "D. Gi\u00e1 tr\u1ecb cao nh\u1ea5t."],
-    correct: 3
+    id: "CH002",
+    question: "Mỹ học khám phá, phát sinh ra những giá trị trên cơ sở quy luật của cái đẹp, trong đó nghệ thuật có giá trị như thế nào",
+    answers: ["Giá trị trung bình", "Giá trị thấp nhất", "Giá trị vừa cao vừa thấp", "Giá trị cao nhất."],
+    correct: [3]
   },
   {
-    question: "h\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Tri\u1ebft gia Alexander Baumgarten ng\u01b0\u1eddi \u0110\u1ee9c \u0111\u00e3 d\u00f9ng t\u1eeb \u201cm\u1ef9 h\u1ecdc\u201d cho l\u00fd thuy\u1ebft v\u1ec1\u2026?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c", "B. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c", "C. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p", "D. Khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c"],
-    correct: [1,0]
+    id: "CH003",
+    question: "hãy điền tiếp vào nội dung còn thiếu sau: Triết gia Alexander Baumgarten người Đức đã dùng từ “mỹ học” cho lý thuyết về…?",
+    answers: ["Nghệ thuật tự do hay khoa học về cái đẹp nhận thức được", "Nghệ thuật tự do hay khoa học về cái đẹp nhận thức được", "Nghệ thuật tự do hay khoa học về cái đẹp", "Khoa học về cái đẹp nhận thức được"],
+    correct: [0, 1]
   },
   {
-    question: "N\u0103m 1750, Baumgacten \u0111\u00e3 cho xu\u1ea5t b\u1ea3n cu\u1ed1n s\u00e1ch g\u00ec?",
-    answers: ["A. l\u1ecbch s\u1eed h\u1ecdc \u0111\u1ea7u ti\u00ean", "B. H\u00f3a h\u1ecdc \u0111\u1ea7u ti\u00ean", "C. M\u1ef9 h\u1ecdc \u0111\u1ea7u ti\u00ean", "D. Tri\u1ebft h\u1ecdc \u0111\u1ea7u ti\u00ean"],
-    correct: 2
+    id: "CH004",
+    question: "Năm 1750, Baumgacten đã cho xuất bản cuốn sách gì?",
+    answers: ["lịch sử học đầu tiên", "Hóa học đầu tiên", "Mỹ học đầu tiên", "Triết học đầu tiên"],
+    correct: [2]
   },
   {
-    question: "Th\u1eddi k\u1ef3 c\u1ed5 \u0111i\u1ec3n \u0110\u1ee9c, ai l\u00e0 ng\u01b0\u1eddi cho \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a m\u1ef9 h\u1ecdc l\u00e0 l\u0129nh v\u1ef1c s\u1ef1 ph\u00e1n \u0111o\u00e1n v\u1ec1 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9?",
-    answers: ["A. Alexander Baumgarten", "B. Kant", "C. Trecnexepxki", "D. \u00d4\u0111ix\u00ea"],
-    correct: 1
+    id: "CH005",
+    question: "Thời kỳ cổ điển Đức, ai là người cho đối tượng của mỹ học là lĩnh vực sự phán đoán về thị hiếu thẩm mỹ?",
+    answers: ["Alexander Baumgarten", "Kant", "Trecnexepxki", "Ôđixê"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Trecnexepxki x\u00e1c nh\u1eadn\u2026m\u00e0 kh\u00f4ng xem x\u00e9t ngh\u1ec7 thu\u1eadt m\u1ed9t c\u00e1ch th\u1ecfa \u0111\u00e1ng trong h\u1ec7 th\u1ed1ng m\u1ef9 h\u1ecdc c\u1ee7a m\u00ecnh?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p l\u00e0 cu\u1ed9c s\u1ed1ng", "B. C\u00e1i \u0111\u1eb9p l\u00e0 c\u1eed ch\u1ec9", "C. C\u00e1i \u0111\u1eb9p l\u00e0 h\u00e0nh \u0111\u1ed9ng", "D. C\u00e1i \u0111\u1eb9p l\u00e0 ngh\u0129a v\u1ee5"],
-    correct: 0
+    id: "CH006",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Trecnexepxki xác nhận…mà không xem xét nghệ thuật một cách thỏa đáng trong hệ thống mỹ học của mình?",
+    answers: ["Cái đẹp là cuộc sống", "Cái đẹp là cử chỉ", "Cái đẹp là hành động", "Cái đẹp là nghĩa vụ"],
+    correct: [0]
   },
   {
-    question: "Hai ph\u01b0\u01a1ng di\u1ec7n \u0111\u1ed1i l\u1eadp nhau trong quan h\u1ec7 th\u1ea9m m\u1ef9 nay l\u00e0?",
-    answers: ["A. kh\u00e1ch th\u1ec3 th\u1ea9m m\u1ef9 v\u00e0 t\u1ef1 do th\u1ea9m m\u1ef9", "B. gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 v\u00e0 ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "C. Kh\u00e1ch th\u1ec3 th\u1ea9m m\u1ef9 v\u00e0 ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "D. T\u01b0 t\u01b0\u1edfng th\u1ea9m m\u1ef9 v\u00e0 ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9"],
-    correct: 2
+    id: "CH007",
+    question: "Hai phương diện đối lập nhau trong quan hệ thẩm mỹ nay là?",
+    answers: ["khách thể thẩm mỹ và tự do thẩm mỹ", "giáo dục thẩm mỹ và chủ thể thẩm mỹ", "Khách thể thẩm mỹ và chủ thể thẩm mỹ", "Tư tưởng thẩm mỹ và chủ thể thẩm mỹ"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t l\u0129nh v\u1ef1c tinh th\u1ea7n c\u1ee7a \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i \u0111\u01b0\u1ee3c nhi\u1ec1u ki\u1ec3u d\u1ea1ng ho\u1ea1t \u0111\u1ed9ng l\u00fd lu\u1eadn quan t\u00e2m \u0111\u1ebfn nh\u01b0:\u2026?",
-    answers: ["A. S\u1eed h\u1ecdc, v\u0103n h\u00f3a h\u1ecdc", "B. S\u1eed h\u1ecdc, nh\u00e2n sinh h\u1ecdc", "C. S\u1eed h\u1ecdc, tri\u1ebft h\u1ecdc", "D. S\u1eed h\u1ecdc, x\u00e3 h\u1ed9i h\u1ecdc"],
-    correct: 3
+    id: "CH008",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nghệ thuật là một lĩnh vực tinh thần của đời sống xã hội được nhiều kiểu dạng hoạt động lý luận quan tâm đến như:…?",
+    answers: ["Sử học, văn hóa học", "Sử học, nhân sinh học", "Sử học, triết học", "Sử học, xã hội học"],
+    correct: [3]
   },
   {
-    question: "T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u1ed5 \u0111\u1ea1i \u0111\u01b0\u1ee3c h\u00ecnh th\u00e0nh v\u00e0o kho\u1ea3ng th\u1ebf k\u1ef7 bao nhi\u00eau?",
-    answers: ["A. Th\u1ebf k\u1ef7 IIX (TCN)", "B. Th\u1ebf k\u1ef7 X (TCN)", "C. Th\u1ebf k\u1ef7 IX ( TCN)", "D. Th\u1ebf k\u1ef7 XI (TCN)"],
-    correct: 2
+    id: "CH009",
+    question: "Tư tưởng mỹ học cổ đại được hình thành vào khoảng thế kỷ bao nhiêu?",
+    answers: ["Thế kỷ IIX (TCN)", "Thế kỷ X (TCN)", "Thế kỷ IX ( TCN)", "Thế kỷ XI (TCN)"],
+    correct: [2]
   },
   {
-    question: "H\u00earaclit bi\u1ec7n gi\u1ea3i h\u00e0i h\u00f2a l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa nh\u1eefng h\u00e0i h\u00f2a", "B. S\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa nh\u1eefng m\u00e2u thu\u1eabn", "C. Th\u1ed1ng nh\u1ea5t gi\u1eefa m\u1ed9t m\u00e2u thu\u1eabn", "D. Th\u1ed1ng nh\u1ea5t gi\u1eefa nh\u1eefng y\u1ebfu t\u1ed1 t\u1ef1 nhi\u00ean"],
-    correct: 1
+    id: "CH010",
+    question: "Hêraclit biện giải hài hòa là gì?",
+    answers: ["Sự thống nhất giữa những hài hòa", "Sự thống nhất giữa những mâu thuẫn", "Thống nhất giữa một mâu thuẫn", "Thống nhất giữa những yếu tố tự nhiên"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u0110\u00eam\u00f4cr\u00edt ( 460 \u2013 370 TCN) l\u00fd gi\u1ea3i s\u1ef1 h\u00ecnh th\u00e0nh c\u1ee7a ngh\u1ec7 thu\u1eadt b\u1eb1ng c\u00e1c nguy\u00ean nh\u00e2n v\u1eadt ch\u1ea5t:\u2026?",
-    answers: ["A. \u0110\u00f3 l\u00e0 s\u1ef1 b\u1eaft ch\u01b0\u1edbc t\u1ef1 nhi\u00ean v\u00e0 c\u00e1c \u0111\u1ed9ng v\u1eadt", "B. \u0110\u00f3 l\u00e0 s\u1ef1 b\u1eaft ch\u01b0\u1edbc t\u1ef1 nhi\u00ean v\u00e0 c\u00e1c lo\u00e0i v\u1eadt", "C. \u0110\u00f3 l\u00e0 s\u1ef1 b\u1eaft ch\u01b0\u1edbc t\u1ef1 nhi\u00ean v\u00e0 c\u00e1c th\u1ef1c v\u1eadt", "D. \u0110\u00f3 l\u00e0 s\u1ef1 b\u1eaft ch\u01b0\u1edbc kh\u00f4ng t\u1ef1 nhi\u00ean v\u00e0 c\u00e1c lo\u00e0i v\u1eadt"],
-    correct: 1
+    id: "CH011",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Đêmôcrít ( 460 – 370 TCN) lý giải sự hình thành của nghệ thuật bằng các nguyên nhân vật chất:…?",
+    answers: ["Đó là sự bắt chước tự nhiên và các động vật", "Đó là sự bắt chước tự nhiên và các loài vật", "Đó là sự bắt chước tự nhiên và các thực vật", "Đó là sự bắt chước không tự nhiên và các loài vật"],
+    correct: [1]
   },
   {
-    question: "X\u00f4crat c\u00f2n \u0111\u01b0a ra ti\u00eau ch\u00ed l\u1ef1a ch\u1ecdn \u0111\u1ed1i t\u01b0\u1ee3ng \u0111\u1ec3 th\u1ec3 hi\u1ec7n trong t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt, \u0111\u00f3 l\u00e0 ti\u00eau ch\u00ed n\u00e0o?",
-    answers: ["A. Thi\u00ean nhi\u00ean c\u00f3 t\u00ednh c\u00e1ch \u0111\u1eb9p, nh\u00e2n h\u1eadu, c\u00f3 ph\u1ea9m h\u1ea1nh cao", "B. \u0110\u1ed9ng v\u1eadt c\u00f3 t\u00ednh c\u00e1ch \u0111\u1eb9p, nh\u00e2n h\u1eadu, c\u00f3 ph\u1ea9m h\u1ea1nh cao", "C. Nh\u1eefng con ng\u01b0\u1eddi c\u00f3 t\u00ednh c\u00e1ch \u0111\u1eb9p, nh\u00e2n h\u1eadu, c\u00f3 ph\u1ea9m h\u1ea1nh cao", "D. nh\u1eefng con ng\u01b0\u1eddi c\u00f3 t\u00ednh c\u00e1ch \u0111\u1eb9p"],
-    correct: 2
+    id: "CH012",
+    question: "Xôcrat còn đưa ra tiêu chí lựa chọn đối tượng để thể hiện trong tác phẩm nghệ thuật, đó là tiêu chí nào?",
+    answers: ["Thiên nhiên có tính cách đẹp, nhân hậu, có phẩm hạnh cao", "Động vật có tính cách đẹp, nhân hậu, có phẩm hạnh cao", "Những con người có tính cách đẹp, nhân hậu, có phẩm hạnh cao", "những con người có tính cách đẹp"],
+    correct: [2]
   },
   {
-    question: "Nh\u1eefng th\u00e0nh t\u1ef1u v\u0103n h\u00f3a cao nh\u1ea5t \u1edf th\u1eddi k\u1ef3 trung c\u1ed5 l\u00e0 g\u00ec?",
-    answers: ["A. C\u00e1c b\u1ed9 kinh T\u00f4n gi\u00e1o v\u00e0 c\u00e1c phong c\u00e1ch ki\u1ebfn tr\u00fac", "B. C\u00e1c b\u1ed9 kinh Kito gi\u00e1o v\u00e0 c\u00e1c phong c\u00e1ch ki\u1ebfn tr\u00fac", "C. C\u00e1c b\u1ed9 ph\u1eadn Kito gi\u00e1o v\u00e0 c\u00e1c phong c\u00e1ch t\u00f4n gi\u00e1o", "D. C\u00e1c b\u1ed9 kinh Kato gi\u00e1o v\u00e0 c\u00e1c phong c\u00e1ch c\u1ed5 \u0111i\u1ec3n"],
-    correct: 1
+    id: "CH013",
+    question: "Những thành tựu văn hóa cao nhất ở thời kỳ trung cổ là gì?",
+    answers: ["Các bộ kinh Tôn giáo và các phong cách kiến trúc", "Các bộ kinh Kito giáo và các phong cách kiến trúc", "Các bộ phận Kito giáo và các phong cách tôn giáo", "Các bộ kinh Kato giáo và các phong cách cổ điển"],
+    correct: [1]
   },
   {
-    question: "Cu\u1ed1i th\u1eddi k\u1ef3 Trung c\u1ed5, ai l\u00e0 ng\u01b0\u1eddi n\u1ed5i l\u00ean nh\u01b0 nh\u00e0 th\u1ea7n h\u1ecdc l\u1edbn nh\u1ea5t?",
-    answers: ["A. \u00d4guytxtanh (354-430)", "B. T\u00f4mat \u0110acanh (1225-1274)", "C. L\u00ea\u00f4n Battixta Anbecti ( 1404 \u2013 1472 )", "D. L\u00ea\u00f4n \u0111\u01a1 Vanhxi ( 1452 \u2013 1529 )"],
-    correct: 1
+    id: "CH014",
+    question: "Cuối thời kỳ Trung cổ, ai là người nổi lên như nhà thần học lớn nhất?",
+    answers: ["Ôguytxtanh (354-430)", "Tômat Đacanh (1225-1274)", "Lêôn Battixta Anbecti ( 1404 – 1472 )", "Lêôn đơ Vanhxi ( 1452 – 1529 )"],
+    correct: [1]
   },
   {
-    question: "n\u00eau \u0111\u1eb7c \u0111i\u1ec3m quan tr\u1ecdng nh\u1ea5t c\u1ee7a t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc th\u1eddi Ph\u1ee5c h\u01b0ng?",
-    answers: ["A. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u1ea3m t\u00ednh, th\u1ef1c ti\u1ec5n", "B. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u1ea3m t\u00ednh, tr\u1ef1c ti\u1ebfp", "C. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u00e1 nh\u00e2n, th\u1ef1c t\u1ebf", "D. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc kh\u00e1ch quan v\u00e0 ch\u1ee7 quan"],
-    correct: 0
+    id: "CH015",
+    question: "nêu đặc điểm quan trọng nhất của tư tưởng mỹ học thời Phục hưng?",
+    answers: ["Tư tưởng mỹ học cảm tính, thực tiễn", "Tư tưởng mỹ học cảm tính, trực tiếp", "Tư tưởng mỹ học cá nhân, thực tế", "Tư tưởng mỹ học khách quan và chủ quan"],
+    correct: [0]
   },
   {
-    question: "Hai th\u1eddi k\u1ef3 th\u1ebf gi\u1edbi quan c\u1ee7a Kant l\u00e0 hai th\u1eddi k\u1ef3 n\u00e0o?",
-    answers: ["A. th\u1eddi k\u1ef3 ti\u1ec1n khen ng\u1ee3i v\u00e0 th\u1eddi k\u1ef3 ph\u00ea ph\u00e1n", "B. Th\u1eddi k\u1ef3 ti\u1ec1n ph\u00ea ph\u00e1n v\u00e0 th\u1eddi k\u1ef3 ph\u00ea ph\u00e1n", "C. Th\u1eddi k\u1ef3 ph\u00ea ph\u00e1n v\u00e0 ch\u00e2m bi\u1ebfm", "D. Th\u1eddi k\u1ef3 kh\u00f4ng ph\u00ea ph\u00e1n"],
-    correct: 1
+    id: "CH016",
+    question: "Hai thời kỳ thế giới quan của Kant là hai thời kỳ nào?",
+    answers: ["thời kỳ tiền khen ngợi và thời kỳ phê phán", "Thời kỳ tiền phê phán và thời kỳ phê phán", "Thời kỳ phê phán và châm biếm", "Thời kỳ không phê phán"],
+    correct: [1]
   },
   {
-    question: "Th\u1ebf gi\u1edbi quan c\u1ee7a Kant c\u00f3 th\u1ec3 chia ra hai th\u1eddi k\u1ef3: th\u1eddi k\u1ef3 ti\u1ec1n ph\u00ea ph\u00e1n v\u00e0 th\u1eddi k\u1ef3 ph\u00ea ph\u00e1n l\u1ea5y n\u0103m n\u00e0o l\u00e0m m\u1ed1c ph\u00e2n \u0111\u1ecbnh>",
-    answers: ["A. 1770", "B. 1780", "C. 1790", "D. 1771"],
-    correct: 0
+    id: "CH017",
+    question: "Thế giới quan của Kant có thể chia ra hai thời kỳ: thời kỳ tiền phê phán và thời kỳ phê phán lấy năm nào làm mốc phân định>",
+    answers: ["1770", "1780", "1790", "1771"],
+    correct: [0]
   },
   {
-    question: "\u0110\u00eani \u0110i\u0111r\u00f4 ( 1713 \u2013 1784 ) l\u00e0 nh\u00e0 duy v\u1eadt \u0111i\u1ec3n h\u00ecnh c\u1ee7a tri\u1ebft h\u1ecdc n\u00e0o?",
-    answers: ["A. Tri\u1ebft h\u1ecdc Khai s\u00e1ng Ph\u00e1p", "B. Tri\u1ebft h\u1ecdc Khai s\u00e1ng \u0110\u1ee9c", "C. Tri\u1ebft h\u1ecdc Khai s\u00e1ng Nga", "D. Tri\u1ebft h\u1ecdc Khai s\u00e1ng Hy L\u1ea1p"],
-    correct: 0
+    id: "CH018",
+    question: "Đêni Điđrô ( 1713 – 1784 ) là nhà duy vật điển hình của triết học nào?",
+    answers: ["Triết học Khai sáng Pháp", "Triết học Khai sáng Đức", "Triết học Khai sáng Nga", "Triết học Khai sáng Hy Lạp"],
+    correct: [0]
   },
   {
-    question: "C\u01a1 s\u1edf tri\u1ebft h\u1ecdc c\u1ee7a m\u1ef9 h\u1ecdc Macxit: S\u1ef1 ra \u0111\u1eddi c\u1ee7a ch\u1ee7 ngh\u0129a Mac l\u00e0 g\u00ec?",
-    answers: ["A. Cu\u1ed9c c\u00e1ch m\u1ea1ng v\u0129 \u0111\u1ea1i nh\u1ea5t trong th\u1ebf k\u1ef7 c\u1ee7a nh\u00e2n lo\u1ea1i", "B. Cu\u1ed9c c\u00e1ch m\u1ea1ng v\u0129 \u0111\u1ea1i nh\u1ea5t trong khoa h\u1ecdc x\u00e3 h\u1ed9i c\u1ee7a nh\u00e2n lo\u1ea1i", "C. Cu\u1ed9c c\u00e1ch m\u1ea1ng h\u00f9ng v\u0129 nh\u1ea5t trong x\u00e3 h\u1ed9i c\u1ee7a lo\u00e0i ng\u01b0\u1eddi", "D. Cu\u1ed9c c\u00e1ch m\u1ea1ng c\u00f4ng khai nh\u1ea5t trong khoa h\u1ecdc x\u00e3 h\u1ed9i"],
-    correct: 1
+    id: "CH019",
+    question: "Cơ sở triết học của mỹ học Macxit: Sự ra đời của chủ nghĩa Mac là gì?",
+    answers: ["Cuộc cách mạng vĩ đại nhất trong thế kỷ của nhân loại", "Cuộc cách mạng vĩ đại nhất trong khoa học xã hội của nhân loại", "Cuộc cách mạng hùng vĩ nhất trong xã hội của loài người", "Cuộc cách mạng công khai nhất trong khoa học xã hội"],
+    correct: [1]
   },
   {
-    question: "Mac\u2013\u0102ngghen quan ni\u1ec7m ngu\u1ed3n g\u1ed1c c\u1ee7a ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p, ngh\u1ec7 thu\u1eadt, n\u00e0y sinh do th\u1ef1c ti\u1ec5n c\u1ee7a con ng\u01b0\u1eddi \u2013 th\u1ef1c ti\u1ec5n s\u1ea3n xu\u1ea5t", "B. C\u1ea3m x\u00fac th\u1ea9m m\u1ef9 n\u1ea3y sinh do th\u1ef1c ti\u1ec5n c\u1ee7a con ng\u01b0\u1eddi-th\u1ef1c ti\u1ec5n lao \u0111\u1ed9ng", "C. C\u1ea3m x\u00fac c\u00e1i \u0111\u1eb9p n\u1ea3y sinh do th\u1ef1c ti\u1ec5n con ng\u01b0\u1eddi \u2013 lao \u0111\u1ed9ng s\u1ea3n xu\u1ea5t", "D. C\u1ea3m x\u00fac th\u1ea9m m\u1ef9, c\u00e1i \u0111\u1eb9p, ngh\u1ec7 thu\u1eadt, n\u1ea3y sinh do th\u1ef1c ti\u1ec5n c\u1ee7a con ng\u01b0\u1eddi -  th\u1ef1c ti\u1ec5n lao \u0111\u1ed9ng s\u1ea3n xu\u1ea5t"],
-    correct: 3
+    id: "CH020",
+    question: "Mac–Ăngghen quan niệm nguồn gốc của nghệ thuật là gì?",
+    answers: ["Cái đẹp, nghệ thuật, này sinh do thực tiễn của con người – thực tiễn sản xuất", "Cảm xúc thẩm mỹ nảy sinh do thực tiễn của con người-thực tiễn lao động", "Cảm xúc cái đẹp nảy sinh do thực tiễn con người – lao động sản xuất", "Cảm xúc thẩm mỹ, cái đẹp, nghệ thuật, nảy sinh do thực tiễn của con người -  thực tiễn lao động sản xuất"],
+    correct: [3]
   },
   {
-    question: "Nguy\u00ean t\u1eafc c\u01a1 b\u1ea3n trong nguy\u00ean l\u00fd t\u00ednh \u0111\u1ea3ng trong ngh\u1ec7 thu\u1eadt c\u1ee7a L\u00eanin l\u00e0 g\u00ec?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t b\u1ed9 ph\u1eadn trong s\u1ef1 nghi\u1ec7p c\u1ee7a giai c\u1ea5p v\u00f4 s\u1ea3n, do giai c\u1ea5p v\u00f4 s\u1ea3n l\u00e3nh \u0111\u1ea1o, v\u00e0 giai c\u1ea5p v\u00f4 s\u1ea3n ph\u1ea3i l\u00e3nh \u0111\u1ea1o ngh\u1ec7 thu\u1eadt theo \u0111\u1eb7c tr\u01b0ng c\u1ee7a n\u00f3 \u0111\u1ec3 h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt ph\u1ee5c v\u1ee5 m\u00ecnh. Y\u1ebfu t\u1ed1 duy v\u1eadt v\u1eeba mang y\u1ebfu t\u1ed1 bi\u1ec7n ch\u1ee9ng", "B. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t b\u1ed9 ph\u1eadn trong s\u1ef1 nghi\u1ec7p c\u1ee7a giai c\u1ea5p v\u00f4 s\u1ea3n v\u00e0 giai c\u1ea5p v\u00f4 s\u1ea3n ph\u1ea3i l\u00e3nh \u0111\u1ea1o ngh\u1ec7 thu\u1eadt theo \u0111\u1eb7c tr\u01b0ng c\u1ee7a n\u00f3 \u0111\u1ec3 h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt ph\u1ee5c v\u1ee5 m\u00ecnh", "C. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t b\u1ed9 ph\u1eadn trong s\u1ef1 nghi\u1ec7p c\u1ee7a giai c\u1ea5p v\u00f4 s\u1ea3n, do giai c\u1ea5p v\u00f4 s\u1ea3n l\u00e3nh \u0111\u1ea1o", "D. Ngh\u1ec7 thu\u1eadt l\u00e0 giai c\u1ea5p v\u00f4 s\u1ea3n ph\u1ea3i l\u00e3nh \u0111\u1ea1o ngh\u1ec7 thu\u1eadt theo \u0111\u1eb7c tr\u01b0ng c\u1ee7a n\u00f3 \u0111\u1ec3 h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt ph\u1ee5c v\u1ee5 m\u00ecnh"],
-    correct: 0
+    id: "CH021",
+    question: "Nguyên tắc cơ bản trong nguyên lý tính đảng trong nghệ thuật của Lênin là gì?",
+    answers: ["Nghệ thuật là một bộ phận trong sự nghiệp của giai cấp vô sản, do giai cấp vô sản lãnh đạo, và giai cấp vô sản phải lãnh đạo nghệ thuật theo đặc trưng của nó để hướng nghệ thuật phục vụ mình. Yếu tố duy vật vừa mang yếu tố biện chứng", "Nghệ thuật là một bộ phận trong sự nghiệp của giai cấp vô sản và giai cấp vô sản phải lãnh đạo nghệ thuật theo đặc trưng của nó để hướng nghệ thuật phục vụ mình", "Nghệ thuật là một bộ phận trong sự nghiệp của giai cấp vô sản, do giai cấp vô sản lãnh đạo", "Nghệ thuật là giai cấp vô sản phải lãnh đạo nghệ thuật theo đặc trưng của nó để hướng nghệ thuật phục vụ mình"],
+    correct: [0]
   },
   {
-    question: "T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u1ee7a Hegel mang y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. V\u1eeba mang y\u1ebfu t\u1ed1 duy t\u00e2m v\u1eeba mang y\u1ebfu t\u1ed1 bi\u1ec7n ch\u1ee9ng", "B. V\u1eeba mang y\u1ebfu t\u1ed1 duy v\u1eadt v\u1eeba mang y\u1ebfu t\u1ed1 bi\u1ec7n ch\u1ee9ng", "C. V\u1eeba mang y\u1ebfu t\u1ed1 duy t\u00e2m v\u1eeba mang y\u1ebfu t\u1ed1 kh\u1ea3o s\u00e1t", "D. V\u1eeba mang y\u1ebfu t\u1ed1 duy t\u00e2m v\u1eeba mang y\u1ebfu t\u1ed1 khoa h\u1ecdc"],
-    correct: 0
+    id: "CH022",
+    question: "Tư tưởng mỹ học của Hegel mang yếu tố nào?",
+    answers: ["Vừa mang yếu tố duy tâm vừa mang yếu tố biện chứng", "Vừa mang yếu tố duy vật vừa mang yếu tố biện chứng", "Vừa mang yếu tố duy tâm vừa mang yếu tố khảo sát", "Vừa mang yếu tố duy tâm vừa mang yếu tố khoa học"],
+    correct: [0]
   },
   {
-    question: "Giai \u0111o\u1ea1n cao nh\u1ea5t c\u1ee7a qu\u00e1 tr\u00ecnh ph\u00e1t tri\u1ec3n l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt duy v\u1eadt tr\u01b0\u1edbc M\u00e1c l\u00e0 m\u1ef9 h\u1ecdc n\u00e0o?",
-    answers: ["A. M\u1ef9 h\u1ecdc D\u00e2n ch\u1ee7 C\u00e1ch m\u1ea1ng Hy L\u1ea1p", "B. M\u1ef9 h\u1ecdc D\u00e2n ch\u1ee7 C\u00e1ch m\u1ea1ng \u0110\u1ee9c", "C. M\u1ef9 h\u1ecdc D\u00e2n ch\u1ee7 C\u00e1ch m\u1ea1ng Ph\u00e1p", "D. M\u1ef9 h\u1ecdc D\u00e2n ch\u1ee7 C\u00e1ch m\u1ea1ng Nga"],
-    correct: 3
+    id: "CH023",
+    question: "Giai đoạn cao nhất của quá trình phát triển lý luận nghệ thuật duy vật trước Mác là mỹ học nào?",
+    answers: ["Mỹ học Dân chủ Cách mạng Hy Lạp", "Mỹ học Dân chủ Cách mạng Đức", "Mỹ học Dân chủ Cách mạng Pháp", "Mỹ học Dân chủ Cách mạng Nga"],
+    correct: [3]
   },
   {
-    question: "H\u1ecdc thuy\u1ebft M\u00e1c \u0111\u00e3 g\u00f3p ph\u1ea7n b\u1ed5 sung, l\u00e0m cho ho\u00e0n ch\u1ec9nh v\u00e0 v\u1eefng ch\u1eafc h\u01a1n v\u1ec1 nh\u1eefng \u0111\u1ecbnh ngh\u0129a c\u00e1i \u0111\u1eb9p. \u0110\u00f3 l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ef1 gi\u1ea3i th\u00edch ngu\u1ed3n g\u1ed1c c\u1ee7a nh\u1eefng gi\u00e1 tr\u1ecb ch\u00e2n \u2013 thi\u1ec7n \u2013 m\u1ef9 n\u00f3i chung", "B. S\u1ef1 gi\u1ea3i th\u00edch ngu\u1ed3n g\u1ed1c c\u1ee7a c\u00e1i \u0111\u1eb9p", "C. C\u1ee7a nh\u1eefng gi\u00e1 tr\u1ecb ch\u00e2n \u2013 thi\u1ec7n \u2013 m\u1ef9 n\u00f3i chung", "D. S\u1ef1 gi\u1ea3i th\u00edch ngu\u1ed3n g\u1ed1c c\u1ee7a c\u00e1i \u0111\u1eb9p, c\u1ee7a nh\u1eefng gi\u00e1 tr\u1ecb ch\u00e2n \u2013 thi\u1ec7n \u2013 m\u1ef9 n\u00f3i chung"],
-    correct: 3
+    id: "CH024",
+    question: "Học thuyết Mác đã góp phần bổ sung, làm cho hoàn chỉnh và vững chắc hơn về những định nghĩa cái đẹp. Đó là gì?",
+    answers: ["Sự giải thích nguồn gốc của những giá trị chân – thiện – mỹ nói chung", "Sự giải thích nguồn gốc của cái đẹp", "Của những giá trị chân – thiện – mỹ nói chung", "Sự giải thích nguồn gốc của cái đẹp, của những giá trị chân – thiện – mỹ nói chung"],
+    correct: [3]
   },
   {
-    question: "L\u00fd thuy\u1ebft c\u00e1i \u0111\u1eb9p \u0111\u1ecbnh ra ti\u00eau chu\u1ea9n g\u00ec?",
-    answers: ["A. M\u1ed9t ti\u00eau chu\u1ea9n kh\u00e1 l\u00fd tr\u00ed cho c\u00e1i \u0111\u1eb9p", "B. M\u1ed9t ti\u00eau chu\u1ea9n kh\u00e1 \u0111\u01a1n gi\u1ea3n cho c\u00e1i \u0111\u1eb9p", "C. M\u1ed9t ti\u00eau chu\u1ea9n kh\u00e1 l\u00fd tr\u00ed v\u00e0 \u0111\u01a1n gi\u1ea3n cho c\u00e1i \u0111\u1eb9p", "D. M\u1ed9t ti\u00eau chu\u1ea9n kh\u00e1 l\u00fd tr\u00ed ho\u1eb7c \u0111\u01a1n gi\u1ea3n cho c\u00e1i \u0111\u1eb9p"],
-    correct: 2
+    id: "CH025",
+    question: "Lý thuyết cái đẹp định ra tiêu chuẩn gì?",
+    answers: ["Một tiêu chuẩn khá lý trí cho cái đẹp", "Một tiêu chuẩn khá đơn giản cho cái đẹp", "Một tiêu chuẩn khá lý trí và đơn giản cho cái đẹp", "Một tiêu chuẩn khá lý trí hoặc đơn giản cho cái đẹp"],
+    correct: [2]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi \u0111\u00e3 ph\u00e1t tri\u1ec3n quan ni\u1ec7m ngh\u1ec7 thu\u1eadt tuy\u1ec7t \u0111\u1ed1i c\u1ee7a Kant?",
-    answers: ["A. C. M\u00e1c v\u00e0 Ph. \u0102ngghen", "B. A. Potebnia", "C. Heidegger", "D. Kant"],
-    correct: 2
+    id: "CH026",
+    question: "Ai là người đã phát triển quan niệm nghệ thuật tuyệt đối của Kant?",
+    answers: ["C. Mác và Ph. Ăngghen", "A. Potebnia", "Heidegger", "Kant"],
+    correct: [2]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt theo Kant l\u00e0 c\u00e1ch bi\u1ec3u di\u1ec5n c\u00e1i \u0111\u1eb9p c\u1ee7a m\u1ed9t y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. C\u00f4ng n\u0103ng", "B. Hi\u1ec7u \u1ee9ng", "C. H\u00ecnh th\u1ee9c", "D. Kh\u1ea3 thi"],
-    correct: 2
+    id: "CH027",
+    question: "Nghệ thuật theo Kant là cách biểu diễn cái đẹp của một yếu tố nào?",
+    answers: ["Công năng", "Hiệu ứng", "Hình thức", "Khả thi"],
+    correct: [2]
   },
   {
-    question: "M\u1ed9t hi\u1ec7n t\u01b0\u1ee3ng c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c xem l\u00e0 \u0111\u1eb9p v\u1edbi t\u00ednh to\u00e0n v\u1eb9n c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh c\u1ee7a ng\u01b0\u1eddi ti\u1ebfp nh\u1eadn, ch\u00fang hi\u1ec7n di\u1ec7n nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Nh\u1eefng gi\u00e1 tr\u1ecb x\u00e3 h\u1ed9i \u2013 nh\u00e2n v\u0103n", "B. Nh\u1eefng gi\u00e1 tr\u1ecb x\u00e3 h\u1ed9i \u2013 kinh t\u1ebf", "C. Nh\u1eefng gi\u00e1 tr\u1ecb cu\u1ed9c s\u1ed1ng \u2013 nh\u00e2n d\u00e2n", "D. Nh\u1eefng gi\u00e1 tr\u1ecb x\u00e3 h\u1ed9i \u2013 nh\u00e2n b\u1ea3n"],
-    correct: 3
+    id: "CH028",
+    question: "Một hiện tượng có thể được xem là đẹp với tính toàn vẹn cụ thể cảm tính của người tiếp nhận, chúng hiện diện như thế nào?",
+    answers: ["Những giá trị xã hội – nhân văn", "Những giá trị xã hội – kinh tế", "Những giá trị cuộc sống – nhân dân", "Những giá trị xã hội – nhân bản"],
+    correct: [3]
   },
   {
-    question: "Theo quan \u0111i\u1ec3m c\u1ee7a ai, c\u00e1i \u0111\u1eb9p kh\u00f4ng ph\u1ea3i l\u00e0 ph\u1ea9m ch\u1ea5t v\u1ed1n c\u00f3 trong s\u1ef1 v\u1eadt, n\u00f3 ch\u1ec9 c\u00f3 trong tinh th\u1ea7n v\u00e0 ch\u1ec9 tinh th\u1ea7n m\u1edbi chi\u00eam nghi\u1ec7m \u0111\u01b0\u1ee3c n\u00f3?",
-    answers: ["A. Hume", "B. Aquinas", "C. Thomas Aquinas", "D. Hogarth"],
-    correct: 0
+    id: "CH029",
+    question: "Theo quan điểm của ai, cái đẹp không phải là phẩm chất vốn có trong sự vật, nó chỉ có trong tinh thần và chỉ tinh thần mới chiêm nghiệm được nó?",
+    answers: ["Hume", "Aquinas", "Thomas Aquinas", "Hogarth"],
+    correct: [0]
   },
   {
-    question: "Th\u01b0\u1ee3ng \u0111\u1ebf Hegel cho r\u1eb1ng c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 h\u00ecnh th\u1ec3 nh\u1eadn t\u00ednh c\u1ee7a c\u00e1c \u00fd ni\u1ec7m", "B. L\u00e0 h\u00ecnh th\u1ec3 c\u1ea3m t\u00ednh c\u1ee7a c\u00e1c \u00fd ni\u1ec7m", "C. L\u00e0 h\u00ecnh th\u1ec3 l\u00fd t\u00ednh c\u1ee7a c\u00e1c \u00fd ni\u1ec7m", "D. L\u00e0 h\u00ecnh th\u1ec3 trung t\u00ednh c\u1ee7a c\u00e1c \u00fd ni\u1ec7m"],
-    correct: 1
+    id: "CH030",
+    question: "Thượng đế Hegel cho rằng cái đẹp là gì?",
+    answers: ["Là hình thể nhận tính của các ý niệm", "Là hình thể cảm tính của các ý niệm", "Là hình thể lý tính của các ý niệm", "Là hình thể trung tính của các ý niệm"],
+    correct: [1]
   },
   {
-    question: "Theo quan \u0111i\u1ec3m c\u1ee7a Karl Marx c\u00e1i \u0111\u1eb9p l\u00e0 kh\u00e1ch quan b\u1edfi v\u00ec n\u00f3 l\u00e0 gi\u00e1 tr\u1ecb g\u00ec?",
-    answers: ["A. Nh\u00e2n b\u1ea3n \u2013 x\u00e3 h\u1ed9i", "B. Nh\u00e2n h\u00f3a \u2013 x\u00e3 h\u1ed9i", "C. Nh\u00e2n c\u00e1ch \u2013 x\u00e3 h\u1ed9i", "D. Nh\u00e2n t\u00e2m \u2013 x\u00e3 h\u1ed9i"],
-    correct: 0
+    id: "CH031",
+    question: "Theo quan điểm của Karl Marx cái đẹp là khách quan bởi vì nó là giá trị gì?",
+    answers: ["Nhân bản – xã hội", "Nhân hóa – xã hội", "Nhân cách – xã hội", "Nhân tâm – xã hội"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Plat\u00f4n cho r\u1eb1ng \u2026\u2026 l\u00e0 c\u00e1i \u0111\u1eb9p trong \u00fd ni\u1ec7m, c\u00e1c \u0111\u1ed3 v\u1eadt \u0111\u1eb9p ch\u1ec9 l\u00e0 c\u00e1i b\u00f3ng c\u1ee7a \u00fd ni\u1ec7m \u0111\u1eb9p?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p v\u0129nh h\u1eb1ng", "B. C\u00e1i \u0111\u1eb9p t\u00e2m h\u1ed3n", "C. C\u00e1i \u0111\u1eb9p t\u01b0 t\u01b0\u1edfng", "D. C\u00e1i \u0111\u1eb9p ch\u00e2n th\u1ef1c"],
-    correct: 0
+    id: "CH032",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Platôn cho rằng …… là cái đẹp trong ý niệm, các đồ vật đẹp chỉ là cái bóng của ý niệm đẹp?",
+    answers: ["Cái đẹp vĩnh hằng", "Cái đẹp tâm hồn", "Cái đẹp tư tưởng", "Cái đẹp chân thực"],
+    correct: [0]
   },
   {
-    question: "V\u1ec1 m\u1ef9 h\u1ecdc, Kant \u0111\u01b0\u1ee3c coi l\u00e0 ng\u01b0\u1eddi c\u00f3 t\u01b0 t\u01b0\u1edfng duy t\u00e2m ch\u1ee7 quan m\u1ed9t c\u00e1ch nh\u1ea5t qu\u00e1n, \u00f4ng cho r\u1eb1ng c\u00e1i \u0111\u1eb9p nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p ho\u00e0n to\u00e0n ph\u1ee5 thu\u1ed9c v\u00e0o ch\u1ee7 th\u1ec3 c\u1ea3m nh\u1eadn", "B. C\u00e1i \u0111\u1eb9p ho\u00e0n to\u00e0n ph\u1ee5 thu\u1ed9c v\u00e0o ch\u1ee7 th\u1ec3 c\u1ea3m th\u1ee5", "C. C\u00e1i \u0111\u1eb9p kh\u00f4ng ho\u00e0n to\u00e0n ph\u1ee5 thu\u1ed9c v\u00e0o ch\u1ee7 th\u1ec3 c\u1ea3m th\u1ee5", "D. C\u00e1i x\u1ea5u ho\u00e0n to\u00e0n ph\u1ee5 thu\u1ed9c v\u00e0o ch\u1ee7 th\u1ec3 c\u1ea3m th\u1ee5"],
-    correct: 1
+    id: "CH033",
+    question: "Về mỹ học, Kant được coi là người có tư tưởng duy tâm chủ quan một cách nhất quán, ông cho rằng cái đẹp như thế nào?",
+    answers: ["Cái đẹp hoàn toàn phụ thuộc vào chủ thể cảm nhận", "Cái đẹp hoàn toàn phụ thuộc vào chủ thể cảm thụ", "Cái đẹp không hoàn toàn phụ thuộc vào chủ thể cảm thụ", "Cái xấu hoàn toàn phụ thuộc vào chủ thể cảm thụ"],
+    correct: [1]
   },
   {
-    question: "Nh\u00e0 l\u1ecbch s\u1eed tri\u1ebft h\u1ecdc \u0111\u1ea7u ti\u00ean l\u00e0 ai?",
-    answers: ["A. Arixstot \u2013 m\u1ed9t nh\u00e0 to\u00e1n to\u00e0n th\u01b0", "B. Arixstot \u2013 m\u1ed9t h\u00f3a h\u1ecdc khoa to\u00e1n th\u01b0", "C. Arixstot \u2013 m\u1ed9t nh\u00e0 b\u00e1ch khoa to\u00e0n th\u01b0", "D. Arixstot \u2013 m\u1ed9t nh\u00e0 s\u1eed h\u1ecdc to\u00e0n th\u01b0"],
-    correct: 2
+    id: "CH034",
+    question: "Nhà lịch sử triết học đầu tiên là ai?",
+    answers: ["Arixstot – một nhà toán toàn thư", "Arixstot – một hóa học khoa toán thư", "Arixstot – một nhà bách khoa toàn thư", "Arixstot – một nhà sử học toàn thư"],
+    correct: [2]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi \u0111\u00e3 c\u00f3 m\u1ed9t b\u01b0\u1edbc ti\u1ebfn so v\u1edbi c\u00e1c nh\u00e0 duy v\u1eadt Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i?",
-    answers: ["A. Trecnuxepxki, nh\u00e0 d\u00e2n ch\u1ee7 c\u00e1ch m\u1ea1ng Nga", "B. Trecnuxepxki, nh\u00e0 t\u01b0 b\u1ea3n c\u00e1ch m\u1ea1ng Nga", "C. Trecnuxepxki, nh\u00e0 x\u00e3 h\u1ed9i c\u00e1ch m\u1ea1ng Nga", "D. Trecnuxepxki, nh\u00e0 cao c\u1ea5p quy\u1ec1n c\u00e1ch m\u1ea1ng Nga"],
-    correct: 0
+    id: "CH035",
+    question: "Ai là người đã có một bước tiến so với các nhà duy vật Hy Lạp cổ đại?",
+    answers: ["Trecnuxepxki, nhà dân chủ cách mạng Nga", "Trecnuxepxki, nhà tư bản cách mạng Nga", "Trecnuxepxki, nhà xã hội cách mạng Nga", "Trecnuxepxki, nhà cao cấp quyền cách mạng Nga"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc M\u00e1c \u2013 Lenin tr\u01b0\u1edbc ti\u00ean x\u00e1c \u0111\u1ecbnh c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ed9t ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc", "B. M\u1ed9t ph\u1ea1m tr\u00f9 tri\u1ebft h\u1ecdc", "C. M\u1ed9t ph\u1ea1m tr\u00f9 khoa h\u1ecdc", "D. M\u1ed9t ph\u1ea1m tr\u00f9 l\u00fd lu\u1eadn h\u1ecdc"],
-    correct: 0
+    id: "CH036",
+    question: "Mỹ học Mác – Lenin trước tiên xác định cái đẹp là gì?",
+    answers: ["Một phạm trù mỹ học", "Một phạm trù triết học", "Một phạm trù khoa học", "Một phạm trù lý luận học"],
+    correct: [0]
   },
   {
-    question: "Trong s\u1ed1 c\u00e1c ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc, ph\u1ea1m tr\u00f9 c\u00e1i \u0111\u1eb9p gi\u1eef v\u1ecb tr\u00ed trung t\u00e2m \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n \u1edf m\u1ea5y ph\u01b0\u01a1ng di\u1ec7n n\u00e0o?",
-    answers: ["A. Trong cu\u1ed9c s\u1ed1ng th\u01b0\u1eddng ng\u00e0y, trong ngh\u1ec7 thu\u1eadt v\u00e0 trong m\u1ef9 h\u1ecdc", "B. Trong cu\u1ed9c s\u1ed1ng th\u01b0\u1eddng ng\u00e0y, trong l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt v\u00e0 trong tri\u1ebft h\u1ecdc", "C. Trong cu\u1ed9c s\u1ed1ng th\u01b0\u1eddng ng\u00e0y, trong ch\u00ednh tr\u1ecb v\u00e0 trong m\u1ef9 h\u1ecdc", "D. Trong cu\u1ed9c s\u1ed1ng th\u01b0\u1eddng ng\u00e0y, trong l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt v\u00e0 trong m\u1ef9 h\u1ecdc"],
-    correct: 3
+    id: "CH037",
+    question: "Trong số các phạm trù mỹ học, phạm trù cái đẹp giữ vị trí trung tâm được thể hiện ở mấy phương diện nào?",
+    answers: ["Trong cuộc sống thường ngày, trong nghệ thuật và trong mỹ học", "Trong cuộc sống thường ngày, trong lý luận nghệ thuật và trong triết học", "Trong cuộc sống thường ngày, trong chính trị và trong mỹ học", "Trong cuộc sống thường ngày, trong lý luận nghệ thuật và trong mỹ học"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: C\u00e1i \u0111\u1eb9p l\u00e0 ph\u1ea1m tr\u00f9\u2026., ph\u1ea3n \u00e1nh gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 t\u00edch c\u1ef1c \u1edf c\u00e1c s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng mang l\u1ea1i kho\u00e1i c\u1ea3m v\u00f4 t\u01b0, trong s\u00e1ng cho con ng\u01b0\u1eddi.",
-    answers: ["A. M\u1ef9 h\u1ecdc khoa h\u1ecdc", "B. M\u1ef9 h\u1ecdc C\u1ed5 \u0111\u1ea1i", "C. M\u1ef9 h\u1ecdc trung t\u00e2m", "D. M\u1ef9 h\u1ecdc th\u1ea7n linh"],
-    correct: 2
+    id: "CH038",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Cái đẹp là phạm trù…., phản ánh giá trị thẩm mỹ tích cực ở các sự vật, hiện tượng mang lại khoái cảm vô tư, trong sáng cho con người.",
+    answers: ["Mỹ học khoa học", "Mỹ học Cổ đại", "Mỹ học trung tâm", "Mỹ học thần linh"],
+    correct: [2]
   },
   {
-    question: "N\u00eau kh\u00e1i ni\u1ec7m c\u00e1i cao c\u1ea3?",
-    answers: ["A. C\u00e1i cao c\u1ea3 l\u00e0 ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc c\u01a1 b\u1ea3n, g\u00e2y n\u00ean c\u1ea3m x\u00fac kh\u00e2m ph\u1ee5c, cho\u00e1ng ng\u1ee3p cho ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "B. C\u00e1i cao c\u1ea3 l\u00e0 ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc c\u01a1 b\u1ea3n, ph\u1ea3n \u00e1nh gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 t\u00edch c\u1ef1c \u1edf c\u1ea5p \u0111\u1ed9 phi th\u01b0\u1eddng, g\u00e2y n\u00ean c\u1ea3m x\u00fac kh\u00e2m ph\u1ee5c", "C. C\u00e1i cao c\u1ea3 l\u00e0 ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc c\u01a1 b\u1ea3n, ph\u1ea3n \u00e1nh gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 t\u00edch c\u1ef1c \u1edf c\u1ea5p \u0111\u1ed9 phi th\u01b0\u1eddng, cho\u00e1ng ng\u1ee3p cho ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "D. C\u00e1i cao c\u1ea3 l\u00e0 ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc c\u01a1 b\u1ea3n, ph\u1ea3n \u00e1nh gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 t\u00edch c\u1ef1c \u1edf c\u1ea5p \u0111\u1ed9 phi th\u01b0\u1eddng, g\u00e2y n\u00ean c\u1ea3m x\u00fac kh\u00e2m ph\u1ee5c, cho\u00e1ng ng\u1ee3p cho ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9"],
-    correct: 3
+    id: "CH039",
+    question: "Nêu khái niệm cái cao cả?",
+    answers: ["Cái cao cả là phạm trù mỹ học cơ bản, gây nên cảm xúc khâm phục, choáng ngợp cho chủ thể thẩm mỹ", "Cái cao cả là phạm trù mỹ học cơ bản, phản ánh giá trị thẩm mỹ tích cực ở cấp độ phi thường, gây nên cảm xúc khâm phục", "Cái cao cả là phạm trù mỹ học cơ bản, phản ánh giá trị thẩm mỹ tích cực ở cấp độ phi thường, choáng ngợp cho chủ thể thẩm mỹ", "Cái cao cả là phạm trù mỹ học cơ bản, phản ánh giá trị thẩm mỹ tích cực ở cấp độ phi thường, gây nên cảm xúc khâm phục, choáng ngợp cho chủ thể thẩm mỹ"],
+    correct: [3]
   },
   {
-    question: "C\u00e1i cao c\u1ea3 mang l\u1ea1i cho con ng\u01b0\u1eddi nh\u1eefng c\u1ea3m x\u00fac th\u1ea9m m\u1ef9 \u0111\u1eb7c bi\u1ec7t g\u00ec?",
-    answers: ["A. C\u1ea3m gi\u00e1c t\u00f4n k\u00ednh, c\u1ea3m gi\u00e1c v\u1ec1 s\u1ef1 v\u0129 \u0111\u1ea1i", "B. C\u1ea3m gi\u00e1c ng\u01b0\u1ee1ng m\u1ed9, t\u00f4n k\u00ednh, c\u1ea3m gi\u00e1c v\u1ec1 s\u1ef1 v\u0129 \u0111\u1ea1i, s\u1ee9c m\u1ea1nh ti\u1ec1m t\u00e0ng", "C. C\u1ea3m gi\u00e1c ng\u01b0\u1ee1ng m\u1ed9, t\u00f4n k\u00ednh, s\u1ee9c m\u1ea1nh ti\u1ec1m t\u00e0ng", "D. C\u1ea3m gi\u00e1c ng\u01b0\u1ee1ng m\u1ed9, t\u00f4n k\u00ednh"],
-    correct: 1
+    id: "CH040",
+    question: "Cái cao cả mang lại cho con người những cảm xúc thẩm mỹ đặc biệt gì?",
+    answers: ["Cảm giác tôn kính, cảm giác về sự vĩ đại", "Cảm giác ngưỡng mộ, tôn kính, cảm giác về sự vĩ đại, sức mạnh tiềm tàng", "Cảm giác ngưỡng mộ, tôn kính, sức mạnh tiềm tàng", "Cảm giác ngưỡng mộ, tôn kính"],
+    correct: [1]
   },
   {
-    question: "C\u00e1i bi l\u00e0 m\u1ed9t ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc ph\u1ea3n \u00e1nh c\u00e1i g\u00ec?",
-    answers: ["A. Hai thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng v\u00e0 kh\u00e1ch th\u1ec3 c\u00f3 s\u1ef1 xung \u0111\u1ed9t gi\u1eefa c\u00e1i \u0111\u1eb9p, c\u00e1i thi\u1ec7n v\u1edbi c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, d\u1eabn \u0111\u1ebfn s\u1ef1 m\u1ea5t m\u00e1t, \u0111au th\u01b0\u01a1ng", "B. Ba thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng c\u00f3 s\u1ef1 xung \u0111\u1ed9t gi\u1eefa c\u00e1i \u0111\u1eb9p, c\u00e1i thi\u1ec7n v\u1edbi c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, d\u1eabn \u0111\u1ebfn s\u1ef1 m\u1ea5t m\u00e1t, \u0111au th\u01b0\u01a1ng", "C. M\u1ed9t thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng v\u00e0 kh\u00e1ch th\u1ec3 c\u00f3 s\u1ef1 xung \u0111\u1ed9t gi\u1eefa c\u00e1i \u0111\u1eb9p, c\u00e1i thi\u1ec7n v\u1edbi c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, d\u1eabn \u0111\u1ebfn s\u1ef1 m\u1ea5t m\u00e1t, \u0111au th\u01b0\u01a1ng", "D. B\u1ed1n thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng v\u00e0 kh\u00e1ch th\u1ec3 c\u00f3 s\u1ef1 xung \u0111\u1ed9t gi\u1eefa c\u00e1i \u0111\u1eb9p, c\u00e1i thi\u1ec7n v\u1edbi c\u00e1i x\u1ea5u, c\u00e1i \u00e1c"],
-    correct: 2
+    id: "CH041",
+    question: "Cái bi là một phạm trù mỹ học phản ánh cái gì?",
+    answers: ["Hai thuộc tính thẩm mỹ của những hiện tượng và khách thể có sự xung đột giữa cái đẹp, cái thiện với cái xấu, cái ác, dẫn đến sự mất mát, đau thương", "Ba thuộc tính thẩm mỹ của những hiện tượng có sự xung đột giữa cái đẹp, cái thiện với cái xấu, cái ác, dẫn đến sự mất mát, đau thương", "Một thuộc tính thẩm mỹ của những hiện tượng và khách thể có sự xung đột giữa cái đẹp, cái thiện với cái xấu, cái ác, dẫn đến sự mất mát, đau thương", "Bốn thuộc tính thẩm mỹ của những hiện tượng và khách thể có sự xung đột giữa cái đẹp, cái thiện với cái xấu, cái ác"],
+    correct: [2]
   },
   {
-    question: "C\u00e1i bi trong ngh\u1ec7 thu\u1eadt ph\u1ea3n \u00e1nh c\u00e1i g\u00ec?",
-    answers: ["A. C\u00e1i bi trong cu\u1ed9c s\u1ed1ng m\u1ed9t c\u00e1ch t\u1eadp trung nh\u1ea5t, c\u1ea3m x\u00fac v\u1ec1 s\u1ef1 cao th\u01b0\u1ee3ng", "B. C\u00e1i bi trong cu\u1ed9c s\u1ed1ng m\u1ed9t c\u00e1ch t\u1eadp trung nh\u1ea5t, g\u00e2y \u1ea5n t\u01b0\u1ee3ng \u0111au th\u01b0\u01a1ng th\u1ea5m th\u00eda", "C. C\u00e1i bi trong cu\u1ed9c s\u1ed1ng m\u1ed9t c\u00e1ch g\u00e2y \u1ea5n t\u01b0\u1ee3ng \u0111au th\u01b0\u01a1ng th\u1ea5m th\u00eda v\u00e0 c\u1ea3m x\u00fac v\u1ec1 s\u1ef1 cao th\u01b0\u1ee3ng", "D. C\u00e1i bi trong cu\u1ed9c s\u1ed1ng m\u1ed9t c\u00e1ch t\u1eadp trung nh\u1ea5t, g\u00e2y \u1ea5n t\u01b0\u1ee3ng \u0111au th\u01b0\u01a1ng th\u1ea5m th\u00eda v\u00e0 c\u1ea3m x\u00fac v\u1ec1 s\u1ef1 cao th\u01b0\u1ee3ng"],
-    correct: 3
+    id: "CH042",
+    question: "Cái bi trong nghệ thuật phản ánh cái gì?",
+    answers: ["Cái bi trong cuộc sống một cách tập trung nhất, cảm xúc về sự cao thượng", "Cái bi trong cuộc sống một cách tập trung nhất, gây ấn tượng đau thương thấm thía", "Cái bi trong cuộc sống một cách gây ấn tượng đau thương thấm thía và cảm xúc về sự cao thượng", "Cái bi trong cuộc sống một cách tập trung nhất, gây ấn tượng đau thương thấm thía và cảm xúc về sự cao thượng"],
+    correct: [3]
   },
   {
-    question: "C\u00e1i h\u00e0i mang l\u1ea1i cho con ng\u01b0\u1eddi nh\u1eefng c\u1ea3m x\u00fac th\u1ea9m m\u1ef9 \u0111\u1eb7c bi\u1ec7t g\u00ec?",
-    answers: ["A. \u0110\u00f3 l\u00e0 c\u1ea3m gi\u00e1c kh\u00f4ng vui v\u1ebb, s\u1ea3ng kho\u00e1i", "B. \u0110\u00f3 l\u00e0 c\u1ea3m gi\u00e1c s\u1ea3ng kho\u00e1i", "C. \u0110\u00f3 l\u00e0 c\u1ea3m gi\u00e1c vui v\u1ebb, s\u1ea3ng kho\u00e1i, gi\u1ea3i t\u1ecfa c\u0103ng th\u1eb3ng", "D. \u0110\u00f3 l\u00e0 c\u1ea3m gi\u00e1c gi\u1ea3i t\u1ecfa c\u0103ng th\u1eb3ng"],
-    correct: 2
+    id: "CH043",
+    question: "Cái hài mang lại cho con người những cảm xúc thẩm mỹ đặc biệt gì?",
+    answers: ["Đó là cảm giác không vui vẻ, sảng khoái", "Đó là cảm giác sảng khoái", "Đó là cảm giác vui vẻ, sảng khoái, giải tỏa căng thẳng", "Đó là cảm giác giải tỏa căng thẳng"],
+    correct: [2]
   },
   {
-    question: "Arixstot cho r\u1eb1ng h\u00e0i k\u1ecbch l\u00e0 c\u00e1i b\u1eaft ch\u01b0\u1edbc c\u00e1i x\u1ea5u nh\u01b0ng kh\u00f4ng ph\u1ea3i to\u00e0n b\u1ed9 s\u1ef1 x\u1ea5u xa, b\u1ecb \u1ed5i m\u00e0 ch\u1ec9 l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ed9t s\u1ef1 k\u1ef3 qu\u1eb7c n\u00e0o \u0111\u00f3", "B. M\u1ed9t sai l\u1ea7m, m\u1ed9t s\u1ef1 k\u1ef3 qu\u1eb7c n\u00e0o \u0111\u00f3", "C. M\u1ed9t hi\u1ec3u l\u1ea7m, m\u1ed9t s\u1ef1 kh\u00f4ng k\u1ef3 qu\u1eb7c n\u00e0o \u0111\u00f3", "D. Hai sai l\u1ea7m, hai s\u1ef1 k\u1ef3 qu\u1eb7c n\u00e0o \u0111\u00f3"],
-    correct: 1
+    id: "CH044",
+    question: "Arixstot cho rằng hài kịch là cái bắt chước cái xấu nhưng không phải toàn bộ sự xấu xa, bị ổi mà chỉ là gì?",
+    answers: ["Một sự kỳ quặc nào đó", "Một sai lầm, một sự kỳ quặc nào đó", "Một hiểu lầm, một sự không kỳ quặc nào đó", "Hai sai lầm, hai sự kỳ quặc nào đó"],
+    correct: [1]
   },
   {
-    question: "Bi k\u1ecbch l\u1ea1c quan xu\u1ea5t hi\u1ec7n ch\u1ee7 y\u1ebfu trong lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt n\u00e0o?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt x\u00e3 h\u1ed9i ch\u1ee7 ngh\u0129a", "B. Ngh\u1ec7 thu\u1eadt t\u1ea1o h\u00ecnh", "C. Ngh\u1ec7 thu\u1eadt t\u01b0 b\u1ea3n ch\u1ee7 ngh\u0129a", "D. Ngh\u1ec7 thu\u1eadt c\u1ea3m t\u00ednh"],
-    correct: 0
+    id: "CH045",
+    question: "Bi kịch lạc quan xuất hiện chủ yếu trong loại hình nghệ thuật nào?",
+    answers: ["Nghệ thuật xã hội chủ nghĩa", "Nghệ thuật tạo hình", "Nghệ thuật tư bản chủ nghĩa", "Nghệ thuật cảm tính"],
+    correct: [0]
   },
   {
-    question: "\u00dd th\u1ee9c th\u1ea9m m\u1ef9 c\u00f3 \u0111\u1eb7c tr\u01b0ng l\u00e0 s\u1ef1 ph\u1ea3n \u00e1nh mang t\u00ednh g\u00ec v\u1ec1 th\u1ebf gi\u1edbi hi\u1ec7n th\u1ef1c kh\u00e1ch quan?",
-    answers: ["A. C\u00e1 nh\u00e2n \u2013 h\u00ecnh t\u01b0\u1ee3ng", "B. Kh\u00e1ch th\u1ec3 \u2013 c\u00e1 th\u1ec3", "C. Kh\u00e1i qu\u00e1t \u2013 nh\u00e2n v\u0103n", "D. H\u00ecnh t\u01b0\u1ee3ng \u2013 c\u1ea3m t\u00ednh"],
-    correct: 3
+    id: "CH046",
+    question: "Ý thức thẩm mỹ có đặc trưng là sự phản ánh mang tính gì về thế giới hiện thực khách quan?",
+    answers: ["Cá nhân – hình tượng", "Khách thể – cá thể", "Khái quát – nhân văn", "Hình tượng – cảm tính"],
+    correct: [3]
   },
   {
-    question: "Nhu c\u1ea7u th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c, l\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "B. L\u00e0 ti\u1ec1m n\u0103ng tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c c\u1ee7a ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "C. L\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi", "D. L\u00e0 ti\u1ec1m n\u0103ng tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c c\u1ee7a ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9, l\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi"],
-    correct: 3
+    id: "CH047",
+    question: "Nhu cầu thẩm mỹ là gì?",
+    answers: ["Là tinh thần thường trực, là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ", "Là tiềm năng tinh thần thường trực của chủ thể thẩm mỹ", "Là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ của con người", "Là tiềm năng tinh thần thường trực của chủ thể thẩm mỹ, là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ của con người"],
+    correct: [3]
   },
   {
-    question: "Nhu c\u1ea7u th\u1ea9m m\u1ef9 l\u00e0?",
-    answers: ["A. Ti\u1ec1m n\u0103ng tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c, l\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "B. Ti\u1ec1m n\u0103ng tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c c\u1ee7a ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "C. L\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi", "D. Ti\u1ec1m n\u0103ng tinh th\u1ea7n th\u01b0\u1eddng tr\u1ef1c c\u1ee7a ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9, l\u00e0 tr\u1ea1ng th\u00e1i \u0111\u00f2i h\u1ecfi s\u1ef1 th\u1ecfa m\u00e3n c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi"],
-    correct: 3
+    id: "CH048",
+    question: "Nhu cầu thẩm mỹ là?",
+    answers: ["Tiềm năng tinh thần thường trực, là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ", "Tiềm năng tinh thần thường trực của chủ thể thẩm mỹ", "Là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ của con người", "Tiềm năng tinh thần thường trực của chủ thể thẩm mỹ, là trạng thái đòi hỏi sự thỏa mãn các giá trị thẩm mỹ của con người"],
+    correct: [3]
   },
   {
-    question: "Nhu c\u1ea7u n\u00f3i chung c\u1ee7a con ng\u01b0\u1eddi c\u00f3 th\u1ec3 x\u1ebfp v\u00e0o hai tuy\u1ebfn n\u00e0o?",
-    answers: ["A. Tuy\u1ebfn t\u1ef1 nhi\u00ean v\u00e0 tuy\u1ebfn cu\u1ed9c s\u1ed1ng", "B. Tuy\u1ebfn t\u1ef1 nhi\u00ean v\u00e0 tuy\u1ebfn x\u00e3 h\u1ed9i", "C. Tuy\u1ebfn c\u1ea3m t\u00ednh v\u00e0 tuy\u1ebfn tr\u1ef1c t\u00ednh", "D. Tuy\u1ebfn x\u00e3 h\u1ed9i v\u00e0 tuy\u1ebfn h\u00ecnh th\u00e0nh"],
-    correct: 1
+    id: "CH049",
+    question: "Nhu cầu nói chung của con người có thể xếp vào hai tuyến nào?",
+    answers: ["Tuyến tự nhiên và tuyến cuộc sống", "Tuyến tự nhiên và tuyến xã hội", "Tuyến cảm tính và tuyến trực tính", "Tuyến xã hội và tuyến hình thành"],
+    correct: [1]
   },
   {
-    question: "Kant nh\u1eadn \u0111\u1ecbnh r\u1eb1ng: Nhu c\u1ea7u th\u1ea9m m\u1ef9 ch\u1ec9 \u0111\u01b0\u1ee3c th\u1ecfa m\u00e3n v\u00e0 t\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9 ch\u1ec9 \u0111\u01b0\u1ee3c nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Khi con ng\u01b0\u1eddi kh\u00f4ng v\u01b0\u1ee3t l\u00ean tr\u00ean nh\u1eefng suy t\u00ednh v\u1ee5 l\u1ee3i, \u00edch k\u1ef7 t\u1ea7m th\u01b0\u1eddng", "B. N\u1ea3y sinh khi con ng\u01b0\u1eddi v\u01b0\u1ee3t l\u00ean tr\u00ean nh\u1eefng suy t\u00ednh v\u1ee5 l\u1ee3i", "C. N\u1ea3y sinh khi con ng\u01b0\u1eddi v\u01b0\u1ee3t l\u00ean tr\u00ean nh\u1eefng \u00edch k\u1ef7 t\u1ea7m th\u01b0\u1eddng", "D. N\u1ea3y sinh khi con ng\u01b0\u1eddi v\u01b0\u1ee3t l\u00ean tr\u00ean nh\u1eefng suy t\u00ednh v\u1ee5 l\u1ee3i, \u00edch k\u1ef7 t\u1ea7m th\u01b0\u1eddng"],
-    correct: 3
+    id: "CH050",
+    question: "Kant nhận định rằng: Nhu cầu thẩm mỹ chỉ được thỏa mãn và tình cảm thẩm mỹ chỉ được như thế nào?",
+    answers: ["Khi con người không vượt lên trên những suy tính vụ lợi, ích kỷ tầm thường", "Nảy sinh khi con người vượt lên trên những suy tính vụ lợi", "Nảy sinh khi con người vượt lên trên những ích kỷ tầm thường", "Nảy sinh khi con người vượt lên trên những suy tính vụ lợi, ích kỷ tầm thường"],
+    correct: [3]
   },
   {
-    question: "Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 \u1edf m\u1ed7i con ng\u01b0\u1eddi kh\u00f4ng ph\u1ea3i l\u00e0 b\u1ea9m sinh, b\u1ea5t bi\u1ebfn, m\u00e0 thay \u0111\u1ed5i t\u00f9y theo y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. L\u1ee9a tu\u1ed5i, t\u1eebng th\u1eddi k\u1ef3", "B. L\u1ee9a tu\u1ed5i, theo gi\u1edbi t\u00ednh kh\u00e1c nhau", "C. T\u1eebng th\u1eddi k\u1ef3, theo gi\u1edbi t\u00ednh kh\u00e1c nhau", "D. L\u1ee9a tu\u1ed5i, t\u1eebng th\u1eddi k\u1ef3, theo gi\u1edbi t\u00ednh kh\u00e1c nhau"],
-    correct: 3
+    id: "CH051",
+    question: "Thị hiếu thẩm mỹ ở mỗi con người không phải là bẩm sinh, bất biến, mà thay đổi tùy theo yếu tố nào?",
+    answers: ["Lứa tuổi, từng thời kỳ", "Lứa tuổi, theo giới tính khác nhau", "Từng thời kỳ, theo giới tính khác nhau", "Lứa tuổi, từng thời kỳ, theo giới tính khác nhau"],
+    correct: [3]
   },
   {
-    question: "Y\u1ebfu t\u1ed1 n\u00e0o l\u00e0 tr\u1ea1ng th\u00e1i t\u00ecnh c\u1ea3m t\u01b0\u01a1ng \u0111\u1ed1i \u1ed5n \u0111\u1ecbnh, l\u1eb7p \u0111i l\u1eb7p l\u1ea1i tr\u01b0\u1edbc \u0111\u1ed1i t\u01b0\u1ee3ng th\u1ea9m m\u1ef9?",
-    answers: ["A. Nhu c\u1ea7u th\u1ea9m m\u1ef9", "B. C\u1ea3m th\u1ee5 th\u1ea9m m\u1ef9", "C. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9", "D. Cu\u1ed9c s\u1ed1ng th\u1ea9m m\u1ef9"],
-    correct: 2
+    id: "CH052",
+    question: "Yếu tố nào là trạng thái tình cảm tương đối ổn định, lặp đi lặp lại trước đối tượng thẩm mỹ?",
+    answers: ["Nhu cầu thẩm mỹ", "Cảm thụ thẩm mỹ", "Thị hiếu thẩm mỹ", "Cuộc sống thẩm mỹ"],
+    correct: [2]
   },
   {
-    question: "L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 m\u1ed9t th\u00e0nh t\u1ed1 c\u01a1 b\u1ea3n, l\u00e0 h\u1ea1t nh\u00e2n c\u1ee7a th\u1ea9m m\u1ef9", "B. L\u00e0 m\u1ed9t th\u00e0nh t\u1ed1 c\u01a1 b\u1ea3n, l\u00e0 h\u1ea1t nh\u00e2n c\u1ee7a \u00fd th\u1ee9c th\u1ea9m m\u1ef9", "C. L\u00e0 m\u1ed9t th\u00e0nh t\u1ed1 c\u01a1 b\u1ea3n, l\u00e0 h\u1ea1t nh\u00e2n c\u1ee7a nh\u1eadn th\u1ee9c th\u1ea9m m\u1ef9", "D. L\u00e0 m\u1ed9t th\u00e0nh t\u1ed1 c\u01a1 b\u1ea3n, l\u00e0 h\u1ea1t nh\u00e2n c\u1ee7a ho\u1ea1t \u0111\u1ed9ng th\u1ea9m m\u1ef9"],
-    correct: 1
+    id: "CH053",
+    question: "Lý tưởng thẩm mỹ là gì?",
+    answers: ["Là một thành tố cơ bản, là hạt nhân của thẩm mỹ", "Là một thành tố cơ bản, là hạt nhân của ý thức thẩm mỹ", "Là một thành tố cơ bản, là hạt nhân của nhận thức thẩm mỹ", "Là một thành tố cơ bản, là hạt nhân của hoạt động thẩm mỹ"],
+    correct: [1]
   },
   {
-    question: "Nh\u1eefng h\u00ecnh t\u01b0\u1ee3ng trong l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 th\u01b0\u1eddng l\u00e0 con ng\u01b0\u1eddi thu\u1ed9c y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. Thu\u1ed9c m\u1ed9t t\u1ea7ng l\u1edbp trong x\u00e3 h\u1ed9i nh\u1ea5t \u0111\u1ecbnh v\u1edbi nh\u1eefng quan h\u1ec7 c\u1ee5 th\u1ec3 c\u1ee7a h\u1ecd v\u1edbi th\u1ebf gi\u1edbi xung quanh", "B. M\u1ed9t th\u1eddi \u0111\u1ea1i nh\u1ea5t \u0111\u1ecbnh v\u00e0 nh\u1eefng quan h\u1ec7 c\u1ee5 th\u1ec3 c\u1ee7a h\u1ecd v\u1edbi th\u1ebf gi\u1edbi xung quanh", "C. M\u1ed9t th\u1eddi \u0111\u1ea1i nh\u1ea5t \u0111\u1ecbnh, thu\u1ed9c m\u1ed9t t\u1ea7ng l\u1edbp trong x\u00e3 h\u1ed9i nh\u1ea5t \u0111\u1ecbnh", "D. M\u1ed9t th\u1eddi \u0111\u1ea1i nh\u1ea5t \u0111\u1ecbnh, thu\u1ed9c m\u1ed9t t\u1ea7ng l\u1edbp trong x\u00e3 h\u1ed9i nh\u1ea5t \u0111\u1ecbnh v\u1edbi nh\u1eefng quan h\u1ec7 c\u1ee5 th\u1ec3 c\u1ee7a h\u1ecd v\u1edbi th\u1ebf gi\u1edbi xung quanh"],
-    correct: 3
+    id: "CH054",
+    question: "Những hình tượng trong lý tưởng thẩm mỹ thường là con người thuộc yếu tố nào?",
+    answers: ["Thuộc một tầng lớp trong xã hội nhất định với những quan hệ cụ thể của họ với thế giới xung quanh", "Một thời đại nhất định và những quan hệ cụ thể của họ với thế giới xung quanh", "Một thời đại nhất định, thuộc một tầng lớp trong xã hội nhất định", "Một thời đại nhất định, thuộc một tầng lớp trong xã hội nhất định với những quan hệ cụ thể của họ với thế giới xung quanh"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Th\u00f4ng th\u01b0\u1eddng l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n \u2026 qua c\u00e1c h\u00ecnh t\u01b0\u1ee3ng nh\u1eefng nh\u00e2n v\u1eadt t\u00edch c\u1ef1c, nh\u00e2n v\u1eadt ch\u00ednh di\u1ec7n, nh\u00e2n v\u1eadt anh h\u00f9ng?",
-    answers: ["A. Gi\u00e1n ti\u1ebfp", "B. Tr\u1ef1c ti\u1ebfp", "C. Trung gian", "D. Tr\u1ef1c ti\u1ebfp ho\u1eb7c gi\u00e1n ti\u1ebfp"],
-    correct: 1
+    id: "CH055",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Thông thường lý tưởng thẩm mỹ được thể hiện … qua các hình tượng những nhân vật tích cực, nhân vật chính diện, nhân vật anh hùng?",
+    answers: ["Gián tiếp", "Trực tiếp", "Trung gian", "Trực tiếp hoặc gián tiếp"],
+    correct: [1]
   },
   {
-    question: "C\u00f3 m\u1ea5y nh\u00f3m ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9?",
-    answers: ["A. 3", "B. 4", "C. 5", "D. 6"],
-    correct: 2
+    id: "CH056",
+    question: "Có mấy nhóm chủ thể thẩm mỹ?",
+    answers: ["3", "4", "5", "6"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 theo \u2026 \u0111\u1ec1u h\u01b0\u1edbng t\u1edbi l\u00e0m cho con ng\u01b0\u1eddi ph\u00e1t tri\u1ec3n phong ph\u00fa v\u00e0 h\u00e0i h\u00f2a v\u00e0 l\u00e0m cho v\u0103n h\u00f3a th\u1ea9m m\u1ef9 \u0111\u01b0\u1ee3c x\u00e1c l\u1eadp trong c\u00e1c quan h\u1ec7 x\u00e3 h\u1ed9i?",
-    answers: ["A. Tri\u1ebft l\u00fd hay t\u01b0 t\u01b0\u1edfng", "B. Ngh\u0129a h\u1eb9p hay ngh\u0129a r\u1ed9ng", "C. Ngh\u0129a b\u00f3ng hay ngh\u0129a \u0111en", "D. Th\u00e0nh ph\u1ea7n hay t\u1ed5ng h\u1ee3p"],
-    correct: 1
+    id: "CH057",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Giáo dục thẩm mỹ theo … đều hướng tới làm cho con người phát triển phong phú và hài hòa và làm cho văn hóa thẩm mỹ được xác lập trong các quan hệ xã hội?",
+    answers: ["Triết lý hay tư tưởng", "Nghĩa hẹp hay nghĩa rộng", "Nghĩa bóng hay nghĩa đen", "Thành phần hay tổng hợp"],
+    correct: [1]
   },
   {
-    question: "Gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 l\u00e0m h\u00ecnh th\u00e1i n\u0103ng \u0111\u1ed9ng c\u1ee7a ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 ph\u00e1t tri\u1ec3n nh\u01b0 th\u1ebf n\u00e0o tr\u00ean c\u01a1 s\u1edf nh\u00e2n sinh quan v\u00e0 th\u1ebf gi\u1edbi quan \u0111\u00fang \u0111\u1eafn?",
-    answers: ["A. M\u1ea1nh m\u1ebd ho\u1eb7c t\u1ef1 do", "B. T\u1ef1 do", "C. M\u1ea1nh m\u1ebd", "D. M\u1ea1nh m\u1ebd v\u00e0 t\u1ef1 do"],
-    correct: 3
+    id: "CH058",
+    question: "Giáo dục thẩm mỹ làm hình thái năng động của chủ thể thẩm mỹ phát triển như thế nào trên cơ sở nhân sinh quan và thế giới quan đúng đắn?",
+    answers: ["Mạnh mẽ hoặc tự do", "Tự do", "Mạnh mẽ", "Mạnh mẽ và tự do"],
+    correct: [3]
   },
   {
-    question: "H\u00ecnh th\u1ee9c gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 th\u1ee9 hai l\u00e0 g\u00ec?",
-    answers: ["A. Th\u00f4ng qua c\u1ea3i thi\u1ec7n m\u00f4i tr\u01b0\u1eddng th\u1ea9m m\u1ef9, \u0103n m\u1eb7c \u0111\u1ed1i v\u1edbi v\u1eadt d\u1ee5ng v\u00e0 v\u1edbi m\u00f4i tr\u01b0\u1eddng s\u1ed1ng", "B. Th\u00f4ng qua c\u1ea3i thi\u1ec7n m\u00f4i tr\u01b0\u1eddng th\u1ea9m m\u1ef9, trong \u0111\u00f3 c\u00f3 v\u0103n h\u00f3a giao ti\u1ebfp, quan h\u1ec7 \u0111\u1ed1i v\u1edbi v\u1eadt d\u1ee5ng", "C. M\u00f4i tr\u01b0\u1eddng th\u1ea9m m\u1ef9, trong \u0111\u00f3 c\u00f3 v\u0103n h\u00f3a, \u0103n m\u1eb7c, quan h\u1ec7 \u0111\u1ed1i v\u1edbi v\u1eadt d\u1ee5ng v\u00e0 v\u1edbi m\u00f4i tr\u01b0\u1eddng s\u1ed1ng", "D. Th\u00f4ng qua c\u1ea3i thi\u1ec7n m\u00f4i tr\u01b0\u1eddng th\u1ea9m m\u1ef9, trong \u0111\u00f3 c\u00f3 v\u0103n h\u00f3a giao ti\u1ebfp, \u0103n m\u1eb7c, quan h\u1ec7 \u0111\u1ed1i v\u1edbi v\u1eadt d\u1ee5ng v\u00e0 v\u1edbi m\u00f4i tr\u01b0\u1eddng s\u1ed1ng"],
-    correct: 3
+    id: "CH059",
+    question: "Hình thức giáo dục thẩm mỹ thứ hai là gì?",
+    answers: ["Thông qua cải thiện môi trường thẩm mỹ, ăn mặc đối với vật dụng và với môi trường sống", "Thông qua cải thiện môi trường thẩm mỹ, trong đó có văn hóa giao tiếp, quan hệ đối với vật dụng", "Môi trường thẩm mỹ, trong đó có văn hóa, ăn mặc, quan hệ đối với vật dụng và với môi trường sống", "Thông qua cải thiện môi trường thẩm mỹ, trong đó có văn hóa giao tiếp, ăn mặc, quan hệ đối với vật dụng và với môi trường sống"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Nh\u00f3m ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c ph\u1ea3n \u00e1nh th\u1ee5 c\u1ea3m nh\u1eefng qu\u00e1 tr\u00ecnh th\u1ea9m m\u1ef9 x\u1ea3y ra trong \u2026 nh\u1edd v\u00e0o gi\u00e1c quan m\u00e0 t\u00edch l\u0169y \u0111\u01b0\u1ee3c nh\u1eefng gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9?",
-    answers: ["A. Cu\u1ed9c s\u1ed1ng v\u00e0 th\u1ea9m m\u1ef9", "B. Cu\u1ed9c s\u1ed1ng v\u00e0 x\u00e3 h\u1ed9i", "C. Cu\u1ed9c s\u1ed1ng v\u00e0 ngh\u1ec7 thu\u1eadt", "D. Tinh th\u1ea7n v\u00e0 ngh\u1ec7 thu\u1eadt"],
-    correct: 2
+    id: "CH060",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nhóm chủ thể thưởng thức phản ánh thụ cảm những quá trình thẩm mỹ xảy ra trong … nhờ vào giác quan mà tích lũy được những giá trị thẩm mỹ?",
+    answers: ["Cuộc sống và thẩm mỹ", "Cuộc sống và xã hội", "Cuộc sống và nghệ thuật", "Tinh thần và nghệ thuật"],
+    correct: [2]
   },
   {
-    question: "Nh\u00f3m \u0111\u1ecbnh h\u01b0\u1edbng c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 gi\u1eef vai tr\u00f2 nh\u01b0 th\u1ebf n\u00e0o trong vi\u1ec7c li\u00ean k\u1ebft c\u00e1c s\u1ea3n ph\u1ea9m s\u00e1ng t\u1ea1o c\u00f3 gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 cao v\u1edbi ng\u01b0\u1eddi ti\u00eau th\u1ee5?",
-    answers: ["A. Ch\u1ee7 y\u1ebfu", "B. \u0110\u1eb7c bi\u1ec7t", "C. \u0110\u1ecbnh h\u01b0\u1edbng", "D. Quan tr\u1ecdng"],
-    correct: 3
+    id: "CH061",
+    question: "Nhóm định hướng các giá trị thẩm mỹ giữ vai trò như thế nào trong việc liên kết các sản phẩm sáng tạo có giá trị thẩm mỹ cao với người tiêu thụ?",
+    answers: ["Chủ yếu", "Đặc biệt", "Định hướng", "Quan trọng"],
+    correct: [3]
   },
   {
-    question: "T\u00ednh ch\u1ea5t s\u00e1ng t\u1ea1o c\u1ee7a ch\u1ee7 th\u1ec3 \u0111\u00e1nh gi\u00e1 c\u00f2n c\u00f3 vai tr\u00f2 quan tr\u1ecdng \u1edf ch\u1ed7 khai th\u00e1c c\u00e1c gi\u00e1 tr\u1ecb n\u00e0o?",
-    answers: ["A. Gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 kh\u00f4ng c\u00f2n ch\u00ecm \u1ea9n trong c\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "B. Gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 ch\u01b0a t\u00ecm th\u1ea5y nhi\u1ec1u trong c\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "C. Gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u00f2n nguy\u00ean v\u1eb9n trong c\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "D. Gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u00f2n ch\u00ecm \u1ea9n trong c\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH062",
+    question: "Tính chất sáng tạo của chủ thể đánh giá còn có vai trò quan trọng ở chỗ khai thác các giá trị nào?",
+    answers: ["Giá trị thẩm mỹ không còn chìm ẩn trong các tác phẩm nghệ thuật", "Giá trị thẩm mỹ chưa tìm thấy nhiều trong các tác phẩm nghệ thuật", "Giá trị thẩm mỹ còn nguyên vẹn trong các tác phẩm nghệ thuật", "Giá trị thẩm mỹ còn chìm ẩn trong các tác phẩm nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "Ho\u1ea1t \u0111\u1ed9ng n\u00e0o ra nh\u1eefng gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 tr\u01b0\u1edbc h\u1ebft c\u0169ng l\u00e0 nh\u1eefng ho\u1ea1t \u0111\u1ed9ng ph\u1ea3n \u00e1nh?",
-    answers: ["A. Ho\u1ea1t \u0111\u1ed9ng th\u1ef1c ti\u1ec5n", "B. Ho\u1ea1t \u0111\u1ed9ng s\u1ea3n xu\u1ea5t", "C. Ho\u1ea1t \u0111\u1ed9ng tinh th\u1ea7n", "D. Ho\u1ea1t \u0111\u1ed9ng gia c\u00f4ng"],
-    correct: 1
+    id: "CH063",
+    question: "Hoạt động nào ra những giá trị thẩm mỹ trước hết cũng là những hoạt động phản ánh?",
+    answers: ["Hoạt động thực tiễn", "Hoạt động sản xuất", "Hoạt động tinh thần", "Hoạt động gia công"],
+    correct: [1]
   },
   {
-    question: "M\u1ee5c \u0111\u00edch c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 nh\u1eadn \u0111\u1ecbnh v\u1ec1 \u0111\u1ed1i t\u01b0\u1ee3ng v\u00e0 n\u00eau l\u00ean nh\u1eefng n\u00e9t n\u1ed5i b\u1eadt, ch\u00ednh x\u00e1c c\u1ee7a \u0111\u1ed1i t\u01b0\u1ee3ng", "B. L\u00e0 li\u00ean k\u1ebft nh\u1eefng nh\u1eadn th\u1ee9c v\u1ec1 \u0111\u1ed1i t\u01b0\u1ee3ng ch\u00ednh x\u00e1c c\u1ee7a \u0111\u1ed1i t\u01b0\u1ee3ng", "C. L\u00e0 li\u00ean k\u1ebft nh\u1eefng x\u00fac c\u1ea3m v\u1ec1 \u0111\u1ed1i t\u01b0\u1ee3ng v\u00e0 n\u00eau l\u00ean nh\u1eefng n\u00e9t n\u1ed5i b\u1eadt, ch\u00ednh x\u00e1c c\u1ee7a \u0111\u1ed1i t\u01b0\u1ee3ng", "D. L\u00e0 li\u00ean k\u1ebft nh\u1eefng th\u1ea9m m\u1ef9 v\u1ec1 \u0111\u1ed1i t\u01b0\u1ee3ng v\u00e0 n\u00eau l\u00ean nh\u1eefng n\u00e9t n\u1ed5i b\u1eadt"],
-    correct: 2
+    id: "CH064",
+    question: "Mục đích của chủ thể sáng tạo là gì?",
+    answers: ["Là nhận định về đối tượng và nêu lên những nét nổi bật, chính xác của đối tượng", "Là liên kết những nhận thức về đối tượng chính xác của đối tượng", "Là liên kết những xúc cảm về đối tượng và nêu lên những nét nổi bật, chính xác của đối tượng", "Là liên kết những thẩm mỹ về đối tượng và nêu lên những nét nổi bật"],
+    correct: [2]
   },
   {
-    question: "Trong ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt th\u00ec y\u1ebfu t\u1ed1 n\u00e0o c\u00f3 vai tr\u00f2 c\u1ef1c k\u1ef3 quan tr\u1ecdng?",
-    answers: ["A. T\u01b0\u1edfng t\u01b0\u1ee3ng v\u00e0 c\u00e1 t\u00ednh s\u00e1ng t\u1ea1o", "B. T\u01b0\u1edfng t\u01b0\u1ee3ng, li\u00ean t\u01b0\u1edfng", "C. T\u01b0\u1edfng t\u01b0\u1ee3ng, li\u00ean t\u01b0\u1edfng v\u00e0 c\u00e1 t\u00ednh s\u00e1ng t\u1ea1o", "D. Li\u00ean t\u01b0\u1edfng v\u00e0 c\u00e1 t\u00ednh s\u00e1ng t\u1ea1o"],
-    correct: 2
+    id: "CH065",
+    question: "Trong chủ thể sáng tạo nghệ thuật thì yếu tố nào có vai trò cực kỳ quan trọng?",
+    answers: ["Tưởng tượng và cá tính sáng tạo", "Tưởng tượng, liên tưởng", "Tưởng tượng, liên tưởng và cá tính sáng tạo", "Liên tưởng và cá tính sáng tạo"],
+    correct: [2]
   },
   {
-    question: "Nh\u00f3m ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 m\u1ed9t nh\u00f3m ch\u1ee7 th\u1ec3 th\u1ef1c hi\u1ec7n vi\u1ec7c truy\u1ec1n \u0111\u1ea1t s\u1ea3n ph\u1ea9m c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9", "B. L\u00e0 m\u1ed9t nh\u00f3m ch\u1ee7 th\u1ec3 th\u1ef1c hi\u1ec7n vi\u1ec7c s\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9 cho ch\u1ee7 th\u1ec3 ti\u00eau th\u1ee5 th\u1ea9m \u0111\u1ecbnh", "C. L\u00e0 m\u1ed9t nh\u00f3m c\u00e1 th\u1ec3 th\u1ef1c hi\u1ec7n vi\u1ec7c truy\u1ec1n \u0111\u1ea1t s\u1ea3n ph\u1ea9m c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9 cho ch\u1ee7 th\u1ec3 ti\u00eau th\u1ee5 th\u1ea9m m\u1ef9", "D. L\u00e0 m\u1ed9t nh\u00f3m ch\u1ee7 th\u1ec3 th\u1ef1c hi\u1ec7n vi\u1ec7c truy\u1ec1n \u0111\u1ea1t s\u1ea3n ph\u1ea9m c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9 cho ch\u1ee7 th\u1ec3 ti\u00eau th\u1ee5 th\u1ea9m m\u1ef9"],
-    correct: 3
+    id: "CH066",
+    question: "Nhóm chủ thể biểu hiện thẩm mỹ là gì?",
+    answers: ["Là một nhóm chủ thể thực hiện việc truyền đạt sản phẩm của chủ thể sáng tạo thẩm mỹ", "Là một nhóm chủ thể thực hiện việc sáng tạo thẩm mỹ cho chủ thể tiêu thụ thẩm định", "Là một nhóm cá thể thực hiện việc truyền đạt sản phẩm của chủ thể sáng tạo thẩm mỹ cho chủ thể tiêu thụ thẩm mỹ", "Là một nhóm chủ thể thực hiện việc truyền đạt sản phẩm của chủ thể sáng tạo thẩm mỹ cho chủ thể tiêu thụ thẩm mỹ"],
+    correct: [3]
   },
   {
-    question: "M\u1ed7i ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n kh\u00f4ng th\u1ec3 t\u1ef1 m\u00ecnh bi\u1ec3u \u0111\u1ea1t \u0111\u01b0\u1ee3c c\u00e1c s\u1ea3n ph\u1ea9m s\u00e1ng t\u1ea1o m\u00e0 h\u1ecd c\u1ea7n ph\u1ea3i c\u00f3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0o \u0111\u1ec3 bi\u1ec3u \u0111\u1ea1t?",
-    answers: ["A. V\u1eadt ch\u1ea5t, tinh th\u1ea7n", "B. C\u01a1 c\u1ea5u, ph\u01b0\u01a1ng ti\u1ec7n", "C. C\u00f4ng c\u1ee5, ph\u01b0\u01a1ng ti\u1ec7n", "D. C\u00f4ng c\u1ee5 ho\u1eb7c ph\u01b0\u01a1ng ti\u1ec7n"],
-    correct: 2
+    id: "CH067",
+    question: "Mỗi chủ thể biểu hiện không thể tự mình biểu đạt được các sản phẩm sáng tạo mà họ cần phải có những yếu tố nào để biểu đạt?",
+    answers: ["Vật chất, tinh thần", "Cơ cấu, phương tiện", "Công cụ, phương tiện", "Công cụ hoặc phương tiện"],
+    correct: [2]
   },
   {
-    question: "C\u00e1c ph\u01b0\u01a1ng ti\u1ec7n c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 t\u1ed5ng h\u1ee3p c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 bao g\u1ed3m c\u00e1c s\u1ea3n ph\u1ea9m c\u1ee7a nh\u1eefng ng\u01b0\u1eddi n\u00e0o?",
-    answers: ["A. C\u00e1c c\u00f4ng c\u1ee5 s\u00e1ng t\u1ea1o c\u1ee7a ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n v\u00e0 c\u1ea3 b\u1ea3n th\u00e2n ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n", "B. C\u00e1c th\u1ee7 ph\u00e1p s\u00e1ng t\u1ea1o, c\u00e1c c\u00f4ng c\u1ee5 s\u00e1ng t\u1ea1o c\u1ee7a ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n v\u00e0 c\u1ea3 b\u1ea3n th\u00e2n ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n", "C. Ng\u01b0\u1eddi s\u00e1ng t\u1ea1o, c\u00e1c c\u00f4ng c\u1ee5 s\u00e1ng t\u1ea1o c\u1ee7a ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n v\u00e0 c\u1ea3 b\u1ea3n th\u00e2n ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n", "D. Ng\u01b0\u1eddi s\u00e1ng t\u1ea1o, c\u00e1c th\u1ee7 ph\u00e1p s\u00e1ng t\u1ea1o, c\u00e1c c\u00f4ng c\u1ee5 s\u00e1ng t\u1ea1o c\u1ee7a ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n v\u00e0 c\u1ea3 b\u1ea3n th\u00e2n ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n"],
-    correct: 3
+    id: "CH068",
+    question: "Các phương tiện của nhóm chủ thể tổng hợp các giá trị thẩm mỹ bao gồm các sản phẩm của những người nào?",
+    answers: ["Các công cụ sáng tạo của chủ thể biểu hiện và cả bản thân chủ thể biểu hiện", "Các thủ pháp sáng tạo, các công cụ sáng tạo của chủ thể biểu hiện và cả bản thân chủ thể biểu hiện", "Người sáng tạo, các công cụ sáng tạo của chủ thể biểu hiện và cả bản thân chủ thể biểu hiện", "Người sáng tạo, các thủ pháp sáng tạo, các công cụ sáng tạo của chủ thể biểu hiện và cả bản thân chủ thể biểu hiện"],
+    correct: [3]
   },
   {
-    question: "Lao \u0111\u1ed9ng \u0111\u1ea1t \u0111\u1ebfn \u0111\u1ed9 th\u00e0nh th\u1ea1o kh\u00e9o l\u00e9o \u0111\u01b0\u1ee3c coi l\u00e0 lao \u0111\u1ed9ng g\u00ec?",
-    answers: ["A. Lao \u0111\u1ed9ng ngh\u1ec7 thu\u1eadt", "B. Ho\u1ea1t \u0111\u1ed9ng ngh\u1ec7 thu\u1eadt", "C. V\u0103n h\u00f3a ngh\u1ec7 thu\u1eadt", "D. Tri\u1ec3n l\u00e3m ngh\u1ec7 thu\u1eadt"],
-    correct: 0
+    id: "CH069",
+    question: "Lao động đạt đến độ thành thạo khéo léo được coi là lao động gì?",
+    answers: ["Lao động nghệ thuật", "Hoạt động nghệ thuật", "Văn hóa nghệ thuật", "Triển lãm nghệ thuật"],
+    correct: [0]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng nghi\u00ean c\u1ee9u c\u1ee7a l\u0129nh v\u1ef1c n\u00e0o?",
-    answers: ["A. V\u0103n h\u1ecdc", "B. M\u1ef9 h\u1ecdc", "C. Tri\u1ebft h\u1ecdc", "D. Khoa h\u1ecdc"],
-    correct: 1
+    id: "CH070",
+    question: "Nghệ thuật là đối tượng nghiên cứu của lĩnh vực nào?",
+    answers: ["Văn học", "Mỹ học", "Triết học", "Khoa học"],
+    correct: [1]
   },
   {
-    question: "L\u0129nh v\u1ef1c n\u00e0o \u0111\u01b0\u1ee3c coi nh\u01b0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i?",
-    answers: ["A. Th\u1ea9m m\u1ef9", "B. C\u00e1i \u0111\u1eb9p", "C. Cu\u1ed9c s\u1ed1ng", "D. Ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH071",
+    question: "Lĩnh vực nào được coi như một hình thái ý thức xã hội?",
+    answers: ["Thẩm mỹ", "Cái đẹp", "Cuộc sống", "Nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt c\u00f3 m\u1ea5y ch\u1ee9c n\u0103ng x\u00e3 h\u1ed9i c\u01a1 b\u1ea3n?",
-    answers: ["A. 2", "B. 3", "C. 4", "D. 5"],
-    correct: 1
+    id: "CH072",
+    question: "Nghệ thuật có mấy chức năng xã hội cơ bản?",
+    answers: ["2", "3", "4", "5"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ch\u1ee9c n\u0103ng th\u1ecfa m\u00e3n nhu c\u1ea7u th\u1ea9m m\u1ef9 c\u1ee7a c\u00e1c \u2026 n\u00f3i chung, \u0111\u00f3 l\u00e0 ch\u1ee9c n\u0103ng \u0111\u1eb7c th\u00f9 c\u1ee7a ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. C\u00e1 nh\u00e2n v\u00e0 x\u00e3 h\u1ed9i", "B. C\u00e1 nh\u00e2n v\u00e0 t\u1eadp th\u1ec3", "C. T\u1eadp th\u1ec3 v\u00e0 x\u00e3 h\u1ed9i", "D. C\u00e1 th\u1ec3 v\u00e0 t\u1eadp th\u1ec3"],
-    correct: 0
+    id: "CH073",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Chức năng thỏa mãn nhu cầu thẩm mỹ của các … nói chung, đó là chức năng đặc thù của nghệ thuật?",
+    answers: ["Cá nhân và xã hội", "Cá nhân và tập thể", "Tập thể và xã hội", "Cá thể và tập thể"],
+    correct: [0]
   },
   {
-    question: "Ch\u1ee9c n\u0103ng nh\u1eadn th\u1ee9c \u2013 ph\u1ea3n \u00e1nh c\u1ee7a ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Ch\u1ee9c n\u0103ng ch\u1ee7 y\u1ebfu v\u1edbi m\u1ecdi h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i", "B. Ch\u1ee9c n\u0103ng ch\u1ee7 y\u1ebfu v\u1edbi m\u1ecdi h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i, trong \u0111\u00f3 \u00fd th\u1ee9c th\u1ea9m m\u1ef9", "C. Ch\u1ee9c n\u0103ng ch\u1ee7 y\u1ebfu v\u1edbi m\u1ecdi h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i, \u0111\u01b0\u1ee3c t\u1eadp trung m\u1ed9t c\u00e1ch cao nh\u1ea5t trong ngh\u1ec7 thu\u1eadt", "D. Ch\u1ee9c n\u0103ng ch\u1ee7 y\u1ebfu v\u1edbi m\u1ecdi h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i, trong \u0111\u00f3 \u00fd th\u1ee9c th\u1ea9m m\u1ef9, \u0111\u01b0\u1ee3c t\u1eadp trung m\u1ed9t c\u00e1ch cao nh\u1ea5t trong ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH074",
+    question: "Chức năng nhận thức – phản ánh của nghệ thuật là gì?",
+    answers: ["Chức năng chủ yếu với mọi hình thái ý thức xã hội", "Chức năng chủ yếu với mọi hình thái ý thức xã hội, trong đó ý thức thẩm mỹ", "Chức năng chủ yếu với mọi hình thái ý thức xã hội, được tập trung một cách cao nhất trong nghệ thuật", "Chức năng chủ yếu với mọi hình thái ý thức xã hội, trong đó ý thức thẩm mỹ, được tập trung một cách cao nhất trong nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt ph\u1ea3n \u00e1nh quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi v\u1edbi y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. Hi\u1ec7n th\u1ef1c kh\u00e1ch quan", "B. Hi\u1ec7n th\u1ef1c ch\u1ee7 quan", "C. Th\u1ebf gi\u1edbi hi\u1ec7n th\u1ef1c kh\u00e1ch quan", "D. Th\u1ebf gi\u1edbi hi\u1ec7n th\u1ef1c t\u01b0\u01a1ng quan"],
-    correct: 2
+    id: "CH075",
+    question: "Nghệ thuật phản ánh quan hệ thẩm mỹ của con người với yếu tố nào?",
+    answers: ["Hiện thực khách quan", "Hiện thực chủ quan", "Thế giới hiện thực khách quan", "Thế giới hiện thực tương quan"],
+    correct: [2]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt v\u00e0 tri\u1ebft h\u1ecdc l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ed9t d\u1ea1ng ho\u1ea1t \u0111\u1ed9ng tinh th\u1ea7n c\u00f3 v\u1ecb tr\u00ed, vai tr\u00f2, ch\u1ee9c n\u0103ng kh\u00e1c nhau, nh\u01b0ng c\u00f3 m\u1ed1i quan h\u1ec7 m\u1eadt thi\u1ebft v\u1edbi nhau", "B. Hai d\u1ea1ng ho\u1ea1t \u0111\u1ed9ng tinh th\u1ea7n c\u00f3 v\u1ecb tr\u00ed, nh\u01b0ng c\u00f3 m\u1ed1i quan h\u1ec7 m\u1eadt thi\u1ebft v\u1edbi nhau", "C. Hai d\u1ea1ng ho\u1ea1t \u0111\u1ed9ng tinh th\u1ea7n c\u00f3 v\u1ecb tr\u00ed, vai tr\u00f2, ch\u1ee9c n\u0103ng kh\u00e1c nhau, nh\u01b0ng c\u00f3 m\u1ed1i quan h\u1ec7 m\u1eadt thi\u1ebft v\u1edbi nhau", "D. Hai d\u1ea1ng ho\u1ea1t \u0111\u1ed9ng tinh th\u1ea7n c\u00f3 v\u1ecb tr\u00ed, vai tr\u00f2, ch\u1ee9c n\u0103ng kh\u00e1c nhau"],
-    correct: 2
+    id: "CH076",
+    question: "Nghệ thuật và triết học là gì?",
+    answers: ["Một dạng hoạt động tinh thần có vị trí, vai trò, chức năng khác nhau, nhưng có mối quan hệ mật thiết với nhau", "Hai dạng hoạt động tinh thần có vị trí, nhưng có mối quan hệ mật thiết với nhau", "Hai dạng hoạt động tinh thần có vị trí, vai trò, chức năng khác nhau, nhưng có mối quan hệ mật thiết với nhau", "Hai dạng hoạt động tinh thần có vị trí, vai trò, chức năng khác nhau"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: C\u01a1 s\u1edf m\u1ee5c \u0111\u00edch v\u00e0 ti\u00eau ch\u00ed c\u1ee7a khoa h\u1ecdc \u0111\u01b0\u1ee3c di\u1ec5n ra trong h\u1ec7 th\u1ed1ng c\u00e1c \u2026 d\u1ef1 \u0111o\u00e1n kh\u00e1m ph\u00e1 h\u01b0\u1edbng t\u1edbi tri th\u1ee9c?",
-    answers: ["A. Kh\u00e1i ni\u1ec7m, ph\u1ea1m tr\u00f9, \u0111\u1ecbnh l\u00fd, \u0111\u1ecbnh lu\u1eadt, gi\u1ea3 thuy\u1ebft", "B. Ph\u1ea1m tr\u00f9, \u0111\u1ecbnh l\u00fd, \u0111\u1ecbnh lu\u1eadt, gi\u1ea3 thuy\u1ebft", "C. Kh\u00e1i ni\u1ec7m, ph\u1ea1m tr\u00f9, \u0111\u1ecbnh l\u00fd, \u0111\u1ecbnh lu\u1eadt", "D. Kh\u00e1i ni\u1ec7m, ph\u1ea1m tr\u00f9, \u0111\u1ecbnh l\u00fd, gi\u1ea3 thuy\u1ebft"],
-    correct: 0
+    id: "CH077",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Cơ sở mục đích và tiêu chí của khoa học được diễn ra trong hệ thống các … dự đoán khám phá hướng tới tri thức?",
+    answers: ["Khái niệm, phạm trù, định lý, định luật, giả thuyết", "Phạm trù, định lý, định luật, giả thuyết", "Khái niệm, phạm trù, định lý, định luật", "Khái niệm, phạm trù, định lý, giả thuyết"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ng\u01b0\u1eddi ngh\u1ec7 s\u0129 s\u1ed1ng v\u00e0 s\u00e1ng t\u00e1c bao gi\u1edd c\u0169ng ph\u1ea3i \u0111\u1ee9ng trong \u2026 n\u00e0o \u0111\u00f3?",
-    answers: ["A. M\u1ed9t t\u1eadp \u0111o\u00e0n, m\u1ed9t giai c\u1ea5p, m\u1ed9t qu\u1ed1c gia", "B. M\u1ed9t giai c\u1ea5p, m\u1ed9t qu\u1ed1c gia", "C. M\u1ed9t t\u1eadp \u0111o\u00e0n, m\u1ed9t giai c\u1ea5p", "D. M\u1ed9t t\u1eadp \u0111o\u00e0n, m\u1ed9t qu\u1ed1c gia"],
-    correct: 0
+    id: "CH078",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Người nghệ sĩ sống và sáng tác bao giờ cũng phải đứng trong … nào đó?",
+    answers: ["Một tập đoàn, một giai cấp, một quốc gia", "Một giai cấp, một quốc gia", "Một tập đoàn, một giai cấp", "Một tập đoàn, một quốc gia"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: C\u00f3 n\u1ed9i dung t\u1ed1t \u2026.. s\u1ebd l\u00e0m cho c\u00f4ng ch\u00fang c\u00f3 \u0111\u1ea1o \u0111\u1ee9c t\u1ed1t?",
-    answers: ["A. H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt", "B. Cu\u1ed9c s\u1ed1ng ngh\u1ec7 thu\u1eadt", "C. T\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "D. V\u0103n h\u00f3a ngh\u1ec7 thu\u1eadt"],
-    correct: 2
+    id: "CH079",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Có nội dung tốt ….. sẽ làm cho công chúng có đạo đức tốt?",
+    answers: ["Hình tượng nghệ thuật", "Cuộc sống nghệ thuật", "Tác phẩm nghệ thuật", "Văn hóa nghệ thuật"],
+    correct: [2]
   },
   {
-    question: "C\u00e1i g\u00ec ph\u1ea3n \u00e1nh s\u1ef1 t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i nh\u1ea5t \u0111\u1ecbnh?",
-    answers: ["A. V\u0103n h\u00f3a v\u00e0 ngh\u1ec7 thu\u1eadt", "B. M\u1ef9 h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt", "C. Khoa h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt", "D. T\u00f4n gi\u00e1o v\u00e0 ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH080",
+    question: "Cái gì phản ánh sự tồn tại xã hội nhất định?",
+    answers: ["Văn hóa và nghệ thuật", "Mỹ học và nghệ thuật", "Khoa học và nghệ thuật", "Tôn giáo và nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "T\u00f4n gi\u00e1o c\u00f3 th\u1ec3 d\u00f9ng ngh\u1ec7 thu\u1eadt \u0111\u1ec3 l\u00e0m h\u00ecnh th\u1ee9c g\u00ec trong m\u1ef9 h\u1ecdc?",
-    answers: ["A. Bi\u1ec3u hi\u1ec7n", "B. H\u00e0nh \u0111\u1ed9ng", "C. Chi ph\u1ed1i", "D. \u0110i\u1ec1u khi\u1ec3n"],
-    correct: 0
+    id: "CH081",
+    question: "Tôn giáo có thể dùng nghệ thuật để làm hình thức gì trong mỹ học?",
+    answers: ["Biểu hiện", "Hành động", "Chi phối", "Điều khiển"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t \u2026\u2026., n\u00ean n\u00f3 c\u0169ng mang b\u1ea3n ch\u1ea5t c\u1ee7a nh\u1eadn th\u1ee9c chung?",
-    answers: ["A. Tri th\u1ee9c nh\u1eadn th\u1ee9c", "B. H\u00ecnh th\u1ee9c nh\u1eadn th\u1ee9c", "C. H\u00e0nh \u0111\u1ed9ng nh\u1eadn th\u1ee9c", "D. Tr\u1ea1ng th\u00e1i nh\u1eadn th\u1ee9c"],
-    correct: 1
+    id: "CH082",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nghệ thuật là một ……., nên nó cũng mang bản chất của nhận thức chung?",
+    answers: ["Tri thức nhận thức", "Hình thức nhận thức", "Hành động nhận thức", "Trạng thái nhận thức"],
+    correct: [1]
   },
   {
-    question: "Trong th\u1eddi k\u1ef3 Ph\u1ee5c H\u01b0ng, l\u00fd thuy\u1ebft n\u00e0o \u0111\u00e3 tr\u1edf th\u00e0nh nguy\u00ean l\u00fd ph\u00e2n t\u00edch ngh\u1ec7 thu\u1eadt ph\u1ed5 bi\u1ebfn?",
-    answers: ["A. H\u00e0i h\u01b0\u1edbc", "B. M\u1ef9 h\u1ecdc", "C. B\u1eaft ch\u01b0\u1edbc", "D. Khoa h\u1ecdc"],
-    correct: 2
+    id: "CH083",
+    question: "Trong thời kỳ Phục Hưng, lý thuyết nào đã trở thành nguyên lý phân tích nghệ thuật phổ biến?",
+    answers: ["Hài hước", "Mỹ học", "Bắt chước", "Khoa học"],
+    correct: [2]
   },
   {
-    question: "T\u00ednh \u0111\u1eb7c th\u00f9 c\u1ee7a s\u1ef1 ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c trong ngh\u1ec7 thu\u1eadt \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n th\u00f4ng qua qu\u00e1 tr\u00ecnh n\u00e0o?",
-    answers: ["A. Qu\u00e1 tr\u00ecnh con ng\u01b0\u1eddi ti\u1ebfn h\u00f3a th\u1ebf gi\u1edbi", "B. Qu\u00e1 tr\u00ecnh con ng\u01b0\u1eddi c\u1ea3m h\u00f3a th\u1ebf gi\u1edbi", "C. Qu\u00e1 tr\u00ecnh con ng\u01b0\u1eddi \u0111\u1ed3ng h\u00f3a th\u1ebf gi\u1edbi", "D. Qu\u00e1 tr\u00ecnh con ng\u01b0\u1eddi h\u00f2a \u0111\u1ed3ng th\u1ebf gi\u1edbi"],
-    correct: 2
+    id: "CH084",
+    question: "Tính đặc thù của sự phản ánh hiện thực trong nghệ thuật được thể hiện thông qua quá trình nào?",
+    answers: ["Quá trình con người tiến hóa thế giới", "Quá trình con người cảm hóa thế giới", "Quá trình con người đồng hóa thế giới", "Quá trình con người hòa đồng thế giới"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: S\u1ef1 chi\u1ebfm h\u1eefu th\u1ebf gi\u1edbi b\u1eb1ng th\u1ea9m m\u1ef9 c\u1ee7a ngh\u1ec7 thu\u1eadt \u0111\u01b0\u1ee3c t\u00e1i hi\u1ec7n d\u01b0\u1edbi \u2026.. phong ph\u00fa trong t\u1ea5t c\u1ea3 c\u00e1c tr\u01b0\u1eddng l\u1ecbch s\u1eed, x\u00e3 h\u1ed9i, v\u0103n h\u00f3a?",
-    answers: ["A. \u0110a d\u1ea1ng h\u00ecnh th\u1ee9c", "B. \u00cdt h\u00ecnh th\u1ee9c", "C. Nhi\u1ec1u h\u00ecnh th\u1ee9c", "D. H\u00ecnh th\u1ee9c phong ph\u00fa"],
-    correct: 2
+    id: "CH085",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Sự chiếm hữu thế giới bằng thẩm mỹ của nghệ thuật được tái hiện dưới ….. phong phú trong tất cả các trường lịch sử, xã hội, văn hóa?",
+    answers: ["Đa dạng hình thức", "Ít hình thức", "Nhiều hình thức", "Hình thức phong phú"],
+    correct: [2]
   },
   {
-    question: "N\u1ed9i dung ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Hi\u1ec7n th\u1ef1c ch\u1ee7 quan \u0111\u00e3 \u0111\u01b0\u1ee3c m\u00f4 t\u1ea3 trong t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "B. Hi\u1ec7n th\u1ef1c kh\u00e1ch quan \u0111\u00e3 \u0111\u01b0\u1ee3c m\u00f4 t\u1ea3 trong t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "C. Hi\u1ec7n th\u1ef1c t\u1ed5ng quan \u0111\u00e3 \u0111\u01b0\u1ee3c m\u00f4 t\u1ea3 trong t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "D. Hi\u1ec7n th\u1ef1c tr\u1ef1c quan \u0111\u00e3 \u0111\u01b0\u1ee3c m\u00f4 t\u1ea3 trong t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt"],
-    correct: 1
+    id: "CH086",
+    question: "Nội dung nghệ thuật là gì?",
+    answers: ["Hiện thực chủ quan đã được mô tả trong tác phẩm nghệ thuật", "Hiện thực khách quan đã được mô tả trong tác phẩm nghệ thuật", "Hiện thực tổng quan đã được mô tả trong tác phẩm nghệ thuật", "Hiện thực trực quan đã được mô tả trong tác phẩm nghệ thuật"],
+    correct: [1]
   },
   {
-    question: "H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Ph\u01b0\u01a1ng th\u1ee9c \u0111\u1eb7c th\u00f9 c\u1ee7a ngh\u1ec7 thu\u1eadt \u0111\u1ec3 th\u1ec3 hi\u1ec7n t\u01b0 t\u01b0\u1edfng, t\u00ecnh c\u1ea3m c\u1ee7a ng\u01b0\u1eddi ngh\u1ec7 s\u0129", "B. Ph\u01b0\u01a1ng th\u1ee9c \u0111\u1eb7c th\u00f9 c\u1ee7a ngh\u1ec7 thu\u1eadt \u0111\u1ec3 m\u00f4 t\u1ea3 hi\u1ec7n th\u1ef1c", "C. Ph\u01b0\u01a1ng th\u1ee9c \u0111\u1eb7c th\u00f9 c\u1ee7a ngh\u1ec7 thu\u1eadt \u0111\u1ec3 m\u00f4 t\u1ea3 hi\u1ec7n th\u1ef1c ho\u1eb7c th\u1ec3 hi\u1ec7n t\u01b0 t\u01b0\u1edfng, t\u00ecnh c\u1ea3m c\u1ee7a ng\u01b0\u1eddi ngh\u1ec7 s\u0129", "D. C\u1ea3 A, B \u0111\u1ec1u \u0111\u00fang"],
-    correct: 3
+    id: "CH087",
+    question: "Hình tượng nghệ thuật là gì?",
+    answers: ["Phương thức đặc thù của nghệ thuật để thể hiện tư tưởng, tình cảm của người nghệ sĩ", "Phương thức đặc thù của nghệ thuật để mô tả hiện thực", "Phương thức đặc thù của nghệ thuật để mô tả hiện thực hoặc thể hiện tư tưởng, tình cảm của người nghệ sĩ", "Cả A, B đều đúng"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: B\u1ed1 c\u1ee5c l\u00e0 ph\u01b0\u01a1ng th\u1ee9c x\u00e2y d\u1ef1ng t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt, l\u00e0 \u2026 c\u00f9ng ki\u1ec3u v\u00e0 kh\u00e1c lo\u1ea1i cho nh\u1ea5t tr\u00ed v\u1edbi nhau v\u00e0 v\u1edbi ch\u1ec9nh th\u1ec3?",
-    answers: ["A. Nguy\u00ean t\u1eafc li\u00ean h\u1ec7 gi\u1eefa c\u00e1c th\u00e0nh t\u1ed1", "B. Nguy\u00ean t\u1eafc li\u00ean h\u1ec7 gi\u1eefa c\u00e1c b\u1ed9 ph\u1eadn", "C. Nguy\u00ean t\u1eafc li\u00ean h\u1ec7 gi\u1eefa c\u00e1c th\u00e0nh t\u1ed1 ho\u1eb7c b\u1ed9 ph\u1eadn", "D. C\u1ea3 A, B \u0111\u1ec1u \u0111\u00fang"],
-    correct: 3
+    id: "CH088",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Bố cục là phương thức xây dựng tác phẩm nghệ thuật, là … cùng kiểu và khác loại cho nhất trí với nhau và với chỉnh thể?",
+    answers: ["Nguyên tắc liên hệ giữa các thành tố", "Nguyên tắc liên hệ giữa các bộ phận", "Nguyên tắc liên hệ giữa các thành tố hoặc bộ phận", "Cả A, B đều đúng"],
+    correct: [3]
   },
   {
-    question: "Ch\u1ea5t li\u1ec7u ngh\u1ec7 thu\u1eadt l\u00e0 c\u01a1 s\u1edf v\u1eadt ch\u1ea5t c\u1ee7a t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt, nh\u1edd n\u00f3 m\u00e0 \u00fd \u0111\u1ed3 ngh\u1ec7 thu\u1eadt \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Kh\u00e1ch quan h\u00f3a", "B. Ch\u1ee7 quan h\u00f3a", "C. Tinh t\u1ebf h\u00f3a", "D. Tr\u1eebu t\u01b0\u1ee3ng h\u00f3a"],
-    correct: 0
+    id: "CH089",
+    question: "Chất liệu nghệ thuật là cơ sở vật chất của tác phẩm nghệ thuật, nhờ nó mà ý đồ nghệ thuật được thể hiện như thế nào?",
+    answers: ["Khách quan hóa", "Chủ quan hóa", "Tinh tế hóa", "Trừu tượng hóa"],
+    correct: [0]
   },
   {
-    question: "Th\u01b0\u1edfng th\u1ee9c ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Th\u01b0\u1edfng th\u1ee9c c\u00e1c t\u00e1c ph\u1ea9m c\u1ee5 th\u1ec3, v\u1edbi m\u1ed9t lo\u1ea1i h\u00ecnh c\u1ee5 th\u1ec3", "B. C\u00e1c t\u00e1c ph\u1ea9m c\u1ee5 th\u1ec3, v\u1edbi m\u1ed9t lo\u1ea1i h\u00ecnh c\u1ee5 th\u1ec3", "C. Th\u01b0\u1edfng th\u1ee9c c\u00e1c t\u00e1c ph\u1ea9m c\u1ee5 th\u1ec3", "D. Th\u01b0\u1edfng th\u1ee9c c\u00e1c t\u00e1c ph\u1ea9m kh\u00f4ng c\u1ee5 th\u1ec3, v\u1edbi m\u1ed9t lo\u1ea1i h\u00ecnh c\u1ee5 th\u1ec3"],
-    correct: 0
+    id: "CH090",
+    question: "Thưởng thức nghệ thuật là gì?",
+    answers: ["Thưởng thức các tác phẩm cụ thể, với một loại hình cụ thể", "Các tác phẩm cụ thể, với một loại hình cụ thể", "Thưởng thức các tác phẩm cụ thể", "Thưởng thức các tác phẩm không cụ thể, với một loại hình cụ thể"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 m\u1ed9t m\u00f4n khoa h\u1ecdc tri\u1ebft h\u1ecdc", "B. L\u00e0 m\u1ed9t m\u00f4n khoa h\u1ecdc s\u1eed h\u1ecdc", "C. L\u00e0 m\u1ed9t m\u00f4n khoa h\u1ecdc v\u0103n h\u1ecdc", "D. L\u00e0 m\u1ed9t m\u00f4n khoa h\u1ecdc to\u00e1n h\u1ecdc"],
-    correct: 0
+    id: "CH091",
+    question: "Mỹ học là gì?",
+    answers: ["Là một môn khoa học triết học", "Là một môn khoa học sử học", "Là một môn khoa học văn học", "Là một môn khoa học toán học"],
+    correct: [0]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o ra thu\u1eadt ng\u1eef M\u1ef9 h\u1ecdc?",
-    answers: ["A. Alexander Baumgarten", "B. Kant", "C. Trecneexpkki", "D. Iliat v\u00e0 \u00d4\u0111ix\u00ea"],
-    correct: 0
+    id: "CH092",
+    question: "Ai là người sáng tạo ra thuật ngữ Mỹ học?",
+    answers: ["Alexander Baumgarten", "Kant", "Trecneexpkki", "Iliat và Ôđixê"],
+    correct: [0]
   },
   {
-    question: "Trong qu\u00e1 tr\u00ecnh s\u1eed d\u1ee5ng v\u00e0 nghi\u00ean c\u1ee9u, \u0111\u1ecbnh ngh\u0129a t\u1eeb \"m\u1ef9 h\u1ecdc\", ng\u01b0\u1eddi ta v\u00ed m\u1ef9 h\u1ecdc nh\u01b0 c\u00e1i c\u00e2y c\u00f3 nhi\u1ec1u c\u00e0nh v\u00e0 lu\u00f4n ph\u00e1t tri\u1ec3n v\u00ec sao?",
-    answers: ["A. M\u1ef9 h\u1ecdc lu\u00f4n t\u1ed3n t\u1ea1i trong thi\u00ean nhi\u00ean v\u00e0 ngh\u1ec7 thu\u1eadt", "B. M\u1ef9 h\u1ecdc lu\u00f4n t\u1ed3n t\u1ea1i trong x\u00e3 h\u1ed9i v\u00e0 ngh\u1ec7 thu\u1eadt", "C. M\u1ef9 h\u1ecdc lu\u00f4n t\u1ed3n t\u1ea1i trong ngh\u1ec7 thu\u1eadt", "D. M\u1ef9 h\u1ecdc lu\u00f4n t\u1ed3n t\u1ea1i trong x\u00e3 h\u1ed9i, trong thi\u00ean nhi\u00ean v\u00e0 ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH093",
+    question: "Trong quá trình sử dụng và nghiên cứu, định nghĩa từ \"mỹ học\", người ta ví mỹ học như cái cây có nhiều cành và luôn phát triển vì sao?",
+    answers: ["Mỹ học luôn tồn tại trong thiên nhiên và nghệ thuật", "Mỹ học luôn tồn tại trong xã hội và nghệ thuật", "Mỹ học luôn tồn tại trong nghệ thuật", "Mỹ học luôn tồn tại trong xã hội, trong thiên nhiên và nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: N\u0103m \u2026., Baumgarten \u0111\u00e3 cho xu\u1ea5t b\u1ea3n cu\u1ed1n m\u1ef9 h\u1ecdc \u0111\u1ea7u ti\u00ean, \u1edf \u0111\u00f3 \u00f4ng x\u00e1c \u0111\u1ecbnh m\u00f4n h\u1ecdc n\u00e0y l\u00e0 nghi\u00ean c\u1ee9u vi\u1ec7c nh\u1eadn th\u1ee9c th\u1ebf gi\u1edbi b\u1eb1ng c\u1ea3m x\u00fac?",
-    answers: ["A. 1740", "B. 1750", "C. 1760", "D. 1770"],
-    correct: 1
+    id: "CH094",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Năm …., Baumgarten đã cho xuất bản cuốn mỹ học đầu tiên, ở đó ông xác định môn học này là nghiên cứu việc nhận thức thế giới bằng cảm xúc?",
+    answers: ["1740", "1750", "1760", "1770"],
+    correct: [1]
   },
   {
-    question: "Gi\u1eefa th\u1ebf k\u1ef7 XIX, Tr\u00e9cneexpkki coi \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a m\u1ef9 h\u1ecdc l\u00e0 g\u00ec?",
-    answers: ["A. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a thi\u00ean nhi\u00ean v\u1edbi hi\u1ec7n th\u1ef1c", "B. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a x\u00e3 h\u1ed9i v\u1edbi hi\u1ec7n th\u1ef1c", "C. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi v\u1edbi ch\u1ee7 ngh\u0129a", "D. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi v\u1edbi hi\u1ec7n th\u1ef1c"],
-    correct: 3
+    id: "CH095",
+    question: "Giữa thế kỷ XIX, Trécneexpkki coi đối tượng của mỹ học là gì?",
+    answers: ["Quan hệ thẩm mỹ của thiên nhiên với hiện thực", "Quan hệ thẩm mỹ của xã hội với hiện thực", "Quan hệ thẩm mỹ của con người với chủ nghĩa", "Quan hệ thẩm mỹ của con người với hiện thực"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u2026\u2026nh\u01b0 ph\u01b0\u01a1ng th\u1ee9c v\u00e0 k\u1ebft qu\u1ea3 cao nh\u1ea5t c\u1ee7a s\u1ef1 t\u00e1c \u0111\u1ed9ng qua l\u1ea1i l\u1eabn nhau gi\u1eefa kh\u00e1ch th\u1ec3 th\u1ea9m m\u1ef9 v\u00e0 ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9?",
-    answers: ["A. V\u0103n h\u1ecdc", "B. Ngh\u1ec7 thu\u1eadt", "C. M\u1ef9 h\u1ecdc", "D. Tri\u1ebft h\u1ecdc"],
-    correct: 1
+    id: "CH096",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: ……như phương thức và kết quả cao nhất của sự tác động qua lại lẫn nhau giữa khách thể thẩm mỹ và chủ thể thẩm mỹ?",
+    answers: ["Văn học", "Nghệ thuật", "Mỹ học", "Triết học"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin l\u00e0 m\u1ed9t h\u1ec7 th\u1ed1ng tri th\u1ee9c ho\u00e0n ch\u1ec9nh v\u1edbi ba m\u1ea3ng ch\u00ednh n\u00e0o?",
-    answers: ["A. L\u1ecbch s\u1eed s\u1ef1 ph\u00e1t tri\u1ec3n t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc, l\u00fd lu\u1eadn c\u01a1 b\u1ea3n v\u00e0 nghi\u00ean c\u1ee9u m\u1ef9 h\u1ecdc", "B. L\u1ecbch s\u1eed s\u1ef1 ph\u00e1t tri\u1ec3n t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc, l\u00fd lu\u1eadn c\u01a1 b\u1ea3n v\u00e0 tri\u1ebft h\u1ecdc ngo\u00e0i m\u00e1cx\u00edt", "C. L\u1ecbch s\u1eed s\u1ef1 ph\u00e1t tri\u1ec3n t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc, l\u00fd lu\u1eadn c\u01a1 b\u1ea3n v\u00e0 nghi\u00ean c\u1ee9u m\u1ef9 h\u1ecdc \u2013 tri\u1ebft h\u1ecdc ngo\u00e0i m\u00e1cx\u00edt", "D. L\u1ecbch s\u1eed s\u1ef1 ph\u00e1t tri\u1ec3n t\u01b0 t\u01b0\u1edfng khoa h\u1ecdc, l\u00fd lu\u1eadn c\u01a1 b\u1ea3n v\u00e0 nghi\u00ean c\u1ee9u m\u1ef9 h\u1ecdc \u2013 tri\u1ebft h\u1ecdc ngo\u00e0i m\u00e1cx\u00edt"],
-    correct: 2
+    id: "CH097",
+    question: "Mỹ học Mác – Lênin là một hệ thống tri thức hoàn chỉnh với ba mảng chính nào?",
+    answers: ["Lịch sử sự phát triển tư tưởng mỹ học, lý luận cơ bản và nghiên cứu mỹ học", "Lịch sử sự phát triển tư tưởng mỹ học, lý luận cơ bản và triết học ngoài mácxít", "Lịch sử sự phát triển tư tưởng mỹ học, lý luận cơ bản và nghiên cứu mỹ học – triết học ngoài mácxít", "Lịch sử sự phát triển tư tưởng khoa học, lý luận cơ bản và nghiên cứu mỹ học – triết học ngoài mácxít"],
+    correct: [2]
   },
   {
-    question: "T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc C\u1ed5 \u0111\u1ea1i \u0111\u1ea1t \u0111\u1ebfn \u0111\u1ed9 c\u1ef1c th\u1ecbnh v\u00e0o th\u1ebf k\u1ef7 IV (TCN) v\u00e0 k\u1ebft th\u00fac v\u00e0o th\u1ebf k\u1ef7 n\u00e0o?",
-    answers: ["A. \u0110\u1ea7u th\u1ebf k\u1ef7 th\u1ee9 VI sau c\u00f4ng nguy\u00ean", "B. \u0110\u1ea7u th\u1ebf k\u1ef7 th\u1ee9 VII sau c\u00f4ng nguy\u00ean", "C. N\u1eeda \u0111\u1ea7u th\u1ebf k\u1ef7 th\u1ee9 VIII sau c\u00f4ng nguy\u00ean", "D. N\u1eeda \u0111\u1ea7u th\u1ebf k\u1ef7 th\u1ee9 VI sau c\u00f4ng nguy\u00ean"],
-    correct: 0
+    id: "CH098",
+    question: "Tư tưởng mỹ học Cổ đại đạt đến độ cực thịnh vào thế kỷ IV (TCN) và kết thúc vào thế kỷ nào?",
+    answers: ["Đầu thế kỷ thứ VI sau công nguyên", "Đầu thế kỷ thứ VII sau công nguyên", "Nửa đầu thế kỷ thứ VIII sau công nguyên", "Nửa đầu thế kỷ thứ VI sau công nguyên"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i ph\u00e1t tri\u1ec3n r\u1ef1c r\u1ee1 nh\u1ea5t \u1edf \u0111\u00e2u?",
-    answers: ["A. \u0110\u1ea3o Sisin", "B. Nam b\u00e1n \u0111\u1ea3o Italia", "C. Aten", "D. \u0110\u1ecba Trung H\u1ea3i"],
-    correct: 2
+    id: "CH099",
+    question: "Mỹ học Hy Lạp cổ đại phát triển rực rỡ nhất ở đâu?",
+    answers: ["Đảo Sisin", "Nam bán đảo Italia", "Aten", "Địa Trung Hải"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau Theo Pitago (580 \u2013 500 TCN) cho r\u1eb1ng\u2026?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p l\u00e0 s\u1ef1 t\u01b0\u01a1ng ph\u1ea3n trong quan h\u1ec7 s\u1ed1 l\u01b0\u1ee3ng", "B. C\u00e1i \u0111\u1eb9p l\u00e0 s\u1ef1 h\u00e0i h\u00f2a trong quan h\u1ec7 ch\u1ea5t l\u01b0\u1ee3ng", "C. C\u00e1i \u0111\u1eb9p l\u00e0 s\u1ef1 trung h\u00f2a trong quan h\u1ec7 s\u1ed1 l\u01b0\u1ee3ng", "D. C\u00e1i \u0111\u1eb9p l\u00e0 s\u1ef1 h\u00e0i h\u00f2a trong quan h\u1ec7 s\u1ed1 l\u01b0\u1ee3ng"],
-    correct: 3
+    id: "CH100",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau Theo Pitago (580 – 500 TCN) cho rằng…?",
+    answers: ["Cái đẹp là sự tương phản trong quan hệ số lượng", "Cái đẹp là sự hài hòa trong quan hệ chất lượng", "Cái đẹp là sự trung hòa trong quan hệ số lượng", "Cái đẹp là sự hài hòa trong quan hệ số lượng"],
+    correct: [3]
   },
   {
-    question: "H\u00earaclit (530 \u2013 470 TCN) \u2013 nh\u00e0 th\u01a1 v\u00e0 nh\u00e0 tri\u1ebft gia v\u0129 \u0111\u1ea1i theo xu h\u01b0\u1edbng duy v\u1eadt, xem x\u00e9t s\u1ef1 v\u1eadt theo quan \u0111i\u1ec3m n\u00e0o?",
-    answers: ["A. Bi\u1ec7n ch\u1ee9ng kh\u1edfi \u0111\u1ea7u", "B. Bi\u1ec7n ch\u1ee9ng khoa h\u1ecdc", "C. Bi\u1ec7n ch\u1ee9ng s\u01a1 khai", "D. Bi\u1ec7n ch\u1ee9ng l\u00fd t\u01b0\u1edfng"],
-    correct: 2
+    id: "CH101",
+    question: "Hêraclit (530 – 470 TCN) – nhà thơ và nhà triết gia vĩ đại theo xu hướng duy vật, xem xét sự vật theo quan điểm nào?",
+    answers: ["Biện chứng khởi đầu", "Biện chứng khoa học", "Biện chứng sơ khai", "Biện chứng lý tưởng"],
+    correct: [2]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi \u0111\u01b0\u1ee3c coi l\u00e0 m\u1ed9t trong nh\u1eefng \u0111\u1ea1i bi\u1ec3u s\u1edbm nh\u1ea5t gi\u1ea3i th\u00edch c\u00e1c kh\u00e1i ni\u1ec7m th\u1ea9m m\u1ef9 theo xu h\u01b0\u1edbng duy v\u1eadt v\u00e0 c\u00f3 t\u00ednh ch\u1ea5t bi\u1ec7n ch\u1ee9ng s\u01a1 khai?",
-    answers: ["A. H\u00earaclit", "B. Kant", "C. M\u00e1c \u2013 L\u00eanin", "D. Tr\u00e9cnexepxki"],
-    correct: 0
+    id: "CH102",
+    question: "Ai là người được coi là một trong những đại biểu sớm nhất giải thích các khái niệm thẩm mỹ theo xu hướng duy vật và có tính chất biện chứng sơ khai?",
+    answers: ["Hêraclit", "Kant", "Mác – Lênin", "Trécnexepxki"],
+    correct: [0]
   },
   {
-    question: "\u0110\u00eam\u00f4crit n\u00eau l\u00ean t\u00ednh ch\u1ea5t v\u1ec1 m\u1ee9c \u0111\u1ed9 c\u1ee7a v\u1ebb \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ef1 v\u1eeba ph\u1ea3i, kh\u00f4ng th\u1eeba, kh\u00f4ng thi\u1ebfu", "B. S\u1ef1 trung b\u00ecnh, kh\u00f4ng th\u1eeba, kh\u00f4ng thi\u1ebfu", "C. S\u1ef1 trung b\u00ecnh, v\u1eeba ph\u1ea3i, kh\u00f4ng th\u1eeba", "D. S\u1ef1 trung b\u00ecnh, v\u1eeba ph\u1ea3i, kh\u00f4ng th\u1eeba, kh\u00f4ng thi\u1ebfu"],
-    correct: 3
+    id: "CH103",
+    question: "Đêmôcrit nêu lên tính chất về mức độ của vẻ đẹp là gì?",
+    answers: ["Sự vừa phải, không thừa, không thiếu", "Sự trung bình, không thừa, không thiếu", "Sự trung bình, vừa phải, không thừa", "Sự trung bình, vừa phải, không thừa, không thiếu"],
+    correct: [3]
   },
   {
-    question: "Tri\u1ebft h\u1ecdc X\u00f4crat cho r\u1eb1ng con ng\u01b0\u1eddi xem x\u00e9t \u1edf c\u00e1c g\u00f3c \u0111\u1ed9 ho\u1ea1t \u0111\u1ed9ng n\u00e0o?",
-    answers: ["A. Th\u1ef1c ti\u1ec5n, h\u00e0nh vi, ph\u1ea9m ch\u1ea5t", "B. Th\u1ef1c ti\u1ec5n, h\u00e0nh \u0111\u1ed9ng, ph\u1ea9m h\u1ea1nh", "C. Th\u1ef1c ti\u1ec5n, h\u00e0nh vi, ph\u1ea9m h\u1ea1nh", "D. Th\u1ef1c h\u00e0nh, h\u00e0nh vi, ph\u1ea9m h\u1ea1nh"],
-    correct: 2
+    id: "CH104",
+    question: "Triết học Xôcrat cho rằng con người xem xét ở các góc độ hoạt động nào?",
+    answers: ["Thực tiễn, hành vi, phẩm chất", "Thực tiễn, hành động, phẩm hạnh", "Thực tiễn, hành vi, phẩm hạnh", "Thực hành, hành vi, phẩm hạnh"],
+    correct: [2]
   },
   {
-    question: "Tri\u1ebft h\u1ecdc X\u00f4crat kh\u1eb3ng \u0111\u1ecbnh \u0111i\u1ec1u g\u00ec?",
-    answers: ["A. S\u1ef1 v\u1eadt n\u00e0o c\u0169ng c\u00f3 th\u1ec3 l\u00e0 \u0111\u1eb9p v\u00e0 c\u0169ng c\u00f3 th\u1ec3 kh\u00f4ng \u0111\u1eb9p trong nh\u1eefng t\u00ecnh hu\u1ed1ng kh\u00e1c nhau", "B. S\u1ef1 v\u1eadt n\u00e0o c\u0169ng c\u00f3 th\u1ec3 l\u00e0 \u0111\u1eb9p v\u00e0 c\u0169ng c\u00f3 th\u1ec3 kh\u00f4ng \u0111\u1eb9p trong nh\u1eefng t\u00ecnh hu\u1ed1ng gi\u1ed1ng nhau", "C. S\u1ef1 v\u1eadt n\u00e0o c\u0169ng c\u00f3 th\u1ec3 l\u00e0 \u0111\u1eb9p", "D. S\u1ef1 v\u1eadt n\u00e0o c\u0169ng c\u00f3 th\u1ec3 kh\u00f4ng \u0111\u1eb9p trong nh\u1eefng t\u00ecnh hu\u1ed1ng kh\u00e1c nhau"],
-    correct: 0
+    id: "CH105",
+    question: "Triết học Xôcrat khẳng định điều gì?",
+    answers: ["Sự vật nào cũng có thể là đẹp và cũng có thể không đẹp trong những tình huống khác nhau", "Sự vật nào cũng có thể là đẹp và cũng có thể không đẹp trong những tình huống giống nhau", "Sự vật nào cũng có thể là đẹp", "Sự vật nào cũng có thể không đẹp trong những tình huống khác nhau"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Theo X\u00f4crat ngh\u1ec7 thu\u1eadt kh\u00f4ng nh\u1eefng t\u00e1i hi\u1ec7n thi\u00ean nhi\u00ean \u1edf c\u00e1i c\u00f3 \u2026 m\u00e0 n\u00f3 c\u00f2n c\u00f3 kh\u1ea3 n\u0103ng di\u1ec5n t\u1ea3 c\u00e1c tr\u1ea1ng th\u00e1i tinh th\u1ea7n con ng\u01b0\u1eddi?",
-    answers: ["A. T\u1ea1o h\u00ecnh, m\u00e0u s\u1eafc, h\u00ecnh kh\u1ed1i", "B. \u0110\u01b0\u1eddng n\u00e9t, m\u00e0u s\u1eafc, \u00e1nh s\u00e1ng", "C. \u00c2m thanh, m\u00e0u s\u1eafc, h\u00ecnh kh\u1ed1i", "D. \u0110\u01b0\u1eddng n\u00e9t, m\u00e0u s\u1eafc, h\u00ecnh kh\u1ed1i"],
-    correct: 3
+    id: "CH106",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Theo Xôcrat nghệ thuật không những tái hiện thiên nhiên ở cái có … mà nó còn có khả năng diễn tả các trạng thái tinh thần con người?",
+    answers: ["Tạo hình, màu sắc, hình khối", "Đường nét, màu sắc, ánh sáng", "Âm thanh, màu sắc, hình khối", "Đường nét, màu sắc, hình khối"],
+    correct: [3]
   },
   {
-    question: "Theo X\u00f4crat ngh\u1ec7 thu\u1eadt kh\u00f4ng nh\u1eefng t\u00e1i hi\u1ec7n thi\u00ean nhi\u00ean \u1edf c\u00e1i c\u00f3 \u0111\u01b0\u1eddng n\u00e9t, m\u00e0u s\u1eafc, h\u00ecnh kh\u1ed1i m\u00e0 n\u00f3 c\u00f2n c\u00f3 kh\u1ea3 n\u0103ng di\u1ec5n t\u1ea3 g\u00ec?",
-    answers: ["A. C\u00e1c tr\u1ea1ng th\u00e1i tinh th\u1ea7n con ng\u01b0\u1eddi", "B. C\u00e1c tr\u1ea1ng th\u00e1i tinh th\u1ea7n con v\u1eadt", "C. Tinh th\u1ea7n con ng\u01b0\u1eddi", "D. C\u00e1c tr\u1ea1ng th\u00e1i con ng\u01b0\u1eddi"],
-    correct: 0
+    id: "CH107",
+    question: "Theo Xôcrat nghệ thuật không những tái hiện thiên nhiên ở cái có đường nét, màu sắc, hình khối mà nó còn có khả năng diễn tả gì?",
+    answers: ["Các trạng thái tinh thần con người", "Các trạng thái tinh thần con vật", "Tinh thần con người", "Các trạng thái con người"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: M\u1ef9 h\u1ecdc th\u1eddi Trung c\u1ed5 b\u1eaft \u0111\u1ea7u \u2026 v\u00e0 k\u1ebft th\u00fac v\u00e0o \u2026?",
-    answers: ["A. V\u00e0o th\u1ebf k\u1ef7 II / cu\u1ed1i th\u1ebf k\u1ef7 III", "B. V\u00e0o th\u1ebf k\u1ef7 IV / cu\u1ed1i th\u1ebf k\u1ef7 XIII", "C. V\u00e0o th\u1ebf k\u1ef7 II / cu\u1ed1i th\u1ebf k\u1ef7 XI", "D. V\u00e0o th\u1ebf k\u1ef7 III / cu\u1ed1i th\u1ebf k\u1ef7 XIII"],
-    correct: 3
+    id: "CH108",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Mỹ học thời Trung cổ bắt đầu … và kết thúc vào …?",
+    answers: ["Vào thế kỷ II / cuối thế kỷ III", "Vào thế kỷ IV / cuối thế kỷ XIII", "Vào thế kỷ II / cuối thế kỷ XI", "Vào thế kỷ III / cuối thế kỷ XIII"],
+    correct: [3]
   },
   {
-    question: "Ai l\u00e0 nh\u00e0 t\u01b0 t\u01b0\u1edfng \u0111i\u1ec3n h\u00ecnh c\u00f3 nhi\u1ec1u quan \u0111i\u1ec3m m\u1ef9 h\u1ecdc trong giai \u0111o\u1ea1n \u0111\u1ea7u c\u1ee7a th\u1eddi k\u1ef3 Trung c\u1ed5?",
-    answers: ["A. \u00d4gu\u00fdtxtanh", "B. Arixstot", "C. X\u00f4crat", "D. \u0110\u00eam\u00f4crit"],
-    correct: 0
+    id: "CH109",
+    question: "Ai là nhà tư tưởng điển hình có nhiều quan điểm mỹ học trong giai đoạn đầu của thời kỳ Trung cổ?",
+    answers: ["Ôguýtxtanh", "Arixstot", "Xôcrat", "Đêmôcrit"],
+    correct: [0]
   },
   {
-    question: "Tomat \u0110acanh coi ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ee9 m\u1ec7nh c\u01a1 b\u1ea3n c\u1ee7a ngh\u1ec7 thu\u1eadt", "B. S\u1ef1 m\u00f4 ph\u1ecfng c\u01a1 b\u1ea3n c\u1ee7a ngh\u1ec7 thu\u1eadt", "C. S\u1ef1 m\u00f4 ph\u1ecfng, s\u1ee9 m\u1ec7nh c\u01a1 b\u1ea3n c\u1ee7a ngh\u1ec7 thu\u1eadt", "D. S\u1ef1 m\u00f4 ph\u1ecfng, s\u1ee9 m\u1ec7nh c\u01a1 b\u1ea3n c\u1ee7a m\u1ef9 h\u1ecdc"],
-    correct: 2
+    id: "CH110",
+    question: "Tomat Đacanh coi nghệ thuật là gì?",
+    answers: ["Sứ mệnh cơ bản của nghệ thuật", "Sự mô phỏng cơ bản của nghệ thuật", "Sự mô phỏng, sứ mệnh cơ bản của nghệ thuật", "Sự mô phỏng, sứ mệnh cơ bản của mỹ học"],
+    correct: [2]
   },
   {
-    question: "Tomat \u0110acan xem c\u00e1i \u0111\u1eb9p ch\u00ednh l\u00e0 g\u00ec?",
-    answers: ["A. H\u00ecnh t\u01b0\u1ee3ng ph\u1ea3n \u00e1nh m\u1ed9t s\u1ef1 v\u1eadt, th\u1eadm ch\u00ed trong tr\u01b0\u1eddng h\u1ee3p ch\u00ednh b\u1ea3n th\u00e2n s\u1ef1 v\u1eadt \u1ea5y kh\u00f4ng \u0111\u1eb9p", "B. Ph\u1ea3n \u00e1nh m\u1ed9t c\u00e1ch \u0111\u1ea7y \u0111\u1ee7, tr\u1ecdn v\u1eb9n nh\u1ea5t c\u1ee7a m\u1ed9t s\u1ef1 v\u1eadt", "C. H\u00ecnh t\u01b0\u1ee3ng ph\u1ea3n \u00e1nh m\u1ed9t c\u00e1ch \u0111\u1ea7y \u0111\u1ee7, th\u1eadm ch\u00ed trong tr\u01b0\u1eddng h\u1ee3p ch\u00ednh b\u1ea3n th\u00e2n s\u1ef1 v\u1eadt \u1ea5y kh\u00f4ng \u0111\u1eb9p", "D. H\u00ecnh t\u01b0\u1ee3ng ph\u1ea3n \u00e1nh m\u1ed9t c\u00e1ch \u0111\u1ea7y \u0111\u1ee7, tr\u1ecdn v\u1eb9n nh\u1ea5t c\u1ee7a m\u1ed9t s\u1ef1 v\u1eadt, th\u1eadm ch\u00ed trong tr\u01b0\u1eddng h\u1ee3p ch\u00ednh b\u1ea3n th\u00e2n s\u1ef1 v\u1eadt \u1ea5y kh\u00f4ng \u0111\u1eb9p"],
-    correct: 3
+    id: "CH111",
+    question: "Tomat Đacan xem cái đẹp chính là gì?",
+    answers: ["Hình tượng phản ánh một sự vật, thậm chí trong trường hợp chính bản thân sự vật ấy không đẹp", "Phản ánh một cách đầy đủ, trọn vẹn nhất của một sự vật", "Hình tượng phản ánh một cách đầy đủ, thậm chí trong trường hợp chính bản thân sự vật ấy không đẹp", "Hình tượng phản ánh một cách đầy đủ, trọn vẹn nhất của một sự vật, thậm chí trong trường hợp chính bản thân sự vật ấy không đẹp"],
+    correct: [3]
   },
   {
-    question: "L\u00ea\u00f4na \u0111\u01a1 Vanhxi \u0111\u1eb7c bi\u1ec7t quan t\u00e2m \u0111\u1ebfn quan h\u1ec7 l\u00fd thuy\u1ebft v\u00e0 th\u1ef1c ti\u1ec5n, \u00f4ng kh\u1eb3ng \u0111\u1ecbnh nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. \u201cNg\u01b0\u1eddi ham m\u00ea th\u1ef1c ti\u1ec5n m\u00e0 thi\u1ebfu khoa h\u1ecdc ch\u1eb3ng kh\u00e1c n\u00e0o thuy\u1ec1n tr\u01b0\u1edfng \u0111i t\u00e0u m\u00e0 kh\u00f4ng c\u00f3 tay l\u00e1i\u201d", "B. \u201cNg\u01b0\u1eddi ham m\u00ea th\u1ef1c ti\u1ec5n m\u00e0 kh\u00f4ng thi\u1ebfu khoa h\u1ecdc ch\u1eb3ng kh\u00e1c n\u00e0o thuy\u1ec1n tr\u01b0\u1edfng \u0111i t\u00e0u m\u00e0 kh\u00f4ng c\u00f3 tay l\u00e1i ho\u1eb7c thi\u1ebfu \u0111\u1ecba b\u00e0n\u201d", "C. \u201cNg\u01b0\u1eddi ham m\u00ea th\u1ef1c ti\u1ec5n m\u00e0 thi\u1ebfu khoa h\u1ecdc ch\u1eb3ng kh\u00e1c n\u00e0o thuy\u1ec1n tr\u01b0\u1edfng \u0111i t\u00e0u m\u00e0 kh\u00f4ng c\u00f3 tay l\u00e1i ho\u1eb7c thi\u1ebfu \u0111\u1ecba b\u00e0n\u201d", "D. \u201cNg\u01b0\u1eddi ham m\u00ea th\u1ef1c ti\u1ec5n m\u00e0 thi\u1ebfu khoa h\u1ecdc ch\u1eb3ng kh\u00e1c n\u00e0o thuy\u1ec1n tr\u01b0\u1edfng \u0111i t\u00e0u m\u00e0 thi\u1ebfu \u0111\u1ecba b\u00e0n\u201d"],
-    correct: 2
+    id: "CH112",
+    question: "Lêôna đơ Vanhxi đặc biệt quan tâm đến quan hệ lý thuyết và thực tiễn, ông khẳng định như thế nào?",
+    answers: ["“Người ham mê thực tiễn mà thiếu khoa học chẳng khác nào thuyền trưởng đi tàu mà không có tay lái”", "“Người ham mê thực tiễn mà không thiếu khoa học chẳng khác nào thuyền trưởng đi tàu mà không có tay lái hoặc thiếu địa bàn”", "“Người ham mê thực tiễn mà thiếu khoa học chẳng khác nào thuyền trưởng đi tàu mà không có tay lái hoặc thiếu địa bàn”", "“Người ham mê thực tiễn mà thiếu khoa học chẳng khác nào thuyền trưởng đi tàu mà thiếu địa bàn”"],
+    correct: [2]
   },
   {
-    question: "Kant lu\u1eadn gi\u1ea3i kh\u00e1 s\u00e2u v\u1ec1 thi\u00ean t\u00e0i, \u00f4ng ph\u00e2n \u0111\u1ecbnh c\u00e1i \u0111\u1eb9p nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean l\u00e0 con ng\u01b0\u1eddi \u0111\u1eb9p, trong ngh\u1ec7 thu\u1eadt l\u00e0 c\u1ea3m gi\u00e1c \u0111\u1eb9p v\u1ec1 v\u1eadt", "B. C\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean l\u00e0 v\u0169 tr\u1ee5, trong ngh\u1ec7 thu\u1eadt l\u00e0 c\u1ea3m gi\u00e1c \u0111\u1eb9p v\u1ec1 v\u1eadt", "C. C\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean l\u00e0 v\u1eadt \u0111\u1eb9p, trong ngh\u1ec7 thu\u1eadt l\u00e0 c\u1ea3m gi\u00e1c \u0111\u1eb9p v\u1ec1 th\u1ea7n linh", "D. C\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean l\u00e0 v\u1eadt \u0111\u1eb9p, trong ngh\u1ec7 thu\u1eadt l\u00e0 c\u1ea3m gi\u00e1c \u0111\u1eb9p v\u1ec1 v\u1eadt"],
-    correct: 3
+    id: "CH113",
+    question: "Kant luận giải khá sâu về thiên tài, ông phân định cái đẹp như thế nào?",
+    answers: ["Cái đẹp trong tự nhiên là con người đẹp, trong nghệ thuật là cảm giác đẹp về vật", "Cái đẹp trong tự nhiên là vũ trụ, trong nghệ thuật là cảm giác đẹp về vật", "Cái đẹp trong tự nhiên là vật đẹp, trong nghệ thuật là cảm giác đẹp về thần linh", "Cái đẹp trong tự nhiên là vật đẹp, trong nghệ thuật là cảm giác đẹp về vật"],
+    correct: [3]
   },
   {
-    question: "H\u1ec7 th\u1ed1ng tri\u1ebft h\u1ecdc \u2013 m\u1ef9 h\u1ecdc c\u1ee7a Kant mang t\u00ednh nh\u00e2n v\u0103n s\u00e2u s\u1eafc, n\u00f3 h\u01b0\u1edbng t\u1edbi vi\u1ec7c g\u00ec?",
-    answers: ["A. Th\u00fac \u0111\u1ea9y c\u00e1 nh\u00e2n con ng\u01b0\u1eddi v\u00e0 t\u1ef1 do l\u00fd tr\u00ed", "B. Gi\u1ea3i ph\u00f3ng c\u00e1 nh\u00e2n con ng\u01b0\u1eddi v\u00e0 t\u1ef1 do l\u00fd tr\u00ed", "C. Gi\u1ea3i ph\u00f3ng c\u00e1 nh\u00e2n con ng\u01b0\u1eddi", "D. T\u1ef1 do l\u00fd tr\u00ed"],
-    correct: 1
+    id: "CH114",
+    question: "Hệ thống triết học – mỹ học của Kant mang tính nhân văn sâu sắc, nó hướng tới việc gì?",
+    answers: ["Thúc đẩy cá nhân con người và tự do lý trí", "Giải phóng cá nhân con người và tự do lý trí", "Giải phóng cá nhân con người", "Tự do lý trí"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc c\u1ed5 \u0111i\u1ec3n \u0110\u1ee9c \u0111\u1ec9nh cao c\u1ee7a n\u00f3 l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ef9 h\u1ecdc", "B. Tri\u1ebft h\u1ecdc", "C. Khoa h\u1ecdc", "D. V\u0103n h\u00f3a h\u1ecdc"],
-    correct: 0
+    id: "CH115",
+    question: "Mỹ học cổ điển Đức đỉnh cao của nó là gì?",
+    answers: ["Mỹ học", "Triết học", "Khoa học", "Văn hóa học"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Th\u1ebf k\u1ef7 XVIII, tri\u1ebft h\u1ecdc khai s\u00e1ng l\u00e0 \u2026\u2026 v\u00ec ti\u1ebfn b\u1ed9 x\u00e3 h\u1ed9i, v\u00ec t\u1ef1 do c\u1ee7a con ng\u01b0\u1eddi?",
-    answers: ["A. C\u01a1 s\u1edf l\u00fd lu\u1eadn cho xu h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt truy\u1ec1n th\u1ed1ng", "B. C\u01a1 s\u1edf l\u00fd lu\u1eadn cho xu h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt hi\u1ec7n \u0111\u1ea1i", "C. C\u01a1 s\u1edf l\u00fd lu\u1eadn cho xu h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt th\u01b0\u1eddng th\u1ee9c", "D. C\u01a1 s\u1edf l\u00fd lu\u1eadn cho xu h\u01b0\u1edbng ngh\u1ec7 thu\u1eadt \u0111\u1ea5u tranh"],
-    correct: 3
+    id: "CH116",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Thế kỷ XVIII, triết học khai sáng là …… vì tiến bộ xã hội, vì tự do của con người?",
+    answers: ["Cơ sở lý luận cho xu hướng nghệ thuật truyền thống", "Cơ sở lý luận cho xu hướng nghệ thuật hiện đại", "Cơ sở lý luận cho xu hướng nghệ thuật thường thức", "Cơ sở lý luận cho xu hướng nghệ thuật đấu tranh"],
+    correct: [3]
   },
   {
-    question: "\u0110eni \u0110i\u0111r\u00f4 kh\u1eb3ng \u0111\u1ecbnh m\u1ee5c \u0111\u00edch ch\u00ednh c\u1ee7a ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Gi\u00e1o d\u1ee5c \u0111\u1ea1o \u0111\u1ee9c cho qu\u1ea7n ch\u00fang nh\u00e2n d\u00e2n, t\u1ed1 c\u00e1o c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, t\u1ed1 c\u00e1o s\u1ef1 suy \u0111\u1ed3i", "B. Ph\u1ee5c v\u1ee5 nh\u00e2n d\u00e2n, gi\u00e1o d\u1ee5c \u0111\u1ea1o \u0111\u1ee9c cho qu\u1ea7n ch\u00fang nh\u00e2n d\u00e2n", "C. Ph\u1ee5c v\u1ee5 nh\u00e2n d\u00e2n, t\u1ed1 c\u00e1o c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, t\u1ed1 c\u00e1o s\u1ef1 suy \u0111\u1ed3i", "D. Ph\u1ee5c v\u1ee5 nh\u00e2n d\u00e2n, gi\u00e1o d\u1ee5c \u0111\u1ea1o \u0111\u1ee9c cho qu\u1ea7n ch\u00fang nh\u00e2n d\u00e2n, t\u1ed1 c\u00e1o c\u00e1i x\u1ea5u, c\u00e1i \u00e1c, t\u1ed1 c\u00e1o s\u1ef1 suy \u0111\u1ed3i"],
-    correct: 3
+    id: "CH117",
+    question: "Đeni Điđrô khẳng định mục đích chính của nghệ thuật là gì?",
+    answers: ["Giáo dục đạo đức cho quần chúng nhân dân, tố cáo cái xấu, cái ác, tố cáo sự suy đồi", "Phục vụ nhân dân, giáo dục đạo đức cho quần chúng nhân dân", "Phục vụ nhân dân, tố cáo cái xấu, cái ác, tố cáo sự suy đồi", "Phục vụ nhân dân, giáo dục đạo đức cho quần chúng nhân dân, tố cáo cái xấu, cái ác, tố cáo sự suy đồi"],
+    correct: [3]
   },
   {
-    question: "C\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c Letxing quan ni\u1ec7m b\u1ed9c l\u1ed9 nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Trong ho\u1ea1t \u0111\u1ed9ng, trong kh\u00e1t v\u1ecdng ch\u1ed1ng l\u1ea1i b\u1ea5t c\u00f4ng v\u00e0 t\u1ed9i \u00e1c", "B. Trong cu\u1ed9c \u0111\u1ea5u tranh, trong kh\u00e1t v\u1ecdng ch\u1ed1ng l\u1ea1i b\u1ea5t c\u00f4ng v\u00e0 t\u1ed9i \u00e1c", "C. Trong cu\u1ed9c \u0111\u1ea5u tranh, trong ho\u1ea1t \u0111\u1ed9ng, trong kh\u00e1t v\u1ecdng ch\u1ed1ng l\u1ea1i b\u1ea5t c\u00f4ng v\u00e0 t\u1ed9i \u00e1c", "D. Trong cu\u1ed9c \u0111\u1ea5u tranh, trong ho\u1ea1t \u0111\u1ed9ng, trong kh\u00e1t v\u1ecdng ch\u1ed1ng l\u1ea1i b\u1ea5t c\u00f4ng"],
-    correct: 2
+    id: "CH118",
+    question: "Cái đẹp được Letxing quan niệm bộc lộ như thế nào?",
+    answers: ["Trong hoạt động, trong khát vọng chống lại bất công và tội ác", "Trong cuộc đấu tranh, trong khát vọng chống lại bất công và tội ác", "Trong cuộc đấu tranh, trong hoạt động, trong khát vọng chống lại bất công và tội ác", "Trong cuộc đấu tranh, trong hoạt động, trong khát vọng chống lại bất công"],
+    correct: [2]
   },
   {
-    question: "B\u1ea3n ch\u1ea5t x\u00e3 h\u1ed9i c\u1ee7a ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i do c\u01a1 s\u1edf kinh t\u1ebf sinh ra v\u00e0 b\u1ecb c\u01a1 s\u1edf \u0111\u1ecba ph\u01b0\u01a1ng quy\u1ebft \u0111\u1ecbnh", "B. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i do c\u01a1 s\u1edf kinh t\u1ebf quy\u1ebft \u0111\u1ecbnh", "C. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i do c\u01a1 s\u1edf kinh t\u1ebf sinh ra v\u00e0 b\u1ecb c\u01a1 s\u1edf kinh t\u1ebf quy\u1ebft \u0111\u1ecbnh", "D. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i do c\u01a1 s\u1edf kinh t\u1ebf sinh ra"],
-    correct: 2
+    id: "CH119",
+    question: "Bản chất xã hội của nghệ thuật là gì?",
+    answers: ["Nghệ thuật là một hình thái ý thức xã hội do cơ sở kinh tế sinh ra và bị cơ sở địa phương quyết định", "Nghệ thuật là một hình thái ý thức xã hội do cơ sở kinh tế quyết định", "Nghệ thuật là một hình thái ý thức xã hội do cơ sở kinh tế sinh ra và bị cơ sở kinh tế quyết định", "Nghệ thuật là một hình thái ý thức xã hội do cơ sở kinh tế sinh ra"],
+    correct: [2]
   },
   {
-    question: "B\u1ea3n ch\u1ea5t nh\u1eadn th\u1ee9c ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t trong nh\u1eefng bi\u1ec7n ph\u00e1p ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c", "B. Ngh\u1ec7 thu\u1eadt l\u00e0 m\u1ed9t h\u00ecnh th\u1ee9c nh\u1eadn th\u1ee9c c\u00f3 \u00fd ngh\u0129a to l\u1edbn", "C. B\u1ea5t k\u1ef3 m\u1ed9t nh\u1eadn th\u1ee9c n\u00e0o v\u1ec1 hi\u1ec7n th\u1ef1c c\u0169ng l\u00e0 m\u1ed9t s\u1ef1 ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c v\u00e0o \u0111\u1ea7u \u00f3c con ng\u01b0\u1eddi", "D. L\u00e0 m\u1ed9t s\u1ef1 ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c v\u00e0o \u0111\u1ea7u \u00f3c con ng\u01b0\u1eddi. L\u00e0 m\u1ed9t trong nh\u1eefng bi\u1ec7n ph\u00e1p ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c. L\u00e0 m\u1ed9t h\u00ecnh th\u1ee9c nh\u1eadn th\u1ee9c c\u00f3 \u00fd ngh\u0129a to l\u1edbn"],
-    correct: 3
+    id: "CH120",
+    question: "Bản chất nhận thức nghệ thuật là gì?",
+    answers: ["Nghệ thuật là một trong những biện pháp phản ánh hiện thực", "Nghệ thuật là một hình thức nhận thức có ý nghĩa to lớn", "Bất kỳ một nhận thức nào về hiện thực cũng là một sự phản ánh hiện thực vào đầu óc con người", "Là một sự phản ánh hiện thực vào đầu óc con người. Là một trong những biện pháp phản ánh hiện thực. Là một hình thức nhận thức có ý nghĩa to lớn"],
+    correct: [3]
   },
   {
-    question: "C\u01a1 s\u1edf l\u00fd lu\u1eadn ch\u1ee7 ngh\u0129a M\u00e1c \u2013 Ch\u1ee7 ngh\u0129a duy v\u1eadt bi\u1ec7n ch\u1ee9ng v\u00e0 Ch\u1ee7 ngh\u0129a duy v\u1eadt l\u1ecbch s\u1eed xu\u1ea5t hi\u1ec7n nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. M\u1edf \u0111\u1ea7u cho m\u1ed9t th\u1eddi \u0111\u1ea1i m\u1edbi trong qu\u00e1 tr\u00ecnh ph\u00e1t tri\u1ec3n nh\u1eadn th\u1ee9c nh\u00e2n lo\u1ea1i", "B. M\u1edf \u0111\u1ea7u cho m\u1ed9t th\u1eddi \u0111\u1ea1i m\u1edbi", "C. M\u1edf \u0111\u1ea7u cho m\u1ed9t qu\u00e1 tr\u00ecnh ph\u00e1t tri\u1ec3n nh\u1eadn th\u1ee9c nh\u00e2n lo\u1ea1i", "D. Qu\u00e1 tr\u00ecnh ph\u00e1t tri\u1ec3n nh\u1eadn th\u1ee9c nh\u00e2n lo\u1ea1i"],
-    correct: 0
+    id: "CH121",
+    question: "Cơ sở lý luận chủ nghĩa Mác – Chủ nghĩa duy vật biện chứng và Chủ nghĩa duy vật lịch sử xuất hiện như thế nào?",
+    answers: ["Mở đầu cho một thời đại mới trong quá trình phát triển nhận thức nhân loại", "Mở đầu cho một thời đại mới", "Mở đầu cho một quá trình phát triển nhận thức nhân loại", "Quá trình phát triển nhận thức nhân loại"],
+    correct: [0]
   },
   {
-    question: "Nh\u1eefng \u0111\u00f3ng g\u00f3p tr\u1ef1c ti\u1ebfp c\u1ee7a L\u00eanin trong m\u1ef9 h\u1ecdc l\u00e0 g\u00ec?",
-    answers: ["A. Nguy\u00ean l\u00fd t\u00ednh \u0111\u1ea3ng trong ngh\u1ec7 thu\u1eadt v\u00e0 v\u1ea5n \u0111\u1ec1 k\u1ebf th\u1eeba v\u00e0 s\u00e1ng t\u1ea1o c\u1ee7a ngh\u1ec7 thu\u1eadt", "B. Ph\u1ea3n \u00e1nh lu\u1eadn v\u00e0 v\u1ea5n \u0111\u1ec1 k\u1ebf th\u1eeba v\u00e0 s\u00e1ng t\u1ea1o c\u1ee7a ngh\u1ec7 thu\u1eadt", "C. Nguy\u00ean l\u00fd t\u00ednh \u0111\u1ea3ng trong ngh\u1ec7 thu\u1eadt, ph\u1ea3n \u00e1nh lu\u1eadn v\u00e0 v\u1ea5n \u0111\u1ec1 k\u1ebf th\u1eeba v\u00e0 s\u00e1ng t\u1ea1o c\u1ee7a ngh\u1ec7 thu\u1eadt", "D. V\u1ea5n \u0111\u1ec1 k\u1ebf th\u1eeba v\u00e0 s\u00e1ng t\u1ea1o c\u1ee7a ngh\u1ec7 thu\u1eadt"],
-    correct: 2
+    id: "CH122",
+    question: "Những đóng góp trực tiếp của Lênin trong mỹ học là gì?",
+    answers: ["Nguyên lý tính đảng trong nghệ thuật và vấn đề kế thừa và sáng tạo của nghệ thuật", "Phản ánh luận và vấn đề kế thừa và sáng tạo của nghệ thuật", "Nguyên lý tính đảng trong nghệ thuật, phản ánh luận và vấn đề kế thừa và sáng tạo của nghệ thuật", "Vấn đề kế thừa và sáng tạo của nghệ thuật"],
+    correct: [2]
   },
   {
-    question: "Ph\u1ea3n \u00e1nh lu\u1eadn l\u00e0 c\u1ed1ng hi\u1ebfn quan tr\u1ecdng th\u1ee9 m\u1ea5y c\u1ee7a L\u00eanin v\u00e0o kho t\u00e0ng l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt M\u00e1c-x\u00edt?",
-    answers: ["A. Th\u1ee9 m\u1ed9t", "B. Th\u1ee9 hai", "C. Th\u1ee9 ba", "D. Th\u1ee9 t\u01b0"],
-    correct: 1
+    id: "CH123",
+    question: "Phản ánh luận là cống hiến quan trọng thứ mấy của Lênin vào kho tàng lý luận nghệ thuật Mác-xít?",
+    answers: ["Thứ một", "Thứ hai", "Thứ ba", "Thứ tư"],
+    correct: [1]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi \u0111\u00e3 l\u00e0m phong ph\u00fa, \u0111\u00e0o s\u00e2u v\u00e0 ph\u00e1t tri\u1ec3n th\u00eam nh\u1eefng v\u1ea5n \u0111\u1ec1 c\u01a1 b\u1ea3n c\u1ee7a m\u1ef9 h\u1ecdc M\u00e1c-x\u00edt?",
-    answers: ["A. C. M\u00e1c v\u00e0 Ph. \u0102ngghen", "B. A. Potebnia", "C. L\u00eanin", "D. T. Benfei"],
-    correct: 2
+    id: "CH124",
+    question: "Ai là người đã làm phong phú, đào sâu và phát triển thêm những vấn đề cơ bản của mỹ học Mác-xít?",
+    answers: ["C. Mác và Ph. Ăngghen", "A. Potebnia", "Lênin", "T. Benfei"],
+    correct: [2]
   },
   {
-    question: "T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc v\u00e0 l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt \u0110\u1ee9c cu\u1ed1i XVIII \u0111\u1ea7u XIX nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc nh\u00e2n lo\u1ea1i \u0111\u1ea1t t\u1edbi m\u1ee9c ph\u00e1t tri\u1ec3n th\u1ea5p", "B. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc nh\u00e2n lo\u1ea1i \u0111\u1ea1t t\u1edbi m\u1ee9c ph\u00e1t tri\u1ec3n trung b\u00ecnh", "C. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc nh\u00e2n lo\u1ea1i \u0111\u1ea1t t\u1edbi m\u1ee9c ph\u00e1t tri\u1ec3n kh\u00f4ng cao", "D. T\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc nh\u00e2n lo\u1ea1i \u0111\u1ea1t t\u1edbi m\u1ee9c ph\u00e1t tri\u1ec3n cao"],
-    correct: 3
+    id: "CH125",
+    question: "Tư tưởng mỹ học và lý luận nghệ thuật Đức cuối XVIII đầu XIX như thế nào?",
+    answers: ["Tư tưởng mỹ học nhân loại đạt tới mức phát triển thấp", "Tư tưởng mỹ học nhân loại đạt tới mức phát triển trung bình", "Tư tưởng mỹ học nhân loại đạt tới mức phát triển không cao", "Tư tưởng mỹ học nhân loại đạt tới mức phát triển cao"],
+    correct: [3]
   },
   {
-    question: "Hegel xem c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 hi\u1ec7n th\u00e2n c\u1ee7a \u00fd ni\u1ec7m t\u01b0\u01a1ng \u0111\u1ed1i", "B. L\u00e0 th\u1ec3 hi\u1ec7n c\u1ee7a \u00fd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i", "C. L\u00e0 hi\u1ec7n th\u00e2n c\u1ee7a \u00fd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i", "D. L\u00e0 hi\u1ec7n th\u00e2n c\u1ee7a \u00fd ni\u1ec7m"],
-    correct: 2
+    id: "CH126",
+    question: "Hegel xem cái đẹp là gì?",
+    answers: ["Là hiện thân của ý niệm tương đối", "Là thể hiện của ý niệm tuyệt đối", "Là hiện thân của ý niệm tuyệt đối", "Là hiện thân của ý niệm"],
+    correct: [2]
   },
   {
-    question: "Bielinski coi ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec? CH\u01af\u01a0NG 2: KH\u00c1CH TH\u1ec2 TH\u1ea8M M\u1ef8",
-    answers: ["A. C\u00e1i t\u00e1i hi\u1ec7n hi\u1ec7n th\u1ef1c; cu\u1ed9c s\u1ed1ng l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a th\u1ea9m m\u1ef9", "B. C\u00e1i cu\u1ed9c s\u1ed1ng l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a ngh\u1ec7 thu\u1eadt", "C. C\u00e1i t\u00e1i hi\u1ec7n hi\u1ec7n th\u1ef1c; cu\u1ed9c s\u1ed1ng l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a ngh\u1ec7 thu\u1eadt", "D. C\u00e1i t\u00e1i hi\u1ec7n hi\u1ec7n th\u1ef1c ho\u1eb7c cu\u1ed9c s\u1ed1ng l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a tri\u1ebft h\u1ecdc"],
-    correct: 2
+    id: "CH127",
+    question: "Bielinski coi nghệ thuật là gì? CHƯƠNG 2: KHÁCH THỂ THẨM MỸ",
+    answers: ["Cái tái hiện hiện thực; cuộc sống là đối tượng của thẩm mỹ", "Cái cuộc sống là đối tượng của nghệ thuật", "Cái tái hiện hiện thực; cuộc sống là đối tượng của nghệ thuật", "Cái tái hiện hiện thực hoặc cuộc sống là đối tượng của triết học"],
+    correct: [2]
   },
   {
-    question: "H\u1ecdc thuy\u1ebft n\u00e0o \u0111\u00e3 g\u00f3p ph\u1ea7n b\u1ed5 sung, l\u00e0m cho ho\u00e0n ch\u1ec9nh v\u00e0 v\u1eefng ch\u1eafc h\u01a1n v\u1ec1 nh\u1eefng \u0111\u1ecbnh ngh\u0129a c\u00e1i \u0111\u1eb9p?",
-    answers: ["A. C\u1ed5 \u0111i\u1ec3n \u0110\u1ee9c", "B. Hy L\u1ea1p", "C. Mac", "D. Nga"],
-    correct: 2
+    id: "CH128",
+    question: "Học thuyết nào đã góp phần bổ sung, làm cho hoàn chỉnh và vững chắc hơn về những định nghĩa cái đẹp?",
+    answers: ["Cổ điển Đức", "Hy Lạp", "Mac", "Nga"],
+    correct: [2]
   },
   {
-    question: "H\u1ecdc thuy\u1ebft Mac c\u00f3 cho r\u1eb1ng c\u00e1i \u0111\u1eb9p kh\u00f4ng xu\u1ea5t ph\u00e1t t\u1eeb th\u1ea7n linh, t\u1eeb \u00fd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i, m\u00e0 xu\u1ea5t ph\u00e1t t\u1eeb \u0111\u00e2u?",
-    answers: ["A. Lao \u0111\u1ed9ng \u0111\u1ea5u tranh sinh t\u1ed3n, con ng\u01b0\u1eddi t\u1ef1 ho\u00e0n thi\u1ec7n m\u00ecnh t\u1eebng b\u01b0\u1edbc v\u1ec1 th\u1ec3 ch\u1ea5t v\u00e0 tinh th\u1ea7n, nh\u1eefng gi\u00e1c quan, nh\u1eefng c\u1ea3m quan v\u1ec1 c\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c n\u1ea3y sinh v\u00e0 ph\u00e1t tri\u1ec3n", "B. Con ng\u01b0\u1eddi t\u1ef1 ho\u00e0n thi\u1ec7n m\u00ecnh t\u1eebng b\u01b0\u1edbc v\u1ec1 th\u1ec3 ch\u1ea5t v\u00e0 tinh th\u1ea7n v\u00e0 nh\u1eefng gi\u00e1c quan, nh\u1eefng c\u1ea3m quan v\u1ec1 c\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c n\u1ea3y sinh v\u00e0 ph\u00e1t tri\u1ec3n", "C. Lao \u0111\u1ed9ng \u0111\u1ea5u tranh sinh t\u1ed3n v\u00e0 nh\u1eefng gi\u00e1c quan, nh\u1eefng c\u1ea3m quan v\u1ec1 c\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c n\u1ea3y sinh v\u00e0 ph\u00e1t tri\u1ec3n", "D. Lao \u0111\u1ed9ng \u0111\u1ea5u tranh sinh t\u1ed3n, con ng\u01b0\u1eddi t\u1ef1 ho\u00e0n thi\u1ec7n m\u00ecnh t\u1eebng b\u01b0\u1edbc v\u1ec1 th\u1ec3 ch\u1ea5t v\u00e0 tinh th\u1ea7n"],
-    correct: 0
+    id: "CH129",
+    question: "Học thuyết Mac có cho rằng cái đẹp không xuất phát từ thần linh, từ ý niệm tuyệt đối, mà xuất phát từ đâu?",
+    answers: ["Lao động đấu tranh sinh tồn, con người tự hoàn thiện mình từng bước về thể chất và tinh thần, những giác quan, những cảm quan về cái đẹp được nảy sinh và phát triển", "Con người tự hoàn thiện mình từng bước về thể chất và tinh thần và những giác quan, những cảm quan về cái đẹp được nảy sinh và phát triển", "Lao động đấu tranh sinh tồn và những giác quan, những cảm quan về cái đẹp được nảy sinh và phát triển", "Lao động đấu tranh sinh tồn, con người tự hoàn thiện mình từng bước về thể chất và tinh thần"],
+    correct: [0]
   },
   {
-    question: "Lao \u0111\u1ed9ng l\u00e0 \u2026 l\u00e0m cho \u0111\u1eddi s\u1ed1ng, nhu c\u1ea7u tinh th\u1ea7n phong ph\u00fa th\u00eam, trong \u0111\u00f3 c\u00f3 nhu c\u1ea7u s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. Ho\u1ea1t \u0111\u1ed9ng th\u1ef1c ti\u1ec5n", "B. Ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao", "C. Ho\u1ea1t \u0111\u1ed9ng vui ch\u01a1i", "D. Ho\u1ea1t \u0111\u1ed9ng gi\u1ea3i tr\u00ed"],
-    correct: 0
+    id: "CH130",
+    question: "Lao động là … làm cho đời sống, nhu cầu tinh thần phong phú thêm, trong đó có nhu cầu sáng tạo nghệ thuật?",
+    answers: ["Hoạt động thực tiễn", "Hoạt động thể thao", "Hoạt động vui chơi", "Hoạt động giải trí"],
+    correct: [0]
   },
   {
-    question: "M\u1ed9t c\u00e1ch ti\u1ebfp c\u1eadn kh\u00e1c \u0111\u1ebfn c\u00e1i \u0111\u1eb9p l\u00e0 do n\u00f3 b\u1eb1ng \u2026 c\u1ee7a ng\u01b0\u1eddi xem?",
-    answers: ["A. C\u1ea3m x\u00fac", "B. C\u1ea3m nh\u1eadn", "C. Gi\u00e1c quan", "D. \u00dd t\u01b0\u1edfng"],
-    correct: 0
+    id: "CH131",
+    question: "Một cách tiếp cận khác đến cái đẹp là do nó bằng … của người xem?",
+    answers: ["Cảm xúc", "Cảm nhận", "Giác quan", "Ý tưởng"],
+    correct: [0]
   },
   {
-    question: "Kant cho r\u1eb1ng c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. C\u00e1i \u0111\u1eb9p l\u00e0 c\u00e1i g\u00ec \u0111\u00f3 kh\u00f4ng c\u00f3 b\u1ea5t k\u1ef3 m\u1ed9t ch\u1ee9c n\u0103ng n\u00e0o kh\u00e1c ngo\u00e0i ch\u1ee9c n\u0103ng l\u00e0m c\u00e1i \u0111\u1eb9p", "B. C\u00e1i g\u00ec \u0111\u00f3 kh\u00f4ng c\u00f3 b\u1ea5t k\u1ef3 hai ch\u1ee9c n\u0103ng n\u00e0o kh\u00e1c ngo\u00e0i ch\u1ee9c n\u0103ng l\u00e0m c\u00e1i \u0111\u1eb9p", "C. C\u00e1i g\u00ec \u0111\u00f3 kh\u00f4ng c\u00f3 b\u1ea5t k\u1ef3 ba ch\u1ee9c n\u0103ng n\u00e0o kh\u00e1c ngo\u00e0i ch\u1ee9c n\u0103ng l\u00e0m c\u00e1i \u0111\u1eb9p", "D. C\u00e1i g\u00ec \u0111\u00f3 kh\u00f4ng c\u00f3 b\u1ea5t k\u1ef3 b\u1ed1n ch\u1ee9c n\u0103ng n\u00e0o kh\u00e1c ngo\u00e0i ch\u1ee9c n\u0103ng l\u00e0m c\u00e1i \u0111\u1eb9p"],
-    correct: 0
+    id: "CH132",
+    question: "Kant cho rằng cái đẹp là gì?",
+    answers: ["Cái đẹp là cái gì đó không có bất kỳ một chức năng nào khác ngoài chức năng làm cái đẹp", "Cái gì đó không có bất kỳ hai chức năng nào khác ngoài chức năng làm cái đẹp", "Cái gì đó không có bất kỳ ba chức năng nào khác ngoài chức năng làm cái đẹp", "Cái gì đó không có bất kỳ bốn chức năng nào khác ngoài chức năng làm cái đẹp"],
+    correct: [0]
   },
   {
-    question: "M\u1ed9t hi\u1ec7n t\u01b0\u1ee3ng c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c xem l\u00e0 \u0111\u1eb9p khi v\u1edbi t\u00ednh to\u00e0n v\u1eb9n c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh c\u1ee7a ng\u01b0\u1eddi n\u00e0o?",
-    answers: ["A. Ti\u1ebfp nh\u1eadn", "B. C\u1ea3m nh\u1eadn", "C. \u0110\u1ed3ng c\u1ea3m", "D. Ti\u1ebfp thu"],
-    correct: 0
+    id: "CH133",
+    question: "Một hiện tượng có thể được xem là đẹp khi với tính toàn vẹn cụ thể cảm tính của người nào?",
+    answers: ["Tiếp nhận", "Cảm nhận", "Đồng cảm", "Tiếp thu"],
+    correct: [0]
   },
   {
-    question: "Trong m\u1ef9 h\u1ecdc v\u00e0 l\u1ecbch s\u1eed ngh\u1ec7 thu\u1eadt, c\u00e1i \u0111\u1eb9p v\u00e0 s\u1ef1 ti\u1ebfp nh\u1eadn c\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c nghi\u00ean c\u1ee9u \u1edf b\u00ecnh di\u1ec7n quan h\u1ec7 gi\u1eefa c\u00e1c y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. V\u1eadt ch\u1ea5t v\u00e0 tinh th\u1ea7n, kh\u00e1ch quan v\u00e0 ch\u1ee7 quan, t\u1ef1 nhi\u00ean v\u00e0 x\u00e3 h\u1ed9i", "B. V\u1eadt ch\u1ea5t v\u00e0 tinh th\u1ea7n, t\u1ef1 nhi\u00ean v\u00e0 x\u00e3 h\u1ed9i, h\u00ecnh th\u1ee9c v\u00e0 n\u1ed9i dung", "C. Kh\u00e1ch quan v\u00e0 ch\u1ee7 quan, t\u1ef1 nhi\u00ean v\u00e0 x\u00e3 h\u1ed9i, h\u00ecnh th\u1ee9c v\u00e0 n\u1ed9i dung", "D. V\u1eadt ch\u1ea5t v\u00e0 tinh th\u1ea7n, kh\u00e1ch quan v\u00e0 ch\u1ee7 quan, t\u1ef1 nhi\u00ean v\u00e0 x\u00e3 h\u1ed9i, h\u00ecnh th\u1ee9c v\u00e0 n\u1ed9i dung"],
-    correct: 3
+    id: "CH134",
+    question: "Trong mỹ học và lịch sử nghệ thuật, cái đẹp và sự tiếp nhận cái đẹp được nghiên cứu ở bình diện quan hệ giữa các yếu tố nào?",
+    answers: ["Vật chất và tinh thần, khách quan và chủ quan, tự nhiên và xã hội", "Vật chất và tinh thần, tự nhiên và xã hội, hình thức và nội dung", "Khách quan và chủ quan, tự nhiên và xã hội, hình thức và nội dung", "Vật chất và tinh thần, khách quan và chủ quan, tự nhiên và xã hội, hình thức và nội dung"],
+    correct: [3]
   },
   {
-    question: "\u0110\u1eb7c tr\u01b0ng c\u1ee7a c\u00e1i \u0111\u1eb9p \u0111\u01b0\u1ee3c x\u00e1c \u0111\u1ecbnh th\u00f4ng qua m\u1ed1i quan h\u1ec7 c\u1ee7a n\u00f3 v\u1edbi c\u00e1c lo\u1ea1i h\u00ecnh gi\u00e1 tr\u1ecb kh\u00e1c n\u00e0o?",
-    answers: ["A. Gi\u00e1 tr\u1ecb th\u1ef1c d\u1ee5ng (l\u1ee3i \u00edch), gi\u00e1 tr\u1ecb nh\u1eadn th\u1ee9c (ch\u00e2n l\u00fd), gi\u00e1 tr\u1ecb \u0111\u1ea1o \u0111\u1ee9c (ch\u00e2n, thi\u1ec7n)", "B. Gi\u00e1 tr\u1ecb nh\u1eadn th\u1ee9c (ch\u00e2n l\u00fd), gi\u00e1 tr\u1ecb \u0111\u1ea1o \u0111\u1ee9c (ch\u00e2n, thi\u1ec7n)", "C. Gi\u00e1 tr\u1ecb th\u1ef1c d\u1ee5ng (l\u1ee3i \u00edch), gi\u00e1 tr\u1ecb \u0111\u1ea1o \u0111\u1ee9c (ch\u00e2n, thi\u1ec7n)", "D. Gi\u00e1 tr\u1ecb th\u1ef1c d\u1ee5ng (l\u1ee3i \u00edch), gi\u00e1 tr\u1ecb nh\u1eadn th\u1ee9c (ch\u00e2n l\u00fd)"],
-    correct: 0
+    id: "CH135",
+    question: "Đặc trưng của cái đẹp được xác định thông qua mối quan hệ của nó với các loại hình giá trị khác nào?",
+    answers: ["Giá trị thực dụng (lợi ích), giá trị nhận thức (chân lý), giá trị đạo đức (chân, thiện)", "Giá trị nhận thức (chân lý), giá trị đạo đức (chân, thiện)", "Giá trị thực dụng (lợi ích), giá trị đạo đức (chân, thiện)", "Giá trị thực dụng (lợi ích), giá trị nhận thức (chân lý)"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc duy v\u1eadt t\u00ecm c\u00e1i g\u00ec?",
-    answers: ["A. Ngu\u1ed3n g\u1ed1c c\u1ee7a kh\u00f4ng ti\u1ebfp nh\u1eadn v\u00e0 tr\u1ea3i nghi\u1ec7m c\u00e1i \u0111\u1eb9p \u1edf th\u1ef1c t\u1ea1i v\u1eadt ch\u1ea5t", "B. Ngu\u1ed3n g\u1ed1c c\u1ee7a ti\u1ebfp nh\u1eadn v\u00e0 kh\u00f4ng tr\u1ea3i nghi\u1ec7m c\u00e1i \u0111\u1eb9p \u1edf th\u1ef1c t\u1ea1i v\u1eadt ch\u1ea5t", "C. Ngu\u1ed3n g\u1ed1c c\u1ee7a ti\u1ebfp nh\u1eadn v\u00e0 tr\u1ea3i nghi\u1ec7m c\u00e1i \u0111\u1eb9p \u1edf th\u1ef1c t\u1ea1i v\u1eadt ch\u1ea5t", "D. Ngu\u1ed3n g\u1ed1c c\u1ee7a ti\u1ebfp thu v\u00e0 kh\u00f4ng tr\u1ea3i nghi\u1ec7m c\u00e1i \u0111\u1eb9p \u1edf th\u1ef1c t\u1ea1i v\u1eadt ch\u1ea5t"],
-    correct: 2
+    id: "CH136",
+    question: "Mỹ học duy vật tìm cái gì?",
+    answers: ["Nguồn gốc của không tiếp nhận và trải nghiệm cái đẹp ở thực tại vật chất", "Nguồn gốc của tiếp nhận và không trải nghiệm cái đẹp ở thực tại vật chất", "Nguồn gốc của tiếp nhận và trải nghiệm cái đẹp ở thực tại vật chất", "Nguồn gốc của tiếp thu và không trải nghiệm cái đẹp ở thực tại vật chất"],
+    correct: [2]
   },
   {
-    question: "M\u1ef9 h\u1ecdc duy v\u1eadt th\u1ec3 hi\u1ec7n c\u00e1c xu h\u01b0\u1edbng nh\u00ecn nh\u1eadn c\u00e1i g\u00ec?",
-    answers: ["A. C\u00e1i th\u1ea9m m\u1ef9", "B. C\u00e1i cu\u1ed9c s\u1ed1ng", "C. C\u00e1i \u0111\u1eb9p", "D. C\u00e1i n\u1ed3ng n\u1ed7i"],
-    correct: 2
+    id: "CH137",
+    question: "Mỹ học duy vật thể hiện các xu hướng nhìn nhận cái gì?",
+    answers: ["Cái thẩm mỹ", "Cái cuộc sống", "Cái đẹp", "Cái nồng nỗi"],
+    correct: [2]
   },
   {
-    question: "Tchernyshevski cho r\u1eb1ng c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. L\u00fd t\u01b0\u1edfng", "B. T\u1ef1 do", "C. Cu\u1ed9c s\u1ed1ng", "D. S\u1ef1 s\u1ed1ng"],
-    correct: 3
+    id: "CH138",
+    question: "Tchernyshevski cho rằng cái đẹp là gì?",
+    answers: ["Lý tưởng", "Tự do", "Cuộc sống", "Sự sống"],
+    correct: [3]
   },
   {
-    question: "C\u00e1c \u0111\u1ea1i bi\u1ec3u c\u1ee7a m\u1ef9 h\u1ecdc theo ch\u1ee7 thuy\u1ebft n\u00e0o n\u00eau l\u00ean s\u1ef1 li\u00ean h\u1ec7 c\u00f3 t\u00ednh quy lu\u1eadt gi\u1eefa c\u00e1i \u0111\u1eb9p v\u1edbi lao \u0111\u1ed9ng c\u1ee7a con ng\u01b0\u1eddi?",
-    answers: ["A. Ch\u1ee7 thuy\u1ebft Roma", "B. Ch\u1ee7 thuy\u1ebft Marx", "C. Ch\u1ee7 thuy\u1ebft Tcherny", "D. Ch\u1ee7 thuy\u1ebft Marry"],
-    correct: 1
+    id: "CH139",
+    question: "Các đại biểu của mỹ học theo chủ thuyết nào nêu lên sự liên hệ có tính quy luật giữa cái đẹp với lao động của con người?",
+    answers: ["Chủ thuyết Roma", "Chủ thuyết Marx", "Chủ thuyết Tcherny", "Chủ thuyết Marry"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc theo ch\u1ee7 thuy\u1ebft Marx c\u0169ng nh\u1ea5n m\u1ea1nh \u0111\u1eb7c bi\u1ec7t m\u1ed1i li\u00ean h\u1ec7 bi\u1ec7n ch\u1ee9ng gi\u1eefa c\u00e1i g\u00ec?",
-    answers: ["A. C\u00e1i kh\u00f4ng \u0111\u1eb9p v\u00e0 c\u00e1i c\u00f3 \u00edch, c\u00e1i \u0111\u1eb9p v\u00e0 ch\u00e2n l\u00fd", "B. C\u00e1i \u0111\u1eb9p v\u00e0 c\u00e1i c\u00f3 \u00edch, c\u00e1i \u0111\u1eb9p v\u00e0 ch\u00e2n l\u00fd", "C. C\u00e1i \u0111\u1eb9p v\u00e0 c\u00e1i kh\u00f4ng c\u00f3 \u00edch, c\u00e1i \u0111\u1eb9p v\u00e0 ch\u00e2n l\u00fd", "D. C\u00e1i kh\u00f4ng \u0111\u1eb9p v\u00e0 c\u00e1i kh\u00f4ng c\u00f3 \u00edch, c\u00e1i \u0111\u1eb9p v\u00e0 ch\u00e2n l\u00fd"],
-    correct: 1
+    id: "CH140",
+    question: "Mỹ học theo chủ thuyết Marx cũng nhấn mạnh đặc biệt mối liên hệ biện chứng giữa cái gì?",
+    answers: ["Cái không đẹp và cái có ích, cái đẹp và chân lý", "Cái đẹp và cái có ích, cái đẹp và chân lý", "Cái đẹp và cái không có ích, cái đẹp và chân lý", "Cái không đẹp và cái không có ích, cái đẹp và chân lý"],
+    correct: [1]
   },
   {
-    question: "Th\u1eddi Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i, xu\u1ea5t ph\u00e1t t\u1eeb th\u1ebf gi\u1edbi quan cho r\u1eb1ng th\u1ebf gi\u1edbi c\u00e1c v\u1eadt th\u1ee5 c\u1ea3m l\u00e0 c\u00e1i g\u00ec?",
-    answers: ["A. C\u00e1i bi c\u1ee7a th\u1ebf gi\u1edbi \u00fd ni\u1ec7m", "B. C\u00e1i t\u00e2m c\u1ee7a th\u1ebf gi\u1edbi \u00fd ni\u1ec7m", "C. C\u00e1i h\u00ecnh c\u1ee7a th\u1ebf gi\u1edbi \u00fd ni\u1ec7m", "D. C\u00e1i b\u00f3ng c\u1ee7a th\u1ebf gi\u1edbi \u00fd ni\u1ec7m"],
-    correct: 3
+    id: "CH141",
+    question: "Thời Hy Lạp cổ đại, xuất phát từ thế giới quan cho rằng thế giới các vật thụ cảm là cái gì?",
+    answers: ["Cái bi của thế giới ý niệm", "Cái tâm của thế giới ý niệm", "Cái hình của thế giới ý niệm", "Cái bóng của thế giới ý niệm"],
+    correct: [3]
   },
   {
-    question: "H\u00eaghen \u2013 nh\u00e0 duy t\u00e2m kh\u00e1ch quan ng\u01b0\u1eddi \u0110\u1ee9c quan ni\u1ec7m c\u00e1i \u0111\u1eb9p nh\u01b0 l\u00e0 m\u1ed9t s\u1ef1 th\u1ec3 hi\u1ec7n \u0111\u1eb7c bi\u1ec7t c\u1ee7a \u00fd ni\u1ec7m g\u00ec?",
-    answers: ["A. \u00dd ni\u1ec7m t\u01b0\u01a1ng \u0111\u1ed1i d\u01b0\u1edbi h\u00ecnh th\u1ee9c c\u1ee5 th\u1ec3 th\u1ee5 t\u00ednh", "B. \u00dd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i d\u01b0\u1edbi h\u00ecnh th\u1ee9c c\u1ee5 th\u1ec3 nh\u00e2n t\u00ednh", "C. \u00dd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i d\u01b0\u1edbi h\u00ecnh th\u1ee9c c\u1ee5 th\u1ec3 b\u1ea3n t\u00ednh", "D. \u00dd ni\u1ec7m tuy\u1ec7t \u0111\u1ed1i d\u01b0\u1edbi h\u00ecnh th\u1ee9c c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh"],
-    correct: 3
+    id: "CH142",
+    question: "Hêghen – nhà duy tâm khách quan người Đức quan niệm cái đẹp như là một sự thể hiện đặc biệt của ý niệm gì?",
+    answers: ["Ý niệm tương đối dưới hình thức cụ thể thụ tính", "Ý niệm tuyệt đối dưới hình thức cụ thể nhân tính", "Ý niệm tuyệt đối dưới hình thức cụ thể bản tính", "Ý niệm tuyệt đối dưới hình thức cụ thể cảm tính"],
+    correct: [3]
   },
   {
-    question: "Ai l\u00e0 nh\u00e0 t\u01b0 t\u01b0\u1edfng duy v\u1eadt c\u00f3 t\u00ednh bi\u1ec7n ch\u1ee9ng ch\u1ea5t ph\u00e1c \u0111\u1ed3ng nh\u1ea5t c\u00e1i \u0111\u1eb9p v\u1edbi s\u1ef1 h\u00e0i h\u00f2a, c\u00f2n b\u1ea3n th\u00e2n s\u1ef1 h\u00e0i h\u00f2a l\u00e0 th\u1ed1ng nh\u1ea5t gi\u1eefa c\u00e1c m\u1eb7t m\u00e2u thu\u1eabn?",
-    answers: ["A. H\u00earaclit", "B. Plat\u00f4n", "C. H\u00eaghen", "D. Kant"],
-    correct: 0
+    id: "CH143",
+    question: "Ai là nhà tư tưởng duy vật có tính biện chứng chất phác đồng nhất cái đẹp với sự hài hòa, còn bản thân sự hài hòa là thống nhất giữa các mặt mâu thuẫn?",
+    answers: ["Hêraclit", "Platôn", "Hêghen", "Kant"],
+    correct: [0]
   },
   {
-    question: "Nh\u00e0 nguy\u00ean t\u1eed lu\u1eadn \u0110\u00eam\u00f4crit ph\u00e1t hi\u1ec7n v\u1ebb \u0111\u1eb9p c\u00f3 quy m\u00f4 g\u00ec?",
-    answers: ["A. Quy m\u00f4 v\u1eeba ph\u1ea3i, c\u00f3 ch\u1eebng m\u1ef1c gi\u1eefa c\u00e1c b\u1ed9 ph\u1eadn trong m\u1ed9t ch\u1ec9nh th\u1ec3", 
-      "B. Quy m\u00f4 v\u1eeba ph\u1ea3i, n\u00f3 t\u1ed3n t\u1ea1i trong s\u1ef1 c\u00e2n x\u1ee9ng", 
-      "C. Quy m\u00f4 v\u1eeba ph\u1ea3i, n\u00f3 t\u1ed3n t\u1ea1i trong s\u1ef1 c\u00e2n x\u1ee9ng, c\u00f3 ch\u1eebng m\u1ef1c gi\u1eefa c\u00e1c b\u1ed9 ph\u1eadn trong m\u1ed9t ch\u1ec9nh th\u1ec3", 
-      "D. T\u1ed3n t\u1ea1i trong s\u1ef1 c\u00e2n x\u1ee9ng, c\u00f3 ch\u1eebng m\u1ef1c gi\u1eefa c\u00e1c b\u1ed9 ph\u1eadn trong m\u1ed9t ch\u1ec9nh th\u1ec3"],
-    correct: 3
+    id: "CH144",
+    question: "Nhà nguyên tử luận Đêmôcrit phát hiện vẻ đẹp có quy mô gì?",
+    answers: ["Quy mô vừa phải, có chừng mực giữa các bộ phận trong một chỉnh thể", "Quy mô vừa phải, nó tồn tại trong sự cân xứng", "Quy mô vừa phải, nó tồn tại trong sự cân xứng, có chừng mực giữa các bộ phận trong một chỉnh thể", "Tồn tại trong sự cân xứng, có chừng mực giữa các bộ phận trong một chỉnh thể"],
+    correct: [1]
   },
   {
-    question: "Trecxn\u01b0xepxki, nh\u00e0 d\u00e2n ch\u1ee7 c\u00e1ch m\u1ea1ng Nga cho c\u00e1i \u0111\u1eb9p l\u00e0 g\u00ec?",
-    answers: ["A. \u00dd ni\u1ec7m", "B. Th\u1ea7n linh", "C. V\u1eadt ch\u1ea5t", "D. Cu\u1ed9c s\u1ed1ng"],
-    correct: 3
+    id: "CH145",
+    question: "Trecxnưxepxki, nhà dân chủ cách mạng Nga cho cái đẹp là gì?",
+    answers: ["Ý niệm", "Thần linh", "Vật chất", "Cuộc sống"],
+    correct: [3]
   },
   {
-    question: "Trong s\u1ed1 c\u00e1c ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc, ph\u1ea1m tr\u00f9 c\u00e1i \u0111\u1eb9p gi\u1eef v\u1ecb tr\u00ed nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Ch\u00ednh di\u1ec7n", "B. Trung t\u00e2m", "C. T\u1ed5ng th\u1ec3", "D. \u0110\u1ea7u ti\u00ean"],
-    correct: 1
+    id: "CH146",
+    question: "Trong số các phạm trù mỹ học, phạm trù cái đẹp giữ vị trí như thế nào?",
+    answers: ["Chính diện", "Trung tâm", "Tổng thể", "Đầu tiên"],
+    correct: [1]
   },
   {
-    question: "Trong s\u1ed1 c\u00e1c ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc, ph\u1ea1m tr\u00f9 c\u00e1i \u0111\u1eb9p gi\u1eef v\u1ecb tr\u00ed trung t\u00e2m \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n \u1edf m\u1ea5y ph\u01b0\u01a1ng di\u1ec7n?",
-    answers: ["A. 2", "B. 3", "C. 4", "D. 5"],
-    correct: 1
+    id: "CH147",
+    question: "Trong số các phạm trù mỹ học, phạm trù cái đẹp giữ vị trí trung tâm được thể hiện ở mấy phương diện?",
+    answers: ["2", "3", "4", "5"],
+    correct: [1]
   },
   {
-    question: "C\u00e1i g\u00ec \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 l\u00e0 \u0111\u1eb9p ph\u1ea3i di\u1ec5n ra ho\u1eb7c \u0111\u01b0\u1ee3c ph\u1ea3n \u00e1nh l\u1ea1i m\u1ed9t c\u00e1ch ch\u00e2n th\u1ef1c, ngh\u0129a l\u00e0 n\u00f3 kh\u00f4ng th\u1ec3 gi\u1ea3 d\u1ed1i?",
-    answers: ["A. S\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng", "B. Hi\u1ec7n t\u01b0\u1ee3ng", "C. S\u1ef1 v\u1eadt", "D. S\u1ef1 v\u1eadt ho\u1eb7c hi\u1ec7n t\u01b0\u1ee3ng"],
-    correct: 0
+    id: "CH148",
+    question: "Cái gì được đánh giá là đẹp phải diễn ra hoặc được phản ánh lại một cách chân thực, nghĩa là nó không thể giả dối?",
+    answers: ["Sự vật, hiện tượng", "Hiện tượng", "Sự vật", "Sự vật hoặc hiện tượng"],
+    correct: [0]
   },
   {
-    question: "Nh\u1eefng con ng\u01b0\u1eddi x\u00e3 h\u1ed9i, nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng x\u00e3 h\u1ed9i ch\u1ec9 \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 l\u00e0 \u0111\u1eb9p khi n\u00f3 nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. G\u00f3p ph\u1ea7n mang l\u1ea1i l\u1ee3i \u00edch cho x\u00e3 h\u1ed9i", "B. G\u00f3p ph\u1ea7n mang l\u1ea1i l\u1ee3i \u00edch cho t\u1eadp th\u1ec3, cho x\u00e3 h\u1ed9i", "C. G\u00f3p ph\u1ea7n mang l\u1ea1i l\u1ee3i \u00edch cho c\u00e1 nh\u00e2n, cho x\u00e3 h\u1ed9i", "D. G\u00f3p ph\u1ea7n mang l\u1ea1i l\u1ee3i \u00edch cho con ng\u01b0\u1eddi, cho x\u00e3 h\u1ed9i"],
-    correct: 3
+    id: "CH149",
+    question: "Những con người xã hội, những hiện tượng xã hội chỉ được đánh giá là đẹp khi nó như thế nào?",
+    answers: ["Góp phần mang lại lợi ích cho xã hội", "Góp phần mang lại lợi ích cho tập thể, cho xã hội", "Góp phần mang lại lợi ích cho cá nhân, cho xã hội", "Góp phần mang lại lợi ích cho con người, cho xã hội"],
+    correct: [3]
   },
   {
-    question: "Bi\u1ec3u hi\u1ec7n c\u1ee7a c\u00e1i \u0111\u1eb9p l\u00e0 n\u00f3i \u0111\u1ebfn c\u00e1c s\u1ef1 v\u1eadt hi\u1ec7n t\u01b0\u1ee3ng nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. C\u00e1c s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 l\u00e0 \u0111\u1eb9p", "B. Hi\u1ec7n t\u01b0\u1ee3ng \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 l\u00e0 \u0111\u1eb9p, c\u00e1c v\u1ebb \u0111\u1eb9p c\u1ee5 th\u1ec3", "C. C\u00e1c s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 l\u00e0 \u0111\u1eb9p, c\u00e1c v\u1ebb \u0111\u1eb9p c\u1ee5 th\u1ec3", "D. C\u00e1c s\u1ef1 v\u1eadt, c\u00e1c v\u1ebb \u0111\u1eb9p c\u1ee5 th\u1ec3"],
-    correct: 2
+    id: "CH150",
+    question: "Biểu hiện của cái đẹp là nói đến các sự vật hiện tượng như thế nào?",
+    answers: ["Các sự vật, hiện tượng được đánh giá là đẹp", "Hiện tượng được đánh giá là đẹp, các vẻ đẹp cụ thể", "Các sự vật, hiện tượng được đánh giá là đẹp, các vẻ đẹp cụ thể", "Các sự vật, các vẻ đẹp cụ thể"],
+    correct: [2]
   },
   {
-    question: "V\u1ebb \u0111\u1eb9p \u0111\u01b0\u1ee3c c\u1ea3m nh\u1eadn ch\u1ee7 y\u1ebfu qua \u0111\u00e2u?",
-    answers: ["A. Th\u1ecb gi\u00e1c v\u00e0 v\u1ecb gi\u00e1c", "B. Th\u1ecb gi\u00e1c v\u00e0 th\u00ednh gi\u00e1c", "C. Kh\u1ee9u gi\u00e1c v\u00e0 th\u00ednh gi\u00e1c", "D. V\u1ecb gi\u00e1c v\u00e0 th\u00ednh gi\u00e1c"],
-    correct: 1
+    id: "CH151",
+    question: "Vẻ đẹp được cảm nhận chủ yếu qua đâu?",
+    answers: ["Thị giác và vị giác", "Thị giác và thính giác", "Khứu giác và thính giác", "Vị giác và thính giác"],
+    correct: [1]
   },
   {
-    question: "L\u0129nh v\u1ef1c bi\u1ec3u hi\u1ec7n c\u1ee7a c\u00e1i \u0111\u1eb9p c\u00f3 th\u1ec3 ph\u00e2n ra m\u1ea5y l\u0129nh v\u1ef1c bi\u1ec3u hi\u1ec7n?",
-    answers: ["A. 5", "B. 4", "C. 3", "D. 2"],
-    correct: 2
+    id: "CH152",
+    question: "Lĩnh vực biểu hiện của cái đẹp có thể phân ra mấy lĩnh vực biểu hiện?",
+    answers: ["5", "4", "3", "2"],
+    correct: [2]
   },
   {
-    question: "N\u00eau ra ba l\u0129nh v\u1ef1c bi\u1ec3u hi\u1ec7n c\u1ee7a c\u00e1i \u0111\u1eb9p?",
-    answers: ["A. Trong t\u1ef1 nhi\u00ean, trong x\u00e3 h\u1ed9i, trong ngh\u1ec7 thu\u1eadt", "B. Trong thi\u00ean nhi\u00ean, trong x\u00e3 h\u1ed9i, trong ngh\u1ec7 thu\u1eadt", "C. Trong t\u1ef1 nhi\u00ean, trong cu\u1ed9c s\u1ed1ng, trong ngh\u1ec7 thu\u1eadt", "D. Trong t\u1ef1 nhi\u00ean, trong x\u00e3 h\u1ed9i ho\u1eb7c trong ngh\u1ec7 thu\u1eadt"],
-    correct: 0
+    id: "CH153",
+    question: "Nêu ra ba lĩnh vực biểu hiện của cái đẹp?",
+    answers: ["Trong tự nhiên, trong xã hội, trong nghệ thuật", "Trong thiên nhiên, trong xã hội, trong nghệ thuật", "Trong tự nhiên, trong cuộc sống, trong nghệ thuật", "Trong tự nhiên, trong xã hội hoặc trong nghệ thuật"],
+    correct: [0]
   },
   {
-    question: "C\u00e1i cao c\u1ea3 c\u00f3 th\u1ec3 t\u00ecm th\u1ea5y \u1edf \u0111\u00e2u?",
-    answers: ["A. Trong thi\u00ean nhi\u00ean, trong x\u00e3 h\u1ed9i, trong con ng\u01b0\u1eddi v\u00e0 trong ngh\u1ec7 thu\u1eadt", "B. Trong x\u00e3 h\u1ed9i, trong con ng\u01b0\u1eddi v\u00e0 trong ngh\u1ec7 thu\u1eadt", "C. Trong thi\u00ean nhi\u00ean, trong con ng\u01b0\u1eddi v\u00e0 trong ngh\u1ec7 thu\u1eadt", "D. Trong thi\u00ean nhi\u00ean, trong x\u00e3 h\u1ed9i, trong con ng\u01b0\u1eddi"],
-    correct: 0
+    id: "CH154",
+    question: "Cái cao cả có thể tìm thấy ở đâu?",
+    answers: ["Trong thiên nhiên, trong xã hội, trong con người và trong nghệ thuật", "Trong xã hội, trong con người và trong nghệ thuật", "Trong thiên nhiên, trong con người và trong nghệ thuật", "Trong thiên nhiên, trong xã hội, trong con người"],
+    correct: [0]
   },
   {
-    question: "C\u00f3 m\u1ea5y ki\u1ec3u cao c\u1ea3?",
-    answers: ["A. 1", "B. 2", "C. 3", "D. 4"],
-    correct: 1
+    id: "CH155",
+    question: "Có mấy kiểu cao cả?",
+    answers: ["1", "2", "3", "4"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin x\u00e1c \u0111\u1ecbnh r\u1eb1ng hi\u1ec7n t\u01b0\u1ee3ng th\u1ea9m m\u1ef9 \u0111\u01b0\u1ee3c xem l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng c\u1ee7a c\u00e1i cao c\u1ea3 bao g\u1ed3m hai ph\u01b0\u01a1ng di\u1ec7n n\u00e0o?",
-    answers: ["A. Ph\u01b0\u01a1ng di\u1ec7n to\u00e0n di\u1ec7n v\u00e0 ph\u01b0\u01a1ng di\u1ec7n c\u00e1 nh\u00e2n", "B. Ph\u01b0\u01a1ng di\u1ec7n x\u00e3 h\u1ed9i v\u00e0 ph\u01b0\u01a1ng di\u1ec7n c\u00e1 nh\u00e2n", "C. Ph\u01b0\u01a1ng di\u1ec7n kh\u00e1ch th\u1ec3 v\u00e0 ph\u01b0\u01a1ng di\u1ec7n ch\u1ee7 th\u1ec3", "D. Ph\u01b0\u01a1ng di\u1ec7n t\u00e2m linh v\u00e0 ph\u01b0\u01a1ng di\u1ec7n t\u00edn ng\u01b0\u1ee1ng"],
-    correct: 2
+    id: "CH156",
+    question: "Mỹ học Mác – Lênin xác định rằng hiện tượng thẩm mỹ được xem là đối tượng của cái cao cả bao gồm hai phương diện nào?",
+    answers: ["Phương diện toàn diện và phương diện cá nhân", "Phương diện xã hội và phương diện cá nhân", "Phương diện khách thể và phương diện chủ thể", "Phương diện tâm linh và phương diện tín ngưỡng"],
+    correct: [2]
   },
   {
-    question: "C\u00e1i cao c\u1ea3 \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n ra trong ngh\u1ec7 thu\u1eadt th\u00f4ng th\u01b0\u1eddng qua c\u00e1c h\u00ecnh th\u1ee9c \u0111i\u1ec3n h\u00ecnh n\u00e0o?",
-    answers: ["A. T\u00ednh trung b\u00ecnh, ho\u00e0nh tr\u00e1ng", "B. T\u00ednh \u0111\u1ed3 s\u1ed9, ho\u00e0nh tr\u00e1ng", "C. T\u00ednh nh\u1ecf b\u00e9, ho\u00e0nh tr\u00e1ng", "D. T\u00ednh \u0111\u1ed3 s\u1ed9, qu\u00e1 kh\u1ed5"],
-    correct: 1
+    id: "CH157",
+    question: "Cái cao cả được thể hiện ra trong nghệ thuật thông thường qua các hình thức điển hình nào?",
+    answers: ["Tính trung bình, hoành tráng", "Tính đồ sộ, hoành tráng", "Tính nhỏ bé, hoành tráng", "Tính đồ sộ, quá khổ"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin kh\u1eb3ng \u0111\u1ecbnh bi k\u1ecbch l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ed9t lo\u1ea1i hi\u1ec7n t\u01b0\u1ee3ng x\u00e3 h\u1ed9i", "B. M\u1ed9t lo\u1ea1i hi\u1ec7n t\u01b0\u1ee3ng t\u1ef1 nhi\u00ean", "C. M\u1ed9t lo\u1ea1i hi\u1ec7n t\u01b0\u1ee3ng khoa h\u1ecdc", "D. M\u1ed9t lo\u1ea1i hi\u1ec7n t\u01b0\u1ee3ng tri\u1ebft h\u1ecdc"],
-    correct: 0
+    id: "CH158",
+    question: "Mỹ học Mác – Lênin khẳng định bi kịch là gì?",
+    answers: ["Một loại hiện tượng xã hội", "Một loại hiện tượng tự nhiên", "Một loại hiện tượng khoa học", "Một loại hiện tượng triết học"],
+    correct: [0]
   },
   {
-    question: "Bi h\u00f9ng ph\u1ea3n \u00e1nh c\u00e1i g\u00ec?",
-    answers: ["A. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch th\u1ea5p h\u00e8n", "B. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch cao c\u1ea3", "C. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch", "D. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch cao c\u1ea3"],
-    correct: 3,
-    correct: 3
+    id: "CH159",
+    question: "Bi hùng phản ánh cái gì?",
+    answers: ["Sự hy sinh cho cái mới một cách thấp hèn", "Sự hy sinh cho cái mới một cách cao cả", "Sự hy sinh cho cái mới một cách", "Sự hy sinh cho cái mới một cách cao cả"],
+    correct: [1, 3]
   },
   {
-    question: "C\u00e1i h\u00e0i l\u00e0 m\u1ed9t ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc ph\u1ea3n \u00e1nh m\u1ed9t thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng v\u00e0 kh\u00e1ch th\u1ec3 c\u00f3 t\u00ednh ch\u1ea5t n\u00e0o?",
-    answers: ["A. Tr\u00e1i ng\u01b0\u1ee3c, m\u00e2u thu\u1eabn, t\u1ea1o ra ti\u1ebfng c\u01b0\u1eddi", "B. M\u00e2u thu\u1eabn, t\u1ea1o ra ti\u1ebfng c\u01b0\u1eddi", "C. Tr\u00e1i ng\u01b0\u1ee3c, t\u1ea1o ra ti\u1ebfng c\u01b0\u1eddi", "D. Tr\u00e1i ng\u01b0\u1ee3c, m\u00e2u thu\u1eabn"],
-    correct: 0
+    id: "CH160",
+    question: "Cái hài là một phạm trù mỹ học phản ánh một thuộc tính thẩm mỹ của những hiện tượng và khách thể có tính chất nào?",
+    answers: ["Trái ngược, mâu thuẫn, tạo ra tiếng cười", "Mâu thuẫn, tạo ra tiếng cười", "Trái ngược, tạo ra tiếng cười", "Trái ngược, mâu thuẫn"],
+    correct: [0]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi cho h\u00e0i k\u1ecbch l\u00e0 c\u00e1i b\u1eaft ch\u01b0\u1edbc c\u00e1i x\u1ea5u nh\u01b0ng kh\u00f4ng ph\u1ea3i to\u00e0n b\u1ed9 s\u1ef1 x\u1ea5u xa, bi \u0111\u1ee1i m\u00e0 ch\u1ec9 l\u00e0 m\u1ed9t sai l\u1ea7m, m\u1ed9t s\u1ef1 k\u1ef3 qu\u1eb7c n\u00e0o \u0111\u00f3?",
-    answers: ["A. Arixtot", "B. Kant xet", "C. H\u00eaghen", "D. Tr\u00e9cnex\u00e9p\u00acxki"],
-    correct: 0
+    id: "CH161",
+    question: "Ai là người cho hài kịch là cái bắt chước cái xấu nhưng không phải toàn bộ sự xấu xa, bi đỡi mà chỉ là một sai lầm, một sự kỳ quặc nào đó?",
+    answers: ["Arixtot", "Kant xet", "Hêghen", "Trécnexép¬xki"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin x\u00e1c \u0111\u1ecbnh c\u01a1 s\u1edf kh\u00e1ch quan c\u1ee7a c\u00e1i h\u00e0i l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ef1 th\u1ec3 hi\u1ec7n b\u1ec1 ngo\u00e0i c\u1ee7a n\u00f3, l\u00e0 s\u1ef1 kh\u00f4ng ph\u00f9 h\u1ee3p gi\u1eefa m\u1ed9t s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng n\u00e0o \u0111\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng, v\u1edbi xu th\u1ebf v\u1eadn \u0111\u1ed9ng c\u1ee7a ngo\u1ea1i c\u1ea3nh", "B. S\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa ph\u1ea9m ch\u1ea5t b\u00ean trong c\u1ee7a hi\u1ec7n t\u01b0\u1ee3ng h\u00e0i, l\u00e0 s\u1ef1 kh\u00f4ng ph\u00f9 h\u1ee3p gi\u1eefa m\u1ed9t s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng n\u00e0o \u0111\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng, v\u1edbi xu th\u1ebf v\u1eadn \u0111\u1ed9ng c\u1ee7a ngo\u1ea1i c\u1ea3nh", "C. S\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa ph\u1ea9m ch\u1ea5t b\u00ean trong c\u1ee7a hi\u1ec7n t\u01b0\u1ee3ng h\u00e0i v\u00e0 s\u1ef1 th\u1ec3 hi\u1ec7n b\u1ec1 ngo\u00e0i c\u1ee7a n\u00f3, l\u00e0 s\u1ef1 kh\u00f4ng ph\u00f9 h\u1ee3p gi\u1eefa m\u1ed9t s\u1ef1 v\u1eadt", "D. S\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa ph\u1ea9m ch\u1ea5t b\u00ean trong c\u1ee7a hi\u1ec7n t\u01b0\u1ee3ng h\u00e0i v\u00e0 s\u1ef1 th\u1ec3 hi\u1ec7n b\u1ec1 ngo\u00e0i c\u1ee7a n\u00f3, l\u00e0 s\u1ef1 kh\u00f4ng ph\u00f9 h\u1ee3p gi\u1eefa m\u1ed9t s\u1ef1 v\u1eadt, hi\u1ec7n t\u01b0\u1ee3ng n\u00e0o \u0111\u00f3 v\u1edbi m\u00f4i tr\u01b0\u1eddng, v\u1edbi xu th\u1ebf v\u1eadn \u0111\u1ed9ng c\u1ee7a ngo\u1ea1i c\u1ea3nh"],
-    correct: 3
+    id: "CH162",
+    question: "Mỹ học Mác – Lênin xác định cơ sở khách quan của cái hài là gì?",
+    answers: ["Sự thể hiện bề ngoài của nó, là sự không phù hợp giữa một sự vật, hiện tượng nào đó với môi trường, với xu thế vận động của ngoại cảnh", "Sự thống nhất giữa phẩm chất bên trong của hiện tượng hài, là sự không phù hợp giữa một sự vật, hiện tượng nào đó với môi trường, với xu thế vận động của ngoại cảnh", "Sự thống nhất giữa phẩm chất bên trong của hiện tượng hài và sự thể hiện bề ngoài của nó, là sự không phù hợp giữa một sự vật", "Sự thống nhất giữa phẩm chất bên trong của hiện tượng hài và sự thể hiện bề ngoài của nó, là sự không phù hợp giữa một sự vật, hiện tượng nào đó với môi trường, với xu thế vận động của ngoại cảnh"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: D\u1ea1ng h\u00e0i l\u1ecbch s\u1eed \u2013 x\u00e3 h\u1ed9i c\u00f3 c\u01a1 s\u1edf l\u00e0 \u2026\u2026 gi\u1eefa xu h\u01b0\u1edbng ph\u00e1t tri\u1ec3n c\u1ee7a ti\u1ebfn b\u1ed9 x\u00e3 h\u1ed9i, c\u1ee7a c\u00e1c l\u1ef1c l\u01b0\u1ee3ng c\u00e1ch m\u1ea1ng v\u1edbi c\u00e1c l\u1ef1c l\u01b0\u1ee3ng x\u00e3 h\u1ed9i l\u1ea1c h\u1eadu?",
-    answers: ["A. M\u00e2u thu\u1eabn", "B. H\u00f2a thu\u1eadn", "C. H\u1ed7 tr\u1ee3", "D. M\u1eadt thi\u1ebft"],
-    correct: 0
+    id: "CH163",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Dạng hài lịch sử – xã hội có cơ sở là …… giữa xu hướng phát triển của tiến bộ xã hội, của các lực lượng cách mạng với các lực lượng xã hội lạc hậu?",
+    answers: ["Mâu thuẫn", "Hòa thuận", "Hỗ trợ", "Mật thiết"],
+    correct: [0]
   },
   {
-    question: "Ti\u1ebfng c\u01b0\u1eddi trong c\u00e1i h\u00e0i kh\u00e1c ti\u1ebfng c\u01b0\u1eddi sinh l\u00fd \u0111\u01a1n thu\u1ea7n v\u00ec sao?",
-    answers: ["A. M\u1ed9t d\u1ea1ng mang \u00fd ngh\u0129a kh\u00f4ng nh\u1eadn th\u1ee9c, kh\u00e1m ph\u00e1", "B. M\u1ed9t d\u1ea1ng mang \u00fd ngh\u0129a nh\u1eadn th\u1ee9c, t\u00ecm hi\u1ec3u", "C. M\u1ed9t d\u1ea1ng mang \u00fd ngh\u0129a nh\u1eadn th\u1ee9c, kh\u00e1m ph\u00e1", "D. M\u1ed9t d\u1ea1ng mang \u00fd ngh\u0129a kh\u00e1m ph\u00e1"],
-    correct: 2
+    id: "CH164",
+    question: "Tiếng cười trong cái hài khác tiếng cười sinh lý đơn thuần vì sao?",
+    answers: ["Một dạng mang ý nghĩa không nhận thức, khám phá", "Một dạng mang ý nghĩa nhận thức, tìm hiểu", "Một dạng mang ý nghĩa nhận thức, khám phá", "Một dạng mang ý nghĩa khám phá"],
+    correct: [2]
   },
   {
-    question: "Bi k\u1ecbch n\u00e0o kh\u1eafc h\u1ecda s\u00e2u v\u00e0o s\u1ef1 bi quan, m\u1ea5t ni\u1ec1m tin ho\u1eb7c c\u1ea3m nh\u1eadn phi l\u00fd v\u1ec1 \u0111\u1eddi s\u1ed1ng hi\u1ec7n th\u1ef1c, ho\u1eb7c c\u00e1i nh\u00ecn u \u00e1m v\u1ec1 t\u01b0\u01a1ng lai c\u1ee7a nh\u00e2n lo\u1ea1i? CH\u01af\u01a0NG 3: CH\u1ee6 TH\u1ec2 TH\u1ea8M M\u1ef8",
-    answers: ["A. Bi k\u1ecbch l\u1ea1c quan", "B. Bi k\u1ecbch x\u00e3 h\u1ed9i ch\u1ee7 ngh\u0129a", "C. Bi k\u1ecbch t\u01b0 s\u1ea3n hi\u1ec7n \u0111\u1ea1i", "D. Bi k\u1ecbch c\u1ed5 \u0111\u1ea1i"],
-    correct: 2
+    id: "CH165",
+    question: "Bi kịch nào khắc họa sâu vào sự bi quan, mất niềm tin hoặc cảm nhận phi lý về đời sống hiện thực, hoặc cái nhìn u ám về tương lai của nhân loại?",
+    answers: ["Bi kịch lạc quan", "Bi kịch xã hội chủ nghĩa", "Bi kịch tư sản hiện đại", "Bi kịch cổ đại"],
+    correct: [2]
   },
   {
-    question: "Ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 l\u00e0 ph\u01b0\u01a1ng di\u1ec7n th\u1ee9 m\u1ea5y c\u1ee7a quan h\u1ec7 th\u1ea9m m\u1ef9?",
-    answers: ["A. Hai", "B. Ba", "C. B\u1ed1n", "D. N\u0103m"],
-    correct: 0
+    id: "CH166",
+    question: "Chủ thể thẩm mỹ là phương diện thứ mấy của quan hệ thẩm mỹ?",
+    answers: ["Hai", "Ba", "Bốn", "Năm"],
+    correct: [0]
   },
   {
-    question: "Ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 l\u00e0 ph\u01b0\u01a1ng di\u1ec7n th\u1ee9 hai c\u1ee7a quan h\u1ec7 th\u1ea9m m\u1ef9, \u0111\u00f3 ch\u00ednh l\u00e0 g\u00ec?",
-    answers: ["A. C\u00e1c t\u1eadp \u0111o\u00e0n x\u00e3 h\u1ed9i, c\u00e1c t\u1eadp \u0111o\u00e0n x\u00e3 h\u1ed9i c\u00e1c ho\u1ea1t \u0111\u1ed9ng ng\u01b0\u1eddi trong ho\u1ea1t \u0111\u1ed9ng th\u01b0\u1eddng th\u1ee9c, \u0111\u00e1nh gi\u00e1", "B. Con ng\u01b0\u1eddi x\u00e3 h\u1ed9i, c\u00e1c t\u1eadp \u0111o\u00e0n x\u00e3 h\u1ed9i c\u00e1c ho\u1ea1t \u0111\u1ed9ng ng\u01b0\u1eddi trong ho\u1ea1t \u0111\u1ed9ng \u0111\u00e1nh gi\u00e1, s\u00e1ng t\u1ea1o c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "C. Con ng\u01b0\u1eddi x\u00e3 h\u1ed9i, c\u00e1c t\u1eadp \u0111o\u00e0n x\u00e3 h\u1ed9i c\u00e1c ho\u1ea1t \u0111\u1ed9ng ng\u01b0\u1eddi trong ho\u1ea1t \u0111\u1ed9ng th\u01b0\u1eddng th\u1ee9c, s\u00e1ng t\u1ea1o c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "D. Con ng\u01b0\u1eddi x\u00e3 h\u1ed9i, c\u00e1c t\u1eadp \u0111o\u00e0n x\u00e3 h\u1ed9i c\u00e1c ho\u1ea1t \u0111\u1ed9ng ng\u01b0\u1eddi trong ho\u1ea1t \u0111\u1ed9ng th\u01b0\u1eddng th\u1ee9c, \u0111\u00e1nh gi\u00e1, s\u00e1ng t\u1ea1o c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9"],
-    correct: 3
+    id: "CH167",
+    question: "Chủ thể thẩm mỹ là phương diện thứ hai của quan hệ thẩm mỹ, đó chính là gì?",
+    answers: ["Các tập đoàn xã hội, các tập đoàn xã hội các hoạt động người trong hoạt động thường thức, đánh giá", "Con người xã hội, các tập đoàn xã hội các hoạt động người trong hoạt động đánh giá, sáng tạo các giá trị thẩm mỹ", "Con người xã hội, các tập đoàn xã hội các hoạt động người trong hoạt động thường thức, sáng tạo các giá trị thẩm mỹ", "Con người xã hội, các tập đoàn xã hội các hoạt động người trong hoạt động thường thức, đánh giá, sáng tạo các giá trị thẩm mỹ"],
+    correct: [3]
   },
   {
-    question: "\u00dd th\u1ee9c th\u1ea9m m\u1ef9 l\u00e0 kh\u00e1i ni\u1ec7m \u0111i li\u1ec1n v\u1edbi kh\u00e1i ni\u1ec7m ho\u1ea1t \u0111\u1ed9ng g\u00ec?",
-    answers: ["A. Th\u1ea9m \u0111\u1ecbnh", "B. Th\u1ea9m quy\u1ec1n", "C. Th\u1ea9m m\u1ef9", "D. Th\u1ea9m th\u1ea5u"],
-    correct: 2
+    id: "CH168",
+    question: "Ý thức thẩm mỹ là khái niệm đi liền với khái niệm hoạt động gì?",
+    answers: ["Thẩm định", "Thẩm quyền", "Thẩm mỹ", "Thẩm thấu"],
+    correct: [2]
   },
   {
-    question: "\u00dd th\u1ee9c th\u1ea9m m\u1ef9 kh\u00f4ng ch\u1ec9 ph\u1ea3n \u00e1nh t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i m\u1ed9t c\u00e1ch th\u1ee5 \u0111\u1ed9ng, m\u00e0 c\u00f2n nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. T\u00edch c\u1ef1c c\u00f9ng v\u1edbi s\u1ef1 ph\u00e1t tri\u1ec3n c\u1ee7a t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i", "B. T\u00e1c \u0111\u1ed9ng t\u00edch c\u1ef1c v\u1edbi s\u1ef1 t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i", "C. T\u00e1c \u0111\u1ed9ng t\u00edch c\u1ef1c tr\u1edf l\u1ea1i v\u1edbi s\u1ef1 ph\u00e1t tri\u1ec3n c\u1ee7a t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i", "D. T\u00e1c \u0111\u1ed9ng kh\u00f4ng t\u00edch c\u1ef1c tr\u1edf l\u1ea1i v\u1edbi s\u1ef1 ph\u00e1t tri\u1ec3n c\u1ee7a t\u1ed3n t\u1ea1i x\u00e3 h\u1ed9i"],
-    correct: 2
+    id: "CH169",
+    question: "Ý thức thẩm mỹ không chỉ phản ánh tồn tại xã hội một cách thụ động, mà còn như thế nào?",
+    answers: ["Tích cực cùng với sự phát triển của tồn tại xã hội", "Tác động tích cực với sự tồn tại xã hội", "Tác động tích cực trở lại với sự phát triển của tồn tại xã hội", "Tác động không tích cực trở lại với sự phát triển của tồn tại xã hội"],
+    correct: [2]
   },
   {
-    question: "C\u1ea3m x\u00fac th\u1ea9m m\u1ef9 l\u00e0 m\u1ed9t trong nh\u1eefng th\u00e0nh t\u1ed1 th\u1ee9 m\u1ea5y c\u1ee7a \u00fd th\u1ee9c th\u1ea9m m\u1ef9?",
-    answers: ["A. \u0110\u1ea7u ti\u00ean", "B. Th\u1ee9 hai", "C. Th\u1ee9 ba", "D. Th\u1ee9 t\u01b0"],
-    correct: 0
+    id: "CH170",
+    question: "Cảm xúc thẩm mỹ là một trong những thành tố thứ mấy của ý thức thẩm mỹ?",
+    answers: ["Đầu tiên", "Thứ hai", "Thứ ba", "Thứ tư"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Nhu c\u1ea7u th\u1ea9m m\u1ef9 l\u00e0 m\u1ed9t trong nh\u1eefng th\u00e0nh t\u1ed1 \u2026. c\u1ee7a \u00fd th\u1ee9c th\u1ea9m m\u1ef9?",
-    answers: ["A. Ch\u1ee7 y\u1ebfu", "B. \u0110\u1ea7u ti\u00ean", "C. C\u01a1 b\u1ea3n", "D. Tr\u1ecdng t\u00e2m"],
-    correct: 2
+    id: "CH171",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nhu cầu thẩm mỹ là một trong những thành tố …. của ý thức thẩm mỹ?",
+    answers: ["Chủ yếu", "Đầu tiên", "Cơ bản", "Trọng tâm"],
+    correct: [2]
   },
   {
-    question: "Nhu c\u1ea7u th\u1ea9m m\u1ef9 thu\u1ed9c v\u1ec1 tuy\u1ebfn x\u00e3 h\u1ed9i, n\u00f3 mang t\u00ednh ch\u1ea5t g\u00ec?",
-    answers: ["A. Tinh th\u1ea7n", "B. V\u1eadt ch\u1ea5t", "C. Giai c\u1ea5p", "D. X\u00e3 h\u1ed9i"],
-    correct: 0
+    id: "CH172",
+    question: "Nhu cầu thẩm mỹ thuộc về tuyến xã hội, nó mang tính chất gì?",
+    answers: ["Tinh thần", "Vật chất", "Giai cấp", "Xã hội"],
+    correct: [0]
   },
   {
-    question: "Nhu c\u1ea7u th\u1ea9m m\u1ef9 \u1edf con ng\u01b0\u1eddi \u0111\u01b0\u1ee3c b\u1ed9c l\u1ed9 qua m\u1ea5y xu h\u01b0\u1edbng?",
-    answers: ["A. Hai", "B. Ba", "C. B\u1ed1n", "D. N\u0103m"],
-    correct: 0
+    id: "CH173",
+    question: "Nhu cầu thẩm mỹ ở con người được bộc lộ qua mấy xu hướng?",
+    answers: ["Hai", "Ba", "Bốn", "Năm"],
+    correct: [0]
   },
   {
-    question: "Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 th\u00e1i \u0111\u1ed9 t\u00ecnh c\u1ea3m c\u1ee7a con ng\u01b0\u1eddi tr\u01b0\u1edbc c\u00e1i \u0111\u1eb9p, c\u00e1i x\u1ea5u", "B. L\u00e0 s\u1edf th\u00edch c\u1ee7a con ng\u01b0\u1eddi v\u1ec1 ph\u01b0\u01a1ng di\u1ec7n th\u1ea9m m\u1ef9", "C. S\u1edf th\u00edch c\u1ee7a con ng\u01b0\u1eddi v\u1ec1 ph\u01b0\u01a1ng di\u1ec7n th\u1ea9m m\u1ef9", "D. S\u1edf th\u00edch c\u1ee7a con ng\u01b0\u1eddi v\u1ec1 ph\u01b0\u01a1ng di\u1ec7n th\u1ea9m \u0111\u1ecbnh"],
-    correct: [1,2]
+    id: "CH174",
+    question: "Thị hiếu thẩm mỹ là gì?",
+    answers: ["Là thái độ tình cảm của con người trước cái đẹp, cái xấu", "Là sở thích của con người về phương diện thẩm mỹ", "Sở thích của con người về phương diện thẩm mỹ", "Sở thích của con người về phương diện thẩm định"],
+    correct: [1]
   },
   {
-    question: "Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 \u1ed5n \u0111\u1ecbnh v\u00e0 b\u1ec1n v\u1eefng h\u01a1n, n\u00f3 l\u00e0 s\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. Gi\u1eefa t\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9 v\u00e0 b\u1ea3n ch\u1ea5t", "B. Gi\u1eefa t\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9 v\u00e0 c\u00e1i \u0111\u1eb9p", "C. Gi\u1eefa t\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9 v\u00e0 l\u00fd tr\u00ed", "D. Gi\u1eefa t\u00ecnh c\u1ea3m v\u00e0 l\u00fd tr\u00ed"],
-    correct: 2
+    id: "CH175",
+    question: "Thị hiếu thẩm mỹ ổn định và bền vững hơn, nó là sự thống nhất giữa yếu tố nào?",
+    answers: ["Giữa tình cảm thẩm mỹ và bản chất", "Giữa tình cảm thẩm mỹ và cái đẹp", "Giữa tình cảm thẩm mỹ và lý trí", "Giữa tình cảm và lý trí"],
+    correct: [2]
   },
   {
-    question: "Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 nghi\u00eang v\u1ec1 ph\u00eda n\u00e0o th\u00ec s\u1ebd b\u1ec1n v\u1eefng, \u1ed5n \u0111\u1ecbnh h\u01a1n?",
-    answers: ["A. Tinh c\u1ea3m", "B. L\u00fd tr\u00ed", "C. C\u1ea3m x\u00fac", "D. X\u00e3 h\u1ed9i"],
-    correct: 1
+    id: "CH176",
+    question: "Thị hiếu thẩm mỹ nghiêng về phía nào thì sẽ bền vững, ổn định hơn?",
+    answers: ["Tinh cảm", "Lý trí", "Cảm xúc", "Xã hội"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Gi\u1eefa \u2026.. kh\u00f4ng c\u00f3 ranh gi\u1edbi c\u1ee9ng nh\u1eafc, ch\u00fang ch\u1ecbu s\u1ef1 chi ph\u1ed1i c\u1ee7a quan \u0111i\u1ec3m ch\u00ednh tr\u1ecb c\u1ee7a m\u1ed9t x\u00e3 h\u1ed9i nh\u1ea5t \u0111\u1ecbnh n\u00e0o \u0111\u00f3?",
-    answers: ["A. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 v\u00e0 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 \u0111\u1ed9c h\u1ea1i", "B. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 l\u00e0nh m\u1ea1nh v\u00e0 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 hi\u1ec7n \u0111\u1ea1i", "C. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 l\u00e0nh m\u1ea1nh v\u00e0 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 \u0111\u1ed9c h\u1ea1i", "D. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 l\u00e0nh m\u1ea1nh v\u00e0 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 kh\u00f4ng l\u00e0nh m\u1ea1nh"],
-    correct: 3
+    id: "CH177",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Giữa ….. không có ranh giới cứng nhắc, chúng chịu sự chi phối của quan điểm chính trị của một xã hội nhất định nào đó?",
+    answers: ["Thị hiếu thẩm mỹ và thị hiếu thẩm mỹ độc hại", "Thị hiếu thẩm mỹ lành mạnh và thị hiếu thẩm mỹ hiện đại", "Thị hiếu thẩm mỹ lành mạnh và thị hiếu thẩm mỹ độc hại", "Thị hiếu thẩm mỹ lành mạnh và thị hiếu thẩm mỹ không lành mạnh"],
+    correct: [3]
   },
   {
-    question: "M\u1ed9t \u0111\u1ed1i t\u01b0\u1ee3ng th\u1ea9m m\u1ef9 c\u00f3 th\u1ec3 l\u00e0 l\u00e0nh m\u1ea1nh, kh\u00f4ng l\u00e0nh m\u1ea1nh t\u00f9y thu\u1ed9c v\u00e0o g\u00ec??",
-    answers: ["A. Ng\u01b0\u1eddi c\u1ea3m nh\u1eadn v\u00e0 m\u1ee9c \u0111\u1ed9 ti\u1ebfp x\u00fac c\u1ee7a ng\u01b0\u1eddi \u0111\u00f3 v\u1edbi \u0111\u1ed1i t\u01b0\u1ee3ng", "B. Ng\u01b0\u1eddi c\u1ea3m th\u1ee5 v\u00e0 m\u1ee9c \u0111\u1ed9 ti\u1ebfp x\u00fac c\u1ee7a ng\u01b0\u1eddi \u0111\u00f3 v\u1edbi \u0111\u1ed1i t\u01b0\u1ee3ng", "C. Ng\u01b0\u1eddi c\u1ea3m nh\u1eadn v\u00e0 m\u1ee9c \u0111\u1ed9 c\u1ee7a \u0111\u1ed1i t\u01b0\u1ee3ng", "D. M\u1ee9c \u0111\u1ed9 ti\u1ebfp x\u00fac c\u1ee7a ng\u01b0\u1eddi \u0111\u00f3 v\u1edbi \u0111\u1ed1i t\u01b0\u1ee3ng"],
-    correct: 0
+    id: "CH178",
+    question: "Một đối tượng thẩm mỹ có thể là lành mạnh, không lành mạnh tùy thuộc vào gì??",
+    answers: ["Người cảm nhận và mức độ tiếp xúc của người đó với đối tượng", "Người cảm thụ và mức độ tiếp xúc của người đó với đối tượng", "Người cảm nhận và mức độ của đối tượng", "Mức độ tiếp xúc của người đó với đối tượng"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: M\u1ed1t \u2013 xem x\u00e9t d\u01b0\u1edbi g\u00f3c \u0111\u1ed9 m\u1ef9 h\u1ecdc \u2013 Tri\u1ebft h\u1ecdc \u2013 l\u00e0\u2026.?",
-    answers: ["A. S\u1ef1 thay \u0111\u1ed5i m\u1ed9t c\u00e1ch c\u1ee5c b\u1ed9 c\u00e1c h\u00ecnh th\u1ee9c b\u1ec1 ngo\u00e0i, x\u1ea3y ra d\u01b0\u1edbi s\u1ef1 \u1ea3nh h\u01b0\u1edfng c\u1ee7a nhi\u1ec1u y\u1ebfu t\u1ed1 x\u00e3 h\u1ed9i", "B. S\u1ef1 thay \u0111\u1ed5i m\u1ed9t c\u00e1ch th\u01b0\u1eddng xuy\u00ean, c\u1ee5c b\u1ed9 c\u00e1c h\u00ecnh th\u1ee9c b\u1ec1 ngo\u00e0i", "C. S\u1ef1 thay \u0111\u1ed5i m\u1ed9t c\u00e1ch th\u01b0\u1eddng xuy\u00ean, x\u1ea3y ra d\u01b0\u1edbi s\u1ef1 \u1ea3nh h\u01b0\u1edfng c\u1ee7a nhi\u1ec1u y\u1ebfu t\u1ed1 x\u00e3 h\u1ed9i", "D. S\u1ef1 thay \u0111\u1ed5i m\u1ed9t c\u00e1ch th\u01b0\u1eddng xuy\u00ean, c\u1ee5c b\u1ed9 c\u00e1c h\u00ecnh th\u1ee9c b\u1ec1 ngo\u00e0i, x\u1ea3y ra d\u01b0\u1edbi s\u1ef1 \u1ea3nh h\u01b0\u1edfng c\u1ee7a nhi\u1ec1u y\u1ebfu t\u1ed1 x\u00e3 h\u1ed9i"],
-    correct: 3
+    id: "CH179",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Mốt – xem xét dưới góc độ mỹ học – Triết học – là….?",
+    answers: ["Sự thay đổi một cách cục bộ các hình thức bề ngoài, xảy ra dưới sự ảnh hưởng của nhiều yếu tố xã hội", "Sự thay đổi một cách thường xuyên, cục bộ các hình thức bề ngoài", "Sự thay đổi một cách thường xuyên, xảy ra dưới sự ảnh hưởng của nhiều yếu tố xã hội", "Sự thay đổi một cách thường xuyên, cục bộ các hình thức bề ngoài, xảy ra dưới sự ảnh hưởng của nhiều yếu tố xã hội"],
+    correct: [3]
   },
   {
-    question: "Trong m\u1ef9 h\u1ecdc, m\u1ed1t c\u00f3 th\u1ec3 l\u00e0m cho nh\u1eefng y\u1ebfu t\u1ed1 truy\u1ec1n th\u1ed1ng tr\u1edf n\u00ean nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. L\u1ed7i th\u1eddi, kh\u00f4ng ph\u00f9 h\u1ee3p v\u1edbi cu\u1ed9c s\u1ed1ng hi\u1ec7n t\u1ea1i", "B. Kh\u00f4ng ph\u00f9 h\u1ee3p v\u1edbi cu\u1ed9c s\u1ed1ng hi\u1ec7n t\u1ea1i", "C. L\u1ed7i th\u1eddi, kh\u00f4ng ph\u00f9 h\u1ee3p v\u1edbi cu\u1ed9c s\u1ed1ng", "D. L\u1ed7i th\u1eddi, ph\u00f9 h\u1ee3p v\u1edbi cu\u1ed9c s\u1ed1ng hi\u1ec7n t\u1ea1i"],
-    correct: 0
+    id: "CH180",
+    question: "Trong mỹ học, mốt có thể làm cho những yếu tố truyền thống trở nên như thế nào?",
+    answers: ["Lỗi thời, không phù hợp với cuộc sống hiện tại", "Không phù hợp với cuộc sống hiện tại", "Lỗi thời, không phù hợp với cuộc sống", "Lỗi thời, phù hợp với cuộc sống hiện tại"],
+    correct: [0]
   },
   {
-    question: "L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 \u0111\u00f3ng vai tr\u00f2 nh\u01b0 th\u1ebf n\u00e0o cho c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 c\u1ea7n thi\u1ebft v\u00e0 mong mu\u1ed1n?",
-    answers: ["A. H\u00ecnh t\u01b0\u1ee3ng", "B. H\u00ecnh \u1ea3nh", "C. H\u00ecnh th\u00e1i", "D. H\u00ecnh m\u1eabu"],
-    correct: 3
+    id: "CH181",
+    question: "Lý tưởng thẩm mỹ đóng vai trò như thế nào cho các giá trị thẩm mỹ cần thiết và mong muốn?",
+    answers: ["Hình tượng", "Hình ảnh", "Hình thái", "Hình mẫu"],
+    correct: [3]
   },
   {
-    question: "\u0110\u00e1nh gi\u00e1 n\u00e0o bao gi\u1edd c\u0169ng ph\u1ea3i tu\u00e2n theo c\u00e1c chu\u1ea9n m\u1ef1c?",
-    answers: ["A. \u0110\u00e1nh gi\u00e1 th\u1ea9m \u0111\u1ecbnh", "B. \u0110\u00e1nh gi\u00e1 th\u1ea9m m\u1ef9", "C. \u0110\u00e1nh gi\u00e1 c\u1ea3m x\u00fac", "D. \u0110\u00e1nh gi\u00e1 cu\u1ed9c s\u1ed1ng"],
-    correct: 1
+    id: "CH182",
+    question: "Đánh giá nào bao giờ cũng phải tuân theo các chuẩn mực?",
+    answers: ["Đánh giá thẩm định", "Đánh giá thẩm mỹ", "Đánh giá cảm xúc", "Đánh giá cuộc sống"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp n\u1ed9i dung c\u00f2n thi\u1ebfu sau: L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 \u0111\u01b0\u1ee3c bi\u1ec3u hi\u1ec7n ra th\u00f4ng qua \u2026.. mang t\u00ednh to\u00e0n v\u1eb9n v\u00e0 c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh?",
-    answers: ["A. Th\u1ef1c v\u1eadt", "B. Con ng\u01b0\u1eddi", "C. Nh\u00e2n v\u1eadt", "D. H\u00ecnh t\u01b0\u1ee3ng"],
-    correct: 3
+    id: "CH183",
+    question: "Hãy điền tiếp nội dung còn thiếu sau: Lý tưởng thẩm mỹ được biểu hiện ra thông qua ….. mang tính toàn vẹn và cụ thể cảm tính?",
+    answers: ["Thực vật", "Con người", "Nhân vật", "Hình tượng"],
+    correct: [3]
   },
   {
-    question: "L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 trong ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. S\u1ef1 th\u1ec3 hi\u1ec7n m\u1ed9t c\u00e1ch t\u1eadp trung s\u00e2u s\u1eafc l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 ngo\u00e0i \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i, n\u00f3 c\u00f3 kh\u1ea3 n\u0103ng d\u1eabn d\u1eaft l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 ngo\u00e0i hi\u1ec7n th\u1ef1c", "B. S\u1ef1 th\u1ec3 hi\u1ec7n m\u1ed9t c\u00e1ch t\u1eadp trung s\u00e2u s\u1eafc l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 ngo\u00e0i \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i", "C. T\u1eadp trung s\u00e2u s\u1eafc th\u1ea9m m\u1ef9 ngo\u00e0i \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i, n\u00f3 c\u00f3 kh\u1ea3 n\u0103ng kh\u00f4ng d\u1eabn d\u1eaft l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 ngo\u00e0i hi\u1ec7n th\u1ef1c", "D. D\u1eabn d\u1eaft l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 ngo\u00e0i hi\u1ec7n th\u1ef1c"],
-    correct: 0
+    id: "CH184",
+    question: "Lý tưởng thẩm mỹ trong nghệ thuật là gì?",
+    answers: ["Sự thể hiện một cách tập trung sâu sắc lý tưởng thẩm mỹ ngoài đời sống xã hội, nó có khả năng dẫn dắt lý tưởng thẩm mỹ ngoài hiện thực", "Sự thể hiện một cách tập trung sâu sắc lý tưởng thẩm mỹ ngoài đời sống xã hội", "Tập trung sâu sắc thẩm mỹ ngoài đời sống xã hội, nó có khả năng không dẫn dắt lý tưởng thẩm mỹ ngoài hiện thực", "Dẫn dắt lý tưởng thẩm mỹ ngoài hiện thực"],
+    correct: [0]
   },
   {
-    question: "Nh\u00f3m n\u00e0o \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0 nh\u00f3m c\u1ea3m th\u1ee5 c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9?",
-    answers: ["A. Ch\u1ee7 th\u1ec3 th\u1ea9m \u0111\u1ecbnh", "B. Ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c", "C. Ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9", "D. Ch\u1ee7 th\u1ec3 \u0111\u1ecbnh c\u01b0"],
-    correct: 2
+    id: "CH185",
+    question: "Nhóm nào được gọi là nhóm cảm thụ các giá trị thẩm mỹ?",
+    answers: ["Chủ thể thẩm định", "Chủ thể thưởng thức", "Chủ thể thẩm mỹ", "Chủ thể định cư"],
+    correct: [2]
   },
   {
-    question: "Gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 bao gi\u1edd c\u0169ng nh\u1eb1m l\u00e0m h\u00ecnh th\u00e0nh m\u1ed9t ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 bi\u1ebft \u0111\u00e1nh gi\u00e1 v\u00e0 s\u00e1ng t\u1ea1o c\u00e1i g\u00ec?",
-    answers: ["A. \u0110\u00e1nh gi\u00e1 v\u00e0 s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "B. H\u01b0\u1edfng th\u1ee5, s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "C. S\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "D. H\u01b0\u1edfng th\u1ee5, \u0111\u00e1nh gi\u00e1 v\u00e0 s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p"],
-    correct: 3
+    id: "CH186",
+    question: "Giáo dục thẩm mỹ bao giờ cũng nhằm làm hình thành một chủ thể thẩm mỹ biết đánh giá và sáng tạo cái gì?",
+    answers: ["Đánh giá và sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Hưởng thụ, sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Hưởng thụ, đánh giá và sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp"],
+    correct: [3]
   },
   {
-    question: "B\u1ea3n ch\u1ea5t c\u1ee7a gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 theo quan \u0111i\u1ec3m c\u1ee7a m\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin g\u1eafn li\u1ec1n v\u1edbi c\u00e1c ho\u1ea1t \u0111\u1ed9ng n\u00e0o?",
-    answers: ["A. S\u00e1ng t\u1ea1o", "B. Nh\u1eadn th\u1ee9c", "C. Ch\u1ee7 ngh\u0129a hi\u1ec7n th\u1ef1c", "D. X\u00e3 h\u1ed9i t\u01b0 b\u1ea3n"],
-    correct: 0
+    id: "CH187",
+    question: "Bản chất của giáo dục thẩm mỹ theo quan điểm của mỹ học Mác – Lênin gắn liền với các hoạt động nào?",
+    answers: ["Sáng tạo", "Nhận thức", "Chủ nghĩa hiện thực", "Xã hội tư bản"],
+    correct: [0]
   },
   {
-    question: "C\u00e1c y\u1ebfu t\u1ed1 n\u00e0o c\u1ee7a giai c\u1ea5p \u0111\u1ec1u ph\u1ee5 thu\u1ed9c v\u00e0o \u0111i\u1ec1u ki\u1ec7n sinh s\u1ed1ng v\u00e0 m\u1ee5c ti\u00eau gi\u00e1o d\u1ee5c c\u1ee7a giai c\u1ea5p \u0111\u00f3?",
-    answers: ["A. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 v\u00e0 l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9", "B. T\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9 v\u00e0 l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9", "C. T\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9, th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 v\u00e0 l\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9", "D. T\u00ecnh c\u1ea3m th\u1ea9m m\u1ef9, th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9"],
-    correct: 2
+    id: "CH188",
+    question: "Các yếu tố nào của giai cấp đều phụ thuộc vào điều kiện sinh sống và mục tiêu giáo dục của giai cấp đó?",
+    answers: ["Thị hiếu thẩm mỹ và lý tưởng thẩm mỹ", "Tình cảm thẩm mỹ và lý tưởng thẩm mỹ", "Tình cảm thẩm mỹ, thị hiếu thẩm mỹ và lý tưởng thẩm mỹ", "Tình cảm thẩm mỹ, thị hiếu thẩm mỹ"],
+    correct: [2]
   },
   {
-    question: "T\u00ednh x\u00e3 h\u1ed9i c\u1ee7a gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 c\u00f2n g\u1eafn li\u1ec1n v\u1edbi t\u00ednh g\u00ec?",
-    answers: ["A. T\u00ednh th\u1eddi \u0111\u1ea1i", "B. T\u00ednh hi\u1ec7n \u0111\u1ea1i", "C. T\u00ednh c\u00f4ng ch\u00fang", "D. T\u00ednh giai c\u1ea5p"],
-    correct: 0
+    id: "CH189",
+    question: "Tính xã hội của giáo dục thẩm mỹ còn gắn liền với tính gì?",
+    answers: ["Tính thời đại", "Tính hiện đại", "Tính công chúng", "Tính giai cấp"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: M\u1ef9 h\u1ecdc \u2026.. kh\u1eb3ng \u0111\u1ecbnh gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 g\u1eafn b\u00f3 ch\u1eb7t ch\u1ebd v\u1edbi gi\u00e1o d\u1ee5c lao \u0111\u1ed9ng?",
-    answers: ["A. M\u00e1c", "B. Kant", "C. M\u00e1c \u2013 L\u00eanin", "D. L\u00eanin"],
-    correct: 2
+    id: "CH190",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Mỹ học ….. khẳng định giáo dục thẩm mỹ gắn bó chặt chẽ với giáo dục lao động?",
+    answers: ["Mác", "Kant", "Mác – Lênin", "Lênin"],
+    correct: [2]
   },
   {
-    question: "Gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 b\u1eb1ng c\u00e1c t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc l\u00e0 h\u00ecnh th\u1ee9c gi\u00e1o d\u1ee5c nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Gi\u00e1o d\u1ee5c th\u1ea5p nh\u1ea5t", "B. Gi\u00e1o d\u1ee5c cao nh\u1ea5t", "C. Gi\u00e1o d\u1ee5c v\u1eeba ph\u1ea3i", "D. Gi\u00e1o d\u1ee5c c\u00e1 nh\u00e2n"],
-    correct: 1
+    id: "CH191",
+    question: "Giáo dục thẩm mỹ bằng các tư tưởng mỹ học là hình thức giáo dục như thế nào?",
+    answers: ["Giáo dục thấp nhất", "Giáo dục cao nhất", "Giáo dục vừa phải", "Giáo dục cá nhân"],
+    correct: [1]
   },
   {
-    question: "Kh\u1ea3 n\u0103ng ti\u1ebfp nh\u1eadn, c\u1ea3m th\u1ee5 c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 ph\u1ee5 thu\u1ed9c v\u00e0o m\u1ea5y y\u1ebfu t\u1ed1?",
-    answers: ["A. M\u1ed9t", "B. Hai", "C. Nhi\u1ec1u", "D. \u00cdt"],
-    correct: 2
+    id: "CH192",
+    question: "Khả năng tiếp nhận, cảm thụ các giá trị thẩm mỹ phụ thuộc vào mấy yếu tố?",
+    answers: ["Một", "Hai", "Nhiều", "Ít"],
+    correct: [2]
   },
   {
-    question: "Nh\u00f3m \u0111\u1ecbnh h\u01b0\u1edbng c\u00f2n c\u00f3 ch\u1ee9c n\u0103ng li\u00ean k\u1ebft n\u00e0o?",
-    answers: ["A. Kh\u1ea3 n\u0103ng ki\u1ec3m so\u00e1t chung", "B. Kh\u1ea3 n\u0103ng s\u00e1ng t\u1ea1o chung", "C. Kh\u1ea3 n\u0103ng h\u1ecdc h\u00e0nh chung", "D. Kh\u1ea3 n\u0103ng h\u00ecnh th\u00e0nh chung"],
-    correct: 1
+    id: "CH193",
+    question: "Nhóm định hướng còn có chức năng liên kết nào?",
+    answers: ["Khả năng kiểm soát chung", "Khả năng sáng tạo chung", "Khả năng học hành chung", "Khả năng hình thành chung"],
+    correct: [1]
   },
   {
-    question: "Nh\u00f3m ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. Nh\u1eefng ch\u1ee7 th\u1ec3 ti\u1ebfp n\u1ed1i qu\u00e1 tr\u00ecnh ti\u00eau th\u1ee5, quan s\u00e1t c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c \u0111\u1ec3 chuy\u1ec3n sang m\u1ed9t qu\u00e1 tr\u00ecnh m\u1edbi \u2013 qu\u00e1 tr\u00ecnh s\u1ea3n xu\u1ea5t", "B. Quan s\u00e1t c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c \u0111\u1ec3 chuy\u1ec3n sang m\u1ed9t qu\u00e1 tr\u00ecnh m\u1edbi \u2013 qu\u00e1 tr\u00ecnh s\u1ea3n xu\u1ea5t", "C. Nh\u1eefng ch\u1ee7 th\u1ec3 ti\u1ebfp n\u1ed1i qu\u00e1 tr\u00ecnh ti\u00eau th\u1ee5, quan s\u00e1t c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c \u0111\u1ec3 chuy\u1ec3n sang m\u1ed9t qu\u00e1 tr\u00ecnh m\u1edbi", "D. Ti\u1ebfp n\u1ed1i qu\u00e1 tr\u00ecnh ti\u00eau th\u1ee5, quan s\u00e1t c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c \u0111\u1ec3 chuy\u1ec3n sang m\u1ed9t qu\u00e1 tr\u00ecnh m\u1edbi \u2013 qu\u00e1 tr\u00ecnh s\u1ea3n xu\u1ea5t"],
-    correct: 0
+    id: "CH194",
+    question: "Nhóm chủ thể sáng tạo thẩm mỹ là gì?",
+    answers: ["Những chủ thể tiếp nối quá trình tiêu thụ, quan sát của nhóm chủ thể thưởng thức để chuyển sang một quá trình mới – quá trình sản xuất", "Quan sát của nhóm chủ thể thưởng thức để chuyển sang một quá trình mới – quá trình sản xuất", "Những chủ thể tiếp nối quá trình tiêu thụ, quan sát của nhóm chủ thể thưởng thức để chuyển sang một quá trình mới", "Tiếp nối quá trình tiêu thụ, quan sát của nhóm chủ thể thưởng thức để chuyển sang một quá trình mới – quá trình sản xuất"],
+    correct: [0]
   },
   {
-    question: "Vi\u1ec7c quan s\u00e1t c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o kh\u00f4ng ph\u1ea3i l\u00e0 nh\u1eadn th\u1ee9c \u0111\u01a1n thu\u1ea7n. \u0110\u00f3 l\u00e0 g\u00ec?",
-    answers: ["A. Qu\u00e1 tr\u00ecnh nh\u1eadn th\u1ee9c s\u00e2u h\u01a1n v\u1ec1 b\u1ea3n ch\u1ea5t \u0111\u1ed1i t\u01b0\u1ee3ng", "B. Qu\u00e1 tr\u00ecnh th\u01b0\u1edfng th\u1ee9c s\u00e2u h\u01a1n v\u1ec1 b\u1ea3n ch\u1ea5t \u0111\u1ed1i t\u01b0\u1ee3ng", "C. Qu\u00e1 tr\u00ecnh c\u1ea3m nh\u1eadn s\u00e2u h\u01a1n v\u1ec1 b\u1ea3n ch\u1ea5t \u0111\u1ed1i t\u01b0\u1ee3ng", "D. Qu\u00e1 tr\u00ecnh h\u00ecnh th\u00e0nh s\u00e2u h\u01a1n v\u1ec1 b\u1ea3n ch\u1ea5t \u0111\u1ed1i t\u01b0\u1ee3ng"],
-    correct: 0
+    id: "CH195",
+    question: "Việc quan sát của chủ thể sáng tạo không phải là nhận thức đơn thuần. Đó là gì?",
+    answers: ["Quá trình nhận thức sâu hơn về bản chất đối tượng", "Quá trình thưởng thức sâu hơn về bản chất đối tượng", "Quá trình cảm nhận sâu hơn về bản chất đối tượng", "Quá trình hình thành sâu hơn về bản chất đối tượng"],
+    correct: [0]
   },
   {
-    question: "Ngh\u1ec7 s\u0129 \u0111\u01b0\u1ee3c coi l\u00e0 ch\u1ee7 th\u1ec3 n\u00e0o khi h\u1ecd ph\u1ea3n \u00e1nh l\u1ea1i hi\u1ec7n t\u01b0\u1ee3ng th\u1ea9m m\u1ef9?",
-    answers: ["A. Ch\u1ee7 th\u1ec3 nh\u00e2n t\u1ea1o", "B. Ch\u1ee7 th\u1ec3 c\u00e1 nh\u00e2n", "C. Ch\u1ee7 th\u1ec3 th\u01b0\u1edfng th\u1ee9c", "D. Ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o"],
-    correct: 3
+    id: "CH196",
+    question: "Nghệ sĩ được coi là chủ thể nào khi họ phản ánh lại hiện tượng thẩm mỹ?",
+    answers: ["Chủ thể nhân tạo", "Chủ thể cá nhân", "Chủ thể thưởng thức", "Chủ thể sáng tạo"],
+    correct: [3]
   },
   {
-    question: "B\u1ea3n ch\u1ea5t c\u1ee7a qu\u00e1 tr\u00ecnh s\u00e1ng t\u1ea1o l\u00e0 g\u00ec?",
-    answers: ["A. Qu\u00e1 tr\u00ecnh ph\u1ea3n \u00e1nh", "B. Qu\u00e1 tr\u00ecnh h\u00ecnh th\u00e0nh", "C. Qu\u00e1 tr\u00ecnh nh\u1eadn th\u1ee9c", "D. Qu\u00e1 tr\u00ecnh c\u1ea3m nh\u1eadn"],
-    correct: 0
+    id: "CH197",
+    question: "Bản chất của quá trình sáng tạo là gì?",
+    answers: ["Quá trình phản ánh", "Quá trình hình thành", "Quá trình nhận thức", "Quá trình cảm nhận"],
+    correct: [0]
   },
   {
-    question: "S\u00e1ng t\u1ea1o th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 s\u00e1ng t\u1ea1o theo quy lu\u1eadt c\u00e1i kh\u00f4ng \u0111\u1eb9p, \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n trong s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt", "B. L\u00e0 s\u00e1ng t\u1ea1o theo quy lu\u1eadt c\u00e1i \u0111\u1eb9p, \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n cao nh\u1ea5t trong s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt", "C. L\u00e0 \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n cao nh\u1ea5t trong s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt", "D. L\u00e0 s\u00e1ng t\u1ea1o theo quy lu\u1eadt c\u00e1i \u0111\u1eb9p, \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n trong s\u00e1ng t\u1ea1o"],
-    correct: 1
+    id: "CH198",
+    question: "Sáng tạo thẩm mỹ là gì?",
+    answers: ["Là sáng tạo theo quy luật cái không đẹp, được thể hiện trong sáng tạo nghệ thuật", "Là sáng tạo theo quy luật cái đẹp, được thể hiện cao nhất trong sáng tạo nghệ thuật", "Là được thể hiện cao nhất trong sáng tạo nghệ thuật", "Là sáng tạo theo quy luật cái đẹp, được thể hiện trong sáng tạo"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u0110\u1eb7c tr\u01b0ng c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 bi\u1ec3u hi\u1ec7n th\u1ea9m m\u1ef9 l\u00e0 \u2026 c\u00e1i b\u1ea3n ch\u1ea5t c\u1ee7a to\u00e0n b\u1ed9 s\u1ea3n ph\u1ea9m s\u00e1ng t\u1ea1o \u0111\u1ebfn ng\u01b0\u1eddi ti\u00eau th\u1ee5?",
-    answers: ["A. Nh\u1eb1m truy\u1ec1n \u0111\u1ea1t m\u1ed9t c\u00e1ch trung th\u00e0nh", "B. Nh\u1eb1m truy\u1ec1n \u0111\u1ea1t m\u1ed9t c\u00e1ch trung th\u00e0nh", "C. Nh\u1eb1m truy\u1ec1n \u0111\u1ea1t m\u1ed9t c\u00e1ch trung th\u00e0nh", "D. Nh\u1eb1m truy\u1ec1n \u0111\u1ea1t m\u1ed9t c\u00e1ch trung th\u00e0nh"],
-    correct: 0
+    id: "CH199",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Đặc trưng của nhóm chủ thể biểu hiện thẩm mỹ là … cái bản chất của toàn bộ sản phẩm sáng tạo đến người tiêu thụ?",
+    answers: ["Nhằm truyền đạt một cách trung thành", "Nhằm truyền đạt một cách trung thành", "Nhằm truyền đạt một cách trung thành", "Nhằm truyền đạt một cách trung thành"],
+    correct: [0, 1, 2, 3]
   },
   {
-    question: "Nh\u00f3m ch\u1ee7 th\u1ec3 t\u1ed5ng h\u1ee3p c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 l\u00e0 nh\u00f3m n\u00e0o?",
-    answers: ["A. L\u00e0 nh\u00f3m v\u1eeba l\u00e0 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o, v\u1eeba l\u00e0 ng\u01b0\u1eddi bi\u1ec3u hi\u1ec7n v\u00e0 c\u0169ng l\u00e0 nh\u00e0 ph\u00ea b\u00ecnh", "B. L\u00e0 nh\u00f3m v\u1eeba c\u00f3 th\u1ec3 l\u00e0 ng\u01b0\u1eddi th\u1ee5 c\u1ea3m, v\u1eeba l\u00e0 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o, v\u1eeba l\u00e0 ng\u01b0\u1eddi bi\u1ec3u hi\u1ec7n v\u00e0 c\u0169ng l\u00e0 nh\u00e0 ph\u00ea b\u00ecnh", "C. L\u00e0 nh\u00f3m v\u1eeba c\u00f3 th\u1ec3 l\u00e0 ng\u01b0\u1eddi th\u1ee5 c\u1ea3m, v\u1eeba l\u00e0 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o v\u00e0 c\u0169ng l\u00e0 nh\u00e0 ph\u00ea b\u00ecnh", "D. L\u00e0 nh\u00f3m v\u1eeba c\u00f3 th\u1ec3 l\u00e0 ng\u01b0\u1eddi th\u1ee5 c\u1ea3m, v\u1eeba l\u00e0 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o"],
-    correct: 1
+    id: "CH200",
+    question: "Nhóm chủ thể tổng hợp các giá trị thẩm mỹ là nhóm nào?",
+    answers: ["Là nhóm vừa là người sáng tạo, vừa là người biểu hiện và cũng là nhà phê bình", "Là nhóm vừa có thể là người thụ cảm, vừa là người sáng tạo, vừa là người biểu hiện và cũng là nhà phê bình", "Là nhóm vừa có thể là người thụ cảm, vừa là người sáng tạo và cũng là nhà phê bình", "Là nhóm vừa có thể là người thụ cảm, vừa là người sáng tạo"],
+    correct: [1]
   },
   {
-    question: "Kh\u00e1i ni\u1ec7m gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 trong m\u1ef9 h\u1ecdc M\u00e1c \u2013 L\u00eanin \u0111\u01b0\u1ee3c x\u00e1c \u0111\u1ecbnh \u1edf m\u1ea5y \u0111\u1ecbnh ngh\u0129a?",
-    answers: ["A. 1", "B. 2", "C. 3", "D. 4"],
-    correct: 1
+    id: "CH201",
+    question: "Khái niệm giáo dục thẩm mỹ trong mỹ học Mác – Lênin được xác định ở mấy định nghĩa?",
+    answers: ["1", "2", "3", "4"],
+    correct: [1]
   },
   {
-    question: "Gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 bao gi\u1edd c\u0169ng nh\u1eb1m h\u00ecnh th\u00e0nh m\u1ed9t ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 bi\u1ebft nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. H\u01b0\u1edfng th\u1ee5, \u0111\u00e1nh gi\u00e1 tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "B. H\u01b0\u1edfng th\u1ee5 v\u00e0 s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "C. \u0110\u00e1nh gi\u00e1 v\u00e0 s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p", "D. H\u01b0\u1edfng th\u1ee5, \u0111\u00e1nh gi\u00e1 v\u00e0 s\u00e1ng t\u1ea1o tr\u00ean m\u1ecdi m\u1eb7t c\u1ee7a cu\u1ed9c s\u1ed1ng theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p"],
-    correct: 3
+    id: "CH202",
+    question: "Giáo dục thẩm mỹ bao giờ cũng nhằm hình thành một chủ thể thẩm mỹ biết như thế nào?",
+    answers: ["Hưởng thụ, đánh giá trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Hưởng thụ và sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Đánh giá và sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp", "Hưởng thụ, đánh giá và sáng tạo trên mọi mặt của cuộc sống theo quy luật của cái đẹp"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt ch\u1ecbu s\u1ef1 chi ph\u1ed1i c\u1ee7a quy lu\u1eadt n\u00e0o?",
-    answers: ["A. C\u00e1c quy lu\u1eadt x\u00e3 h\u1ed9i", "B. C\u00e1c quy lu\u1eadt cu\u1ed9c s\u1ed1ng", "C. C\u00e1c quy lu\u1eadt l\u1ecbch s\u1eed", "D. C\u00e1c quy lu\u1eadt khoa h\u1ecdc"],
-    correct: 2
+    id: "CH203",
+    question: "Nghệ thuật chịu sự chi phối của quy luật nào?",
+    answers: ["Các quy luật xã hội", "Các quy luật cuộc sống", "Các quy luật lịch sử", "Các quy luật khoa học"],
+    correct: [2]
   },
   {
-    question: "M\u1ee5c \u0111\u00edch c\u1ee7a s\u1ef1 ho\u00e0n thi\u1ec7n, ho\u00e0n m\u1ef9 trong ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ee5c \u0111\u00edch kh\u00f4ng v\u01b0\u01a1n t\u1edbi c\u1ee7a ngh\u1ec7 thu\u1eadt", "B. M\u1ee5c \u0111\u00edch v\u01b0\u01a1n t\u1edbi c\u1ee7a ngh\u1ec7 thu\u1eadt", "C. M\u1ee5c ti\u00eau v\u01b0\u01a1n t\u1edbi c\u1ee7a ngh\u1ec7 s\u0129", "D. M\u1ee5c \u0111\u00edch v\u01b0\u01a1n t\u1edbi c\u1ee7a c\u00e1 nh\u00e2n v\u00e0 t\u1eadp th\u1ec3"],
-    correct: 1
+    id: "CH204",
+    question: "Mục đích của sự hoàn thiện, hoàn mỹ trong nghệ thuật là gì?",
+    answers: ["Mục đích không vươn tới của nghệ thuật", "Mục đích vươn tới của nghệ thuật", "Mục tiêu vươn tới của nghệ sĩ", "Mục đích vươn tới của cá nhân và tập thể"],
+    correct: [1]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt gi\u00e1o d\u1ee5c con ng\u01b0\u1eddi m\u1ed9t c\u00e1ch nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. L\u00e3ng m\u1ea1n, t\u1ef1 gi\u00e1c, kh\u1ea3 n\u0103ng gi\u00e1o d\u1ee5c l\u00e2u d\u00e0i", "B. L\u00e3ng m\u1ea1n, t\u1ef1 gi\u00e1c, kh\u1ea3 n\u0103ng gi\u00e1o d\u1ee5c l\u00e2u d\u00e0i t\u1eeb th\u1ebf h\u1ec7 n\u00e0y \u0111\u1ebfn th\u1ebf h\u1ec7 kh\u00e1c", "C. T\u1ef1 gi\u00e1c, kh\u1ea3 n\u0103ng gi\u00e1o d\u1ee5c l\u00e2u d\u00e0i t\u1eeb th\u1ebf h\u1ec7 n\u00e0y \u0111\u1ebfn th\u1ebf h\u1ec7 kh\u00e1c", "D. Kh\u1ea3 n\u0103ng gi\u00e1o d\u1ee5c l\u00e2u d\u00e0i t\u1eeb th\u1ebf h\u1ec7 n\u00e0y \u0111\u1ebfn th\u1ebf h\u1ec7 kh\u00e1c"],
-    correct: 1
+    id: "CH205",
+    question: "Nghệ thuật giáo dục con người một cách như thế nào?",
+    answers: ["Lãng mạn, tự giác, khả năng giáo dục lâu dài", "Lãng mạn, tự giác, khả năng giáo dục lâu dài từ thế hệ này đến thế hệ khác", "Tự giác, khả năng giáo dục lâu dài từ thế hệ này đến thế hệ khác", "Khả năng giáo dục lâu dài từ thế hệ này đến thế hệ khác"],
+    correct: [1]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt gi\u00e1o d\u1ee5c v\u00e0 c\u1ea3m h\u00f3a con ng\u01b0\u1eddi b\u1eb1ng c\u00e1ch n\u00e0o?",
-    answers: ["A. N\u00eau g\u01b0\u01a1ng th\u00f4ng qua h\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt", "B. Th\u00f4ng qua h\u00ecnh t\u01b0\u1ee3ng con ng\u01b0\u1eddi", "C. Th\u00f4ng qua h\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt", "D. N\u00eau g\u01b0\u01a1ng th\u00f4ng qua h\u00ecnh t\u01b0\u1ee3ng v\u0103n h\u00f3a"],
-    correct: 0
+    id: "CH206",
+    question: "Nghệ thuật giáo dục và cảm hóa con người bằng cách nào?",
+    answers: ["Nêu gương thông qua hình tượng nghệ thuật", "Thông qua hình tượng con người", "Thông qua hình tượng nghệ thuật", "Nêu gương thông qua hình tượng văn hóa"],
+    correct: [0]
   },
   {
-    question: "T\u1ea5t c\u1ea3 c\u00e1c ch\u1ee9c n\u0103ng x\u00e3 h\u1ed9i c\u01a1 b\u1ea3n c\u1ee7a ngh\u1ec7 thu\u1eadt suy cho c\u00f9ng ch\u1ec9 l\u00e0 m\u1ed9t, \u0111\u00f3 l\u00e0 ch\u1ee9c n\u0103ng g\u00ec?",
-    answers: ["A. Con ng\u01b0\u1eddi th\u1ea5y v\u00e0 v\u01b0\u01a1n t\u1edbi c\u00e1c gi\u00e1 tr\u1ecb t\u00edch c\u1ef1c c\u1ee7a x\u00e3 h\u1ed9i, thi\u1ec7n, m\u1ef9 m\u00e0 th\u00f4i", "B. H\u01b0\u1edbng con ng\u01b0\u1eddi th\u1ea5y v\u00e0 v\u01b0\u01a1n t\u1edbi c\u00e1c gi\u00e1 tr\u1ecb t\u00edch c\u1ef1c c\u1ee7a x\u00e3 h\u1ed9i, gi\u00e1 tr\u1ecb ch\u00e2n, thi\u1ec7n, m\u1ef9", "C. V\u01b0\u01a1n t\u1edbi c\u00e1c gi\u00e1 tr\u1ecb t\u00edch c\u1ef1c c\u1ee7a x\u00e3 h\u1ed9i, gi\u00e1 tr\u1ecb ch\u00e2n, m\u1ef9 m\u00e0 th\u00f4i", "D. H\u01b0\u1edbng \u0111\u01b0a con ng\u01b0\u1eddi th\u1ea5y v\u00e0 v\u01b0\u01a1n t\u1edbi c\u00e1c gi\u00e1 tr\u1ecb t\u00edch c\u1ef1c c\u1ee7a x\u00e3 h\u1ed9i"],
-    correct: 1
+    id: "CH207",
+    question: "Tất cả các chức năng xã hội cơ bản của nghệ thuật suy cho cùng chỉ là một, đó là chức năng gì?",
+    answers: ["Con người thấy và vươn tới các giá trị tích cực của xã hội, thiện, mỹ mà thôi", "Hướng con người thấy và vươn tới các giá trị tích cực của xã hội, giá trị chân, thiện, mỹ", "Vươn tới các giá trị tích cực của xã hội, giá trị chân, mỹ mà thôi", "Hướng đưa con người thấy và vươn tới các giá trị tích cực của xã hội"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u2026.. \u0111\u1ec1u l\u00e0 th\u1ec3 hi\u1ec7n quan h\u1ec7 ch\u1ee7 th\u1ec3 v\u1edbi kh\u00e1ch th\u1ec3?",
-    answers: ["A. Tri\u1ebft h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt", "B. M\u1ef9 h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt", "C. Tri\u1ebft h\u1ecdc v\u00e0 khoa h\u1ecdc", "D. V\u0103n h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt"],
-    correct: 0
+    id: "CH208",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: ….. đều là thể hiện quan hệ chủ thể với khách thể?",
+    answers: ["Triết học và nghệ thuật", "Mỹ học và nghệ thuật", "Triết học và khoa học", "Văn học và nghệ thuật"],
+    correct: [0]
   },
   {
-    question: "Tri\u1ebft h\u1ecdc v\u00e0 ngh\u1ec7 thu\u1eadt c\u00f3 quan h\u1ec7 nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. G\u1eafn b\u00f3", "B. V\u1eadn \u0111\u1ed9ng", "C. H\u1ed7 tr\u1ee3", "D. C\u1ea1nh tranh"],
-    correct: 2
+    id: "CH209",
+    question: "Triết học và nghệ thuật có quan hệ như thế nào?",
+    answers: ["Gắn bó", "Vận động", "Hỗ trợ", "Cạnh tranh"],
+    correct: [2]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ngh\u1ec7 thu\u1eadt mang d\u1ea5u \u1ea5n\u2026., mang l\u1ea1i kho\u00e1i c\u1ea3m\u2026.?",
-    answers: ["A. C\u00e1 th\u1ec3/ Nh\u00e2n lo\u1ea1i", "B. C\u00e1 nh\u00e2n/ Th\u1ea9m m\u1ef9", "C. H\u00ecnh th\u1ee9c/ Th\u1ea9m m\u1ef9", "D. C\u00e1 nh\u00e2n/ Th\u1ea9m \u0111\u1ecbnh"],
-    correct: 1
+    id: "CH210",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nghệ thuật mang dấu ấn…., mang lại khoái cảm….?",
+    answers: ["Cá thể/ Nhân loại", "Cá nhân/ Thẩm mỹ", "Hình thức/ Thẩm mỹ", "Cá nhân/ Thẩm định"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Ngh\u1ec7 thu\u1eadt kh\u00f4ng ch\u1ec9 \u0111\u01b0a l\u1ea1i t\u01b0 li\u1ec7u \u0111\u1ed3 s\u1ed9 v\u1ec1\u2026., m\u00e0 c\u00f2n g\u1ee3i m\u1edf k\u00edch th\u00edch tr\u00ed t\u01b0\u1edfng t\u01b0\u1ee3ng phong ph\u00fa s\u00e1ng t\u1ea1o \u0111\u1ed1i v\u1edbi khoa h\u1ecdc?",
-    answers: ["A. Nh\u1eadn th\u1ee9c x\u00e3 h\u1ed9i", "B. Nh\u1eadn th\u1ee9c v\u0103n h\u00f3a", "C. Nh\u1eadn th\u1ee9c tr\u00ed tu\u1ec7", "D. Nh\u1eadn th\u1ee9c cu\u1ed9c s\u1ed1ng"],
-    correct: 3
+    id: "CH211",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Nghệ thuật không chỉ đưa lại tư liệu đồ sộ về…., mà còn gợi mở kích thích trí tưởng tượng phong phú sáng tạo đối với khoa học?",
+    answers: ["Nhận thức xã hội", "Nhận thức văn hóa", "Nhận thức trí tuệ", "Nhận thức cuộc sống"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt c\u00f3 s\u1ee9c m\u1ea1nh ti\u1ec1m t\u00e0ng trong vi\u1ec7c t\u00e1c \u0111\u1ed9ng \u0111\u1ebfn nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. Tinh th\u1ea7n, quan \u0111i\u1ec3m l\u00fd lu\u1eadn c\u1ee7a con ng\u01b0\u1eddi th\u00f4ng qua ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c", "B. Tinh th\u1ea7n, quan \u0111i\u1ec3m ch\u00ednh tr\u1ecb c\u1ee7a con ng\u01b0\u1eddi th\u00f4ng qua ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c", "C. Tinh th\u1ea7n, quan \u0111i\u1ec3m ch\u00ednh tr\u1ecb c\u1ee7a con ng\u01b0\u1eddi kh\u00f4ng th\u00f4ng qua ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c", "D. Tinh th\u1ea7n ho\u1eb7c quan \u0111i\u1ec3m ch\u00ednh tr\u1ecb c\u1ee7a con ng\u01b0\u1eddi th\u00f4ng qua ch\u1ee9c n\u0103ng gi\u00e1o d\u1ee5c"],
-    correct: 1
+    id: "CH212",
+    question: "Nghệ thuật có sức mạnh tiềm tàng trong việc tác động đến những yếu tố nào?",
+    answers: ["Tinh thần, quan điểm lý luận của con người thông qua chức năng giáo dục", "Tinh thần, quan điểm chính trị của con người thông qua chức năng giáo dục", "Tinh thần, quan điểm chính trị của con người không thông qua chức năng giáo dục", "Tinh thần hoặc quan điểm chính trị của con người thông qua chức năng giáo dục"],
+    correct: [1]
   },
   {
-    question: "\u0110\u1ea1o \u0111\u1ee9c th\u01b0\u1eddng xuy\u00ean c\u00f3 m\u1eb7t trong c\u00e1c t\u00e1c ph\u1ea9m n\u00e0o?",
-    answers: ["A. T\u00e1c ph\u1ea9m ca nh\u1ea1c", "B. T\u00e1c ph\u1ea9m v\u0103n h\u1ecdc", "C. T\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt", "D. T\u00e1c ph\u1ea9m h\u00e0i k\u1ecbch"],
-    correct: 2
+    id: "CH213",
+    question: "Đạo đức thường xuyên có mặt trong các tác phẩm nào?",
+    answers: ["Tác phẩm ca nhạc", "Tác phẩm văn học", "Tác phẩm nghệ thuật", "Tác phẩm hài kịch"],
+    correct: [2]
   },
   {
-    question: "V\u1edbi \u0111\u1ea1o \u0111\u1ee9c t\u1ed1t, ng\u01b0\u1eddi ta s\u00e1ng t\u1ea1o v\u00e0 s\u1eed d\u1ee5ng nh\u1eefng t\u00e1c ph\u1ea9m c\u00f3 n\u1ed9i dung nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. T\u1ed1t", "B. X\u1ea5u", "C. B\u00ecnh th\u01b0\u1eddng", "D. Th\u1ea5p h\u00e8n"],
-    correct: 0
+    id: "CH214",
+    question: "Với đạo đức tốt, người ta sáng tạo và sử dụng những tác phẩm có nội dung như thế nào?",
+    answers: ["Tốt", "Xấu", "Bình thường", "Thấp hèn"],
+    correct: [0]
   },
   {
-    question: "S\u1ef1 th\u1ed1ng nh\u1ea5t v\u00e0 m\u1ed1i li\u00ean h\u1ec7 h\u1eefu c\u01a1 n\u00e0y c\u00f3 c\u01a1 s\u1edf t\u1eeb s\u1ef1 th\u1ed1ng nh\u1ea5t c\u1ee7a c\u00e1i g\u00ec?",
-    answers: ["A. Ch\u00e2n, thi\u1ec7n, m\u1ef9", "B. \u0110\u1eb9p, x\u1ea5u, h\u00e0i", "C. Cao c\u1ea3, bao dung, r\u1ed9ng l\u01b0\u1ee3ng", "D. Bi, h\u00e0i, cao c\u1ea3"],
-    correct: 0
+    id: "CH215",
+    question: "Sự thống nhất và mối liên hệ hữu cơ này có cơ sở từ sự thống nhất của cái gì?",
+    answers: ["Chân, thiện, mỹ", "Đẹp, xấu, hài", "Cao cả, bao dung, rộng lượng", "Bi, hài, cao cả"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u2026.. c\u1ed5 v\u0169 cu\u1ed9c \u0111\u1ea5u tranh cho t\u1ef1 do, cho h\u1ea1nh ph\u00fac tr\u1ea7n gian \u0111\u00edch th\u1ef1c. C\u00f2n \u2026\u2026 khuy\u00ean nh\u1ee7 s\u1ef1 nh\u1eabn nh\u1ee5c, ch\u1ecbu \u0111\u1ef1ng \u0111\u1ec3 h\u1ee9a h\u1eb9n h\u1ea1nh ph\u00fac \u1edf th\u1ebf gi\u1edbi kh\u00e1c?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt/ M\u1ef9 h\u1ecdc", "B. Ngh\u1ec7 thu\u1eadt/ \u0110\u1ea1o \u0111\u1ee9c", "C. Ngh\u1ec7 thu\u1eadt/ Khoa h\u1ecdc", "D. Ngh\u1ec7 thu\u1eadt/ T\u00f4n gi\u00e1o"],
-    correct: 3
+    id: "CH216",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: ….. cổ vũ cuộc đấu tranh cho tự do, cho hạnh phúc trần gian đích thực. Còn …… khuyên nhủ sự nhẫn nhục, chịu đựng để hứa hẹn hạnh phúc ở thế giới khác?",
+    answers: ["Nghệ thuật/ Mỹ học", "Nghệ thuật/ Đạo đức", "Nghệ thuật/ Khoa học", "Nghệ thuật/ Tôn giáo"],
+    correct: [3]
   },
   {
-    question: "Gi\u1eefa ngh\u1ec7 thu\u1eadt v\u00e0 t\u00f4n gi\u00e1o c\u00f3 s\u1ef1 chi ph\u1ed1i, \u1ea3nh h\u01b0\u1edfng l\u1eabn nhau hay kh\u00f4ng?",
-    answers: ["A. Kh\u00f4ng", "B. C\u00f3", "C. Kh\u00f4ng ch\u1eafc ch\u1eafn", "D. Kh\u00f4ng bi\u1ebft"],
-    correct: 1
+    id: "CH217",
+    question: "Giữa nghệ thuật và tôn giáo có sự chi phối, ảnh hưởng lẫn nhau hay không?",
+    answers: ["Không", "Có", "Không chắc chắn", "Không biết"],
+    correct: [1]
   },
   {
-    question: "Ai vi\u1ebft: \u201c\u00fd ni\u1ec7m ch\u1eb3ng qua ch\u1ec9 l\u00e0 c\u00e1i v\u1eadt ch\u1ea5t \u0111\u01b0\u1ee3c \u0111em chuy\u1ec3n v\u00e0o trong \u00f3c con ng\u01b0\u1eddi v\u00e0 \u0111\u01b0\u1ee3c c\u1ea3i bi\u1ebfn \u0111i \u1edf trong \u0111\u00f3\u201d?",
-    answers: ["A. Kant", "B. M\u00e1c", "C. Arix t\u00f3t", "D. Tsecnu sepxki"],
-    correct: 1
+    id: "CH218",
+    question: "Ai viết: “ý niệm chẳng qua chỉ là cái vật chất được đem chuyển vào trong óc con người và được cải biến đi ở trong đó”?",
+    answers: ["Kant", "Mác", "Arix tót", "Tsecnu sepxki"],
+    correct: [1]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt c\u00f3 vai tr\u00f2 quan tr\u1ecdng trong ho\u1ea1t \u0111\u1ed9ng n\u00e0o?",
-    answers: ["A. Th\u1ebf gi\u1edbi nh\u1eadn th\u1ee9c", "B. Tr\u1ea1ng th\u00e1i nh\u1eadn th\u1ee9c", "C. H\u00e0nh \u0111\u1ed9ng nh\u1eadn th\u1ee9c", "D. Ho\u1ea1t \u0111\u1ed9ng nh\u1eadn th\u1ee9c"],
-    correct: 3
+    id: "CH219",
+    question: "Nghệ thuật có vai trò quan trọng trong hoạt động nào?",
+    answers: ["Thế giới nhận thức", "Trạng thái nhận thức", "Hành động nhận thức", "Hoạt động nhận thức"],
+    correct: [3]
   },
   {
-    question: "Khi di\u1ec5n \u0111\u1ea1t t\u01b0 t\u01b0\u1edfng c\u1ee7a m\u00ecnh v\u1ec1 \u201cThuy\u1ebft b\u1eaft ch\u01b0\u1edbc\", Arixt\u1ed1t c\u0169ng kh\u1eb3ng \u0111\u1ecbnh m\u1ea5y \u0111i\u1ec1u?",
-    answers: ["A. M\u1ed9t", "B. Hai", "C. Ba", "D. B\u1ed1n"],
-    correct: 1
+    id: "CH220",
+    question: "Khi diễn đạt tư tưởng của mình về “Thuyết bắt chước\", Arixtốt cũng khẳng định mấy điều?",
+    answers: ["Một", "Hai", "Ba", "Bốn"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Arixtot kh\u1eb3ng \u0111\u1ecbnh r\u1eb1ng: \u2026.?",
-    answers: ["A. M\u1ed9t c\u00e1i g\u00ec m\u01a1 h\u1ed3 \u1edf th\u1ebf gi\u1edbi c\u00e1c \u00fd ni\u1ec7m hay \u1edf th\u1ebf gi\u1edbi si\u00eau nghi\u1ec7m", "B. S\u1ef1 th\u00edch th\u00fa th\u1ea9m m\u1ef9 kh\u00f4ng ph\u1ea3i l\u00e0 m\u1ed9t c\u00e1i g\u00ec m\u01a1 h\u1ed3 \u1edf th\u1ebf gi\u1edbi c\u00e1c \u00fd ni\u1ec7m", "C. S\u1ef1 th\u00edch th\u00fa th\u1ea9m m\u1ef9 kh\u00f4ng ph\u1ea3i l\u00e0 m\u1ed9t c\u00e1i g\u00ec m\u01a1 h\u1ed3 \u1edf th\u1ebf gi\u1edbi si\u00eau nghi\u1ec7m", "D. S\u1ef1 th\u00edch th\u00fa th\u1ea9m m\u1ef9 kh\u00f4ng ph\u1ea3i l\u00e0 m\u1ed9t c\u00e1i g\u00ec m\u01a1 h\u1ed3 \u1edf th\u1ebf gi\u1edbi c\u00e1c \u00fd ni\u1ec7m v\u00e0 th\u1ebf gi\u1edbi si\u00eau nghi\u1ec7m"],
-    correct: 3
+    id: "CH221",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Arixtot khẳng định rằng: ….?",
+    answers: ["Một cái gì mơ hồ ở thế giới các ý niệm hay ở thế giới siêu nghiệm", "Sự thích thú thẩm mỹ không phải là một cái gì mơ hồ ở thế giới các ý niệm", "Sự thích thú thẩm mỹ không phải là một cái gì mơ hồ ở thế giới siêu nghiệm", "Sự thích thú thẩm mỹ không phải là một cái gì mơ hồ ở thế giới các ý niệm và thế giới siêu nghiệm"],
+    correct: [3]
   },
   {
-    question: "Mac \u0111\u00e3 kh\u1eb3ng \u0111\u1ecbnh ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. M\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i \u0111\u1eb7c th\u00f9", "B. M\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i \u0111\u1eb7c tr\u01b0ng", "C. M\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i \u0111\u1eb7c s\u1eafc", "D. M\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i \u0111\u1eb7c c\u00f4ng"],
-    correct: 0
+    id: "CH222",
+    question: "Mac đã khẳng định nghệ thuật là gì?",
+    answers: ["Một hình thái ý thức xã hội đặc thù", "Một hình thái ý thức xã hội đặc trưng", "Một hình thái ý thức xã hội đặc sắc", "Một hình thái ý thức xã hội đặc công"],
+    correct: [0]
   },
   {
-    question: "Lu\u1eadn \u0111i\u1ec3m c\u01a1 b\u1ea3n c\u1ee7a tri\u1ebft h\u1ecdc M\u00e1c \u2013 L\u00eanin l\u00e0 g\u00ec?",
-    answers: ["A. Ph\u01b0\u01a1ng th\u1ee9c s\u1ea3n xu\u1ea5t v\u1eadt ch\u1ea5t quy \u0111\u1ecbnh c\u00e1c qu\u00e1 tr\u00ecnh x\u00e3 h\u1ed9i", "B. Ph\u01b0\u01a1ng th\u1ee9c s\u1ea3n xu\u1ea5t v\u1eadt ch\u1ea5t quy \u0111\u1ecbnh c\u00e1c qu\u00e1 tr\u00ecnh ch\u00ednh tr\u1ecb v\u00e0 tinh th\u1ea7n c\u1ee7a to\u00e0n b\u1ed9 \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i n\u00f3i chung", "C. Ph\u01b0\u01a1ng th\u1ee9c s\u1ea3n xu\u1ea5t v\u1eadt ch\u1ea5t kh\u00f4ng quy \u0111\u1ecbnh c\u00e1c qu\u00e1 tr\u00ecnh tinh th\u1ea7n c\u1ee7a to\u00e0n b\u1ed9 \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i n\u00f3i chung", "D. C\u1ea3 A, B \u0111\u1ec1u \u0111\u00fang"],
-    correct: 3
+    id: "CH223",
+    question: "Luận điểm cơ bản của triết học Mác – Lênin là gì?",
+    answers: ["Phương thức sản xuất vật chất quy định các quá trình xã hội", "Phương thức sản xuất vật chất quy định các quá trình chính trị và tinh thần của toàn bộ đời sống xã hội nói chung", "Phương thức sản xuất vật chất không quy định các quá trình tinh thần của toàn bộ đời sống xã hội nói chung", "Cả A, B đều đúng"],
+    correct: [3]
   },
   {
-    question: "B\u1ea3n ch\u1ea5t c\u1ee7a ho\u1ea1t \u0111\u1ed9ng nh\u1eadn th\u1ee9c c\u1ee7a ngh\u1ec7 thu\u1eadt v\u1edbi t\u01b0 c\u00e1ch l\u00e0 s\u1ef1 t\u00e1i hi\u1ec7n th\u1ebf gi\u1edbi hi\u1ec7n th\u1ef1c m\u1ed9t c\u00e1ch \u0111\u1eb7c th\u00f9 c\u00f3 th\u1ec3 xem nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. M\u1ed9t lo\u1ea1i ho\u1ea1t \u0111\u1ed9ng b\u1eb1ng c\u00e1ch nh\u00e2n h\u00f3a \u00fd t\u01b0\u1edfng", "B. M\u1ed9t lo\u1ea1i ph\u1ea3n \u00e1nh", "C. M\u1ed9t lo\u1ea1i ho\u1ea1t \u0111\u1ed9ng b\u1eb1ng c\u00e1ch m\u00f4 h\u00ecnh ho\u00e1 \u00fd t\u01b0\u1edfng", "D. C\u1ea3 A, B, C \u0111\u1ec1u \u0111\u00fang"],
-    correct: 3
+    id: "CH224",
+    question: "Bản chất của hoạt động nhận thức của nghệ thuật với tư cách là sự tái hiện thế giới hiện thực một cách đặc thù có thể xem như thế nào?",
+    answers: ["Một loại hoạt động bằng cách nhân hóa ý tưởng", "Một loại phản ánh", "Một loại hoạt động bằng cách mô hình hoá ý tưởng", "Cả A, B, C đều đúng"],
+    correct: [3]
   },
   {
-    question: "Trong l\u00fd lu\u1eadn ph\u1ea3n \u00e1nh, L\u00eanin kh\u1eb3ng \u0111\u1ecbnh?",
-    answers: ["A. Nh\u1eadn th\u1ee9c l\u00e0 m\u1ed9t qu\u00e1 tr\u00ecnh t\u1eeb tr\u1ef1c quan sinh \u0111\u1ed9ng \u0111\u1ebfn t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng v\u00e0 t\u1eeb t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng \u0111\u1ebfn th\u1ef1c ti\u1ec5n", "B. Nh\u1eadn th\u1ee9c l\u00e0 m\u1ed9t qu\u00e1 tr\u00ecnh t\u1eeb tr\u1ef1c quan sinh \u0111\u1ed9ng \u0111\u1ebfn t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng", "C. Nh\u1eadn th\u1ee9c l\u00e0 m\u1ed9t qu\u00e1 tr\u00ecnh t\u1eeb tr\u1ef1c quan sinh \u0111\u1ed9ng \u0111\u1ebfn t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng", "D. Nh\u1eadn th\u1ee9c l\u00e0 m\u1ed9t qu\u00e1 tr\u00ecnh t\u1eeb t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng v\u00e0 t\u1eeb t\u01b0 duy tr\u1eebu t\u01b0\u1ee3ng \u0111\u1ebfn th\u1ef1c ti\u1ec5n"],
-    correct: 0
+    id: "CH225",
+    question: "Trong lý luận phản ánh, Lênin khẳng định?",
+    answers: ["Nhận thức là một quá trình từ trực quan sinh động đến tư duy trừu tượng và từ tư duy trừu tượng đến thực tiễn", "Nhận thức là một quá trình từ trực quan sinh động đến tư duy trừu tượng", "Nhận thức là một quá trình từ trực quan sinh động đến thực tiễn", "Nhận thức là một quá trình từ tư duy trừu tượng đến trực quan sinh động và từ tư duy trừu tượng đến thực tiễn"],
+    correct: [0]
   },
   {
-    question: "C\u1ea5u tr\u00fac c\u1ee7a h\u00ecnh t\u01b0\u1ee3ng n\u00e0o h\u01b0\u1edbng v\u00e0o c\u1ea3m quan c\u1ee7a ng\u01b0\u1eddi c\u1ea3m th\u1ee5 \u0111\u1ec3 th\u1ec3 hi\u1ec7n, di\u1ec5n c\u1ea3m l\u00e0m rung \u0111\u1ed9ng t\u00e2m h\u1ed3n ng\u01b0\u1eddi c\u1ea3m th\u1ee5?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt", "B. M\u1ef9 h\u1ecdc", "C. Tri\u1ebft h\u1ecdc", "D. Khoa h\u1ecdc"],
-    correct: 0
+    id: "CH226",
+    question: "Cấu trúc của hình tượng nào hướng vào cảm quan của người cảm thụ để thể hiện, diễn cảm làm rung động tâm hồn người cảm thụ?",
+    answers: ["Nghệ thuật", "Mỹ học", "Triết học", "Khoa học"],
+    correct: [0]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Trong h\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt c\u00e1i l\u00fd tr\u00ed ph\u1ea3i \u0111\u01b0\u1ee3c th\u1ec3 hi\u1ec7n b\u1eb1ng\u2026, c\u00f2n t\u00ecnh c\u1ea3m ph\u1ea3i lu\u00f4n \u0111\u01b0\u1ee3c ki\u1ec3m tra b\u1eb1ng\u2026.?",
-    answers: ["A. T\u00ecnh c\u1ea3m / l\u00fd tr\u00ed", "B. C\u1ea3m x\u00fac / l\u00fd tr\u00ed", "C. Tinh c\u1ea3m / c\u00e1i \u0111\u1eb9p", "D. T\u00ecnh c\u1ea3m / cu\u1ed9c s\u1ed1ng"],
-    correct: 0
+    id: "CH227",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Trong hình tượng nghệ thuật cái lý trí phải được thể hiện bằng…, còn tình cảm phải luôn được kiểm tra bằng….?",
+    answers: ["Tình cảm / lý trí", "Cảm xúc / lý trí", "Tinh cảm / cái đẹp", "Tình cảm / cuộc sống"],
+    correct: [0]
   },
   {
-    question: "N\u1ed9i dung ngh\u1ec7 thu\u1eadt c\u00f3 \u0111\u1ed3ng nh\u1ea5t v\u1edbi \u0111\u1ed1i t\u01b0\u1ee3ng ph\u1ea3n \u00e1nh hay kh\u00f4ng?",
-    answers: ["A. Kh\u00f4ng \u0111\u1ed3ng nh\u1ea5t", "B. C\u00f3 \u0111\u1ed3ng nh\u1ea5t", "C. V\u1eeba kh\u00f4ng \u0111\u1ed3ng nh\u1ea5t, v\u1eeba c\u00f3 \u0111\u1ed3ng nh\u1ea5t", "D. C\u1ea3 A, B \u0111\u1ec1u \u0111\u00fang"],
-    correct: 0
+    id: "CH228",
+    question: "Nội dung nghệ thuật có đồng nhất với đối tượng phản ánh hay không?",
+    answers: ["Không đồng nhất", "Có đồng nhất", "Vừa không đồng nhất, vừa có đồng nhất", "Cả A, B đều đúng"],
+    correct: [0]
   },
   {
-    question: "H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt l\u00e0 ph\u01b0\u01a1ng th\u1ee9c, ph\u01b0\u01a1ng ti\u1ec7n bi\u1ec3u hi\u1ec7n v\u00e0 t\u1ed3n t\u1ea1i y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. C\u1ee7a n\u1ed9i dung", "B. C\u1ee7a h\u00ecnh th\u1ee9c", "C. C\u1ee7a cu\u1ed9c s\u1ed1ng", "D. C\u1ee7a th\u1ea9m m\u1ef9"],
-    correct: 0
+    id: "CH229",
+    question: "Hình tượng nghệ thuật là phương thức, phương tiện biểu hiện và tồn tại yếu tố nào?",
+    answers: ["Của nội dung", "Của hình thức", "Của cuộc sống", "Của thẩm mỹ"],
+    correct: [0]
   },
   {
-    question: "C\u00e1i g\u00ec l\u00e0 t\u1ed5ng h\u00f2a c\u00e1c s\u1ef1 ki\u1ec7n c\u00f3 li\u00ean h\u1ec7 li\u00ean nhau theo th\u1eddi gian v\u00e0 kh\u00f4ng gian, \u0111\u01b0\u1ee3c mi\u00eau t\u1ea3 trong t\u00e1c ph\u1ea9m?",
-    answers: ["A. V\u0103n h\u1ecdc", "B. C\u1ed1t truy\u1ec7n", "C. Ngh\u1ec7 thu\u1eadt", "D. V\u0103n h\u00f3a"],
-    correct: 1
+    id: "CH230",
+    question: "Cái gì là tổng hòa các sự kiện có liên hệ liên nhau theo thời gian và không gian, được miêu tả trong tác phẩm?",
+    answers: ["Văn học", "Cốt truyện", "Nghệ thuật", "Văn hóa"],
+    correct: [1]
   },
   {
-    question: "Ng\u00f4n ng\u1eef ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. H\u1ec7 th\u1ed1ng c\u00e1c ph\u01b0\u01a1ng ti\u1ec7n thi\u00ean nhi\u00ean bi\u1ec3u hi\u1ec7n", "B. Ph\u01b0\u01a1ng ti\u1ec7n x\u00e3 h\u1ed9i bi\u1ec3u hi\u1ec7n \u1edf m\u1ed9t lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt nh\u1ea5t \u0111\u1ecbnh", "C. H\u1ec7 th\u1ed1ng c\u00e1c ph\u01b0\u01a1ng ti\u1ec7n v\u1eadt ch\u1ea5t bi\u1ec3u hi\u1ec7n \u1edf m\u1ed9t lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt kh\u00f4ng nh\u1ea5t \u0111\u1ecbnh", "D. H\u1ec7 th\u1ed1ng c\u00e1c ph\u01b0\u01a1ng ti\u1ec7n v\u1eadt ch\u1ea5t bi\u1ec3u hi\u1ec7n \u1edf m\u1ed9t lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt nh\u1ea5t \u0111\u1ecbnh"],
-    correct: 3
+    id: "CH231",
+    question: "Ngôn ngữ nghệ thuật là gì?",
+    answers: ["Hệ thống các phương tiện thiên nhiên biểu hiện", "Phương tiện xã hội biểu hiện ở một loại hình nghệ thuật nhất định", "Hệ thống các phương tiện vật chất biểu hiện ở một loại hình nghệ thuật không nhất định", "Hệ thống các phương tiện vật chất biểu hiện ở một loại hình nghệ thuật nhất định"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Gi\u1eefa \u2026 c\u00f3 s\u1ef1 th\u1ed1ng nh\u1ea5t bi\u1ec7n ch\u1ee9ng?",
-    answers: ["A. N\u1ed9i dung v\u00e0 h\u00ecnh th\u1ee9c ngh\u1ec7 thu\u1eadt", "B. V\u1eadt ch\u1ea5t v\u00e0 h\u00ecnh th\u1ee9c ngh\u1ec7 thu\u1eadt", "C. T\u01b0 t\u01b0\u1edfng v\u00e0 h\u00ecnh th\u1ee9c ngh\u1ec7 thu\u1eadt", "D. Th\u00e0nh ph\u1ea7n v\u00e0 h\u00ecnh th\u1ee9c ngh\u1ec7 thu\u1eadt"],
-    correct: 0
+    id: "CH232",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Giữa … có sự thống nhất biện chứng?",
+    answers: ["Nội dung và hình thức nghệ thuật", "Vật chất và hình thức nghệ thuật", "Tư tưởng và hình thức nghệ thuật", "Thành phần và hình thức nghệ thuật"],
+    correct: [0]
   },
   {
-    question: "N\u1ed9i dung \u2013 H\u00ecnh th\u1ee9c trong ngh\u1ec7 thu\u1eadt c\u00f3 xu h\u01b0\u1edbng thay \u0111\u1ed5i nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Kh\u00f4ng m\u1edbi th\u01b0\u1eddng xuy\u00ean", "B. M\u1edbi th\u01b0\u1eddng xuy\u00ean", "C. C\u0169 th\u01b0\u1eddng xuy\u00ean", "D. Kh\u00f4ng th\u01b0\u1eddng xuy\u00ean"],
-    correct: 1
+    id: "CH233",
+    question: "Nội dung – Hình thức trong nghệ thuật có xu hướng thay đổi như thế nào?",
+    answers: ["Không mới thường xuyên", "Mới thường xuyên", "Cũ thường xuyên", "Không thường xuyên"],
+    correct: [1]
   },
   {
-    question: "Trong ngh\u1ec7 thu\u1eadt h\u00ecnh th\u1ee9c c\u00f3 \u1ea3nh h\u01b0\u1edfng nh\u01b0 th\u1ebf n\u00e0o \u0111\u1ebfn n\u1ed9i dung?",
-    answers: ["A. Ti\u00eau c\u1ef1c", "B. T\u00edch c\u1ef1c", "C. T\u00edch c\u1ef1c ho\u1eb7c ti\u00eau c\u1ef1c", "D. Kh\u00f4ng t\u00edch c\u1ef1c ho\u1eb7c kh\u00f4ng ti\u00eau c\u1ef1c"],
-    correct: 2
+    id: "CH234",
+    question: "Trong nghệ thuật hình thức có ảnh hưởng như thế nào đến nội dung?",
+    answers: ["Tiêu cực", "Tích cực", "Tích cực hoặc tiêu cực", "Không tích cực hoặc không tiêu cực"],
+    correct: [2]
   },
   {
-    question: "N\u00eau c\u00e1c lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. Ki\u1ebfn tr\u00fac, \u0111i\u00eau kh\u1eafc, h\u1ed9i h\u1ecda", "B. V\u0103n h\u1ecdc, k\u1ecbch, \u00e2m nh\u1ea1c", "C. M\u00faa, \u0111i\u1ec7n \u1ea3nh, phim truy\u1ec1n h\u00ecnh, s\u00e2n kh\u1ea5u truy\u1ec1n h\u00ecnh", "D. C\u1ea3 A, B, C \u0111\u1ec1u \u0111\u00fang"],
-    correct: 3
+    id: "CH235",
+    question: "Nêu các loại hình nghệ thuật?",
+    answers: ["Kiến trúc, điêu khắc, hội họa", "Văn học, kịch, âm nhạc", "Múa, điện ảnh, phim truyền hình, sân khấu truyền hình", "Cả A, B, C đều đúng"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt ki\u1ebfn tr\u00fac l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 m\u1ed9t ngh\u1ec7 thu\u1eadt nh\u1eb1m k\u1ebft h\u1ee3p c\u00e1i \u0111\u1eb9p v\u1edbi c\u00e1i th\u1ef1c d\u1ee5ng \u0111\u1ec3 s\u00e1ng t\u1ea1o kh\u00f4ng gian sinh t\u1ed3n c\u1ee7a con ng\u01b0\u1eddi", "B. L\u00e0 hai ngh\u1ec7 thu\u1eadt nh\u1eb1m k\u1ebft h\u1ee3p c\u00e1i \u0111\u1eb9p v\u1edbi c\u00e1i kh\u00f4ng th\u1ef1c d\u1ee5ng \u0111\u1ec3 s\u00e1ng t\u1ea1o kh\u00f4ng gian sinh t\u1ed3n c\u1ee7a con ng\u01b0\u1eddi", "C. L\u00e0 m\u1ed9t ngh\u1ec7 thu\u1eadt nh\u1eb1m k\u1ebft h\u1ee3p c\u00e1i \u0111\u1eb9p v\u1edbi c\u00e1i th\u1ef1c d\u1ee5ng", "D. L\u00e0 m\u1ed9t ngh\u1ec7 thu\u1eadt nh\u1eb1m k\u1ebft h\u1ee3p c\u00e1i th\u1ef1c d\u1ee5ng \u0111\u1ec3 s\u00e1ng t\u1ea1o kh\u00f4ng gian sinh t\u1ed3n c\u1ee7a con ng\u01b0\u1eddi"],
-    correct: 0
+    id: "CH236",
+    question: "Nghệ thuật kiến trúc là gì?",
+    answers: ["Là một nghệ thuật nhằm kết hợp cái đẹp với cái thực dụng để sáng tạo không gian sinh tồn của con người", "Là hai nghệ thuật nhằm kết hợp cái đẹp với cái không thực dụng để sáng tạo không gian sinh tồn của con người", "Là một nghệ thuật nhằm kết hợp cái đẹp với cái thực dụng", "Là một nghệ thuật nhằm kết hợp cái thực dụng để sáng tạo không gian sinh tồn của con người"],
+    correct: [0]
   },
   {
-    question: "\u0110i\u00eau kh\u1eafc l\u00e0 g\u00ec?",
-    answers: ["A. L\u00e0 ngh\u1ec7 thu\u1eadt t\u1ea1o h\u00ecnh b\u1eb1ng c\u00e1ch ph\u1ed1i m\u1ea3ng, kh\u1ed1i, n\u00e9t trong kh\u00f4ng gian kh\u00f4ng \u0111a chi\u1ec1u", "B. L\u00e0 ngh\u1ec7 thu\u1eadt t\u1ea1o h\u00ecnh b\u1eb1ng c\u00e1ch ph\u1ed1i m\u1ea3ng, kh\u1ed1i trong kh\u00f4ng gian \u0111a chi\u1ec1u", "C. L\u00e0 ngh\u1ec7 thu\u1eadt t\u1ea1o h\u00ecnh b\u1eb1ng c\u00e1ch ph\u1ed1i n\u00e9t trong kh\u00f4ng gian \u0111a chi\u1ec1u", "D. L\u00e0 ngh\u1ec7 thu\u1eadt t\u1ea1o h\u00ecnh b\u1eb1ng c\u00e1ch ph\u1ed1i m\u1ea3ng, kh\u1ed1i, n\u00e9t trong kh\u00f4ng gian \u0111a chi\u1ec1u"],
-    correct: 3
+    id: "CH237",
+    question: "Điêu khắc là gì?",
+    answers: ["Là nghệ thuật tạo hình bằng cách phối mảng, khối, nét trong không gian không đa chiều", "Là nghệ thuật tạo hình bằng cách phối mảng, khối trong không gian đa chiều", "Là nghệ thuật tạo hình bằng cách phối nét trong không gian đa chiều", "Là nghệ thuật tạo hình bằng cách phối mảng, khối, nét trong không gian đa chiều"],
+    correct: [3]
   },
   {
-    question: "H\u1ed9i h\u1ecda l\u00e0 ngh\u1ec7 thu\u1eadt ph\u00e1t tri\u1ec3n kh\u1ea3 n\u0103ng g\u00ec?",
-    answers: ["A. Th\u01b0\u1eddng ngo\u1ea1n t\u1ed1i \u0111a c\u1ee7a th\u1ecb gi\u00e1c tr\u1ef1c ti\u1ebfp v\u00e0 c\u1ea3m quan c\u1ee5 th\u1ec3 \u0111\u1ed1i v\u1edbi nh\u00e2n v\u1eadt l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng t\u00e1i hi\u1ec7n trong tranh", "B. Th\u01b0\u1eddng ngo\u1ea1n t\u1ed1i thi\u1ec3u c\u1ee7a th\u1ecb gi\u00e1c tr\u1ef1c ti\u1ebfp v\u00e0 c\u1ea3m quan c\u1ee5 th\u1ec3 \u0111\u1ed1i v\u1edbi nh\u00e2n v\u1eadt l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng t\u00e1i hi\u1ec7n trong tranh", "C. Th\u01b0\u1eddng ngo\u1ea1n t\u1ed1i \u0111a c\u1ee7a kh\u1ee9u gi\u00e1c tr\u1ef1c ti\u1ebfp v\u00e0 c\u1ea3m quan c\u1ee5 th\u1ec3 \u0111\u1ed1i v\u1edbi nh\u00e2n v\u1eadt l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng t\u00e1i hi\u1ec7n trong tranh", "D. Th\u01b0\u1eddng ngo\u1ea1n t\u1ed1i \u0111a c\u1ee7a v\u1ecb gi\u00e1c tr\u1ef1c ti\u1ebfp v\u00e0 c\u1ea3m quan c\u1ee5 th\u1ec3 \u0111\u1ed1i v\u1edbi nh\u00e2n v\u1eadt l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng t\u00e1i hi\u1ec7n trong tranh"],
-    correct: 0
+    id: "CH238",
+    question: "Hội họa là nghệ thuật phát triển khả năng gì?",
+    answers: ["Thường ngoạn tối đa của thị giác trực tiếp và cảm quan cụ thể đối với nhân vật là hiện tượng tái hiện trong tranh", "Thường ngoạn tối thiểu của thị giác trực tiếp và cảm quan cụ thể đối với nhân vật là hiện tượng tái hiện trong tranh", "Thường ngoạn tối đa của khứu giác trực tiếp và cảm quan cụ thể đối với nhân vật là hiện tượng tái hiện trong tranh", "Thường ngoạn tối đa của vị giác trực tiếp và cảm quan cụ thể đối với nhân vật là hiện tượng tái hiện trong tranh"],
+    correct: [0]
   },
   {
-    question: "\u00c2m nh\u1ea1c l\u00e0 ngh\u1ec7 thu\u1eadt g\u00ec?",
-    answers: ["A. Kh\u1ee9u gi\u00e1c", "B. Th\u00ednh gi\u00e1c", "C. V\u1ecb gi\u00e1c", "D. Ng\u0169 gi\u00e1c"],
-    correct: 1
+    id: "CH239",
+    question: "Âm nhạc là nghệ thuật gì?",
+    answers: ["Khứu giác", "Thính giác", "Vị giác", "Ngũ giác"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: K\u1ecbch l\u00e0 ngh\u1ec7 thu\u1eadt t\u00e1i hi\u1ec7n \u2026?",
-    answers: ["A. C\u00e1c c\u1ea3nh hu\u1ed1ng c\u1ee7a cu\u1ed9c \u0111\u1eddi, c\u00e1c t\u00ednh c\u00e1ch, c\u00e1c s\u1ed1 ph\u1eadn con ng\u01b0\u1eddi", "B. C\u00e1c c\u1ea3nh hu\u1ed1ng c\u1ee7a cu\u1ed9c \u0111\u1eddi, c\u00e1c s\u1ed1 ph\u1eadn con ng\u01b0\u1eddi", "C. C\u00e1c c\u00e1c t\u00ednh c\u00e1ch, c\u00e1c s\u1ed1 ph\u1eadn con ng\u01b0\u1eddi", "D. C\u00e1c c\u1ea3nh hu\u1ed1ng c\u1ee7a cu\u1ed9c \u0111\u1eddi, c\u00e1c t\u00ednh c\u00e1ch"],
-    correct: 0
+    id: "CH240",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Kịch là nghệ thuật tái hiện …?",
+    answers: ["Các cảnh huống của cuộc đời, các tính cách, các số phận con người", "Các cảnh huống của cuộc đời, các số phận con người", "Các các tính cách, các số phận con người", "Các cảnh huống của cuộc đời, các tính cách"],
+    correct: [0]
   },
   {
-    question: "M\u1ef9 h\u1ecdc nghi\u00ean c\u1ee9u c\u00e1i g\u00ec?",
-    answers: ["A. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a th\u1ebf gi\u1edbi v\u1edbi hi\u1ec7n th\u1ef1c", "B. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi v\u1edbi hi\u1ec7n th\u1ef1c", "C. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a con ng\u01b0\u1eddi", "D. Quan h\u1ec7 th\u1ea9m m\u1ef9 c\u1ee7a hi\u1ec7n th\u1ef1c"],
-    correct: 1
+    id: "CH241",
+    question: "Mỹ học nghiên cứu cái gì?",
+    answers: ["Quan hệ thẩm mỹ của thế giới với hiện thực", "Quan hệ thẩm mỹ của con người với hiện thực", "Quan hệ thẩm mỹ của con người", "Quan hệ thẩm mỹ của hiện thực"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: M\u1ef9 h\u1ecdc l\u00e0 b\u1ed9 m\u00f4n khoa h\u1ecdc c\u00f3 t\u00ednh l\u00fd thuy\u1ebft g\u00ec?",
-    answers: ["A. S\u1ef1 th\u01b0\u1edfng th\u1ee9c v\u00e0 nh\u1eadn th\u1ee9c v\u1ec1 c\u00e1i \u0111\u1eb9p", "B. S\u1ef1 nh\u1eadn th\u1ee9c ho\u1eb7c th\u01b0\u1edfng th\u1ee9c c\u00e1i \u0111\u1eb9p", "C. S\u1ef1 nh\u1eadn th\u1ee9c v\u00e0 th\u01b0\u1edfng th\u1ee9c c\u00e1i \u0111\u1eb9p", "D. S\u1ef1 nh\u1eadn th\u1ee9c, th\u1ee5 h\u01b0\u1edfng v\u00e0 th\u01b0\u1edfng th\u1ee9c c\u00e1i \u0111\u1eb9p"],
-    correct: 2
+    id: "CH242",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Mỹ học là bộ môn khoa học có tính lý thuyết gì?",
+    answers: ["Sự thưởng thức và nhận thức về cái đẹp", "Sự nhận thức hoặc thưởng thức cái đẹp", "Sự nhận thức và thưởng thức cái đẹp", "Sự nhận thức, thụ hưởng và thưởng thức cái đẹp"],
+    correct: [2]
   },
   {
-    question: "T\u1eeb khi h\u00ecnh th\u00e0nh khoa h\u1ecdc tri\u1ebft h\u1ecdc cho \u0111\u1ebfn th\u1ebf k\u1ef7 th\u1ee9 XVIII, t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc c\u00f3 ph\u1ea3i l\u00e0 m\u1ed9t \u0111\u1ed1i t\u01b0\u1ee3ng nghi\u00ean c\u1ee9u ri\u00eang kh\u00f4ng hay ch\u1ec9 nh\u01b0 m\u1ed9t ph\u1ea7n c\u1ee7a tri\u1ebft h\u1ecdc?",
-    answers: ["A. C\u00f3", "B. Kh\u00f4ng", "C. Kh\u00f4ng bi\u1ebft", "D. T\u1ea5t c\u1ea3 c\u00e1c \u00fd tr\u00ean"],
-    correct: 0
+    id: "CH243",
+    question: "Từ khi hình thành khoa học triết học cho đến thế kỷ thứ XVIII, tư tưởng mỹ học có phải là một đối tượng nghiên cứu riêng không hay chỉ như một phần của triết học?",
+    answers: ["Có", "Không", "Không biết", "Tất cả các ý trên"],
+    correct: [0]
   },
   {
-    question: "L\u00e0 m\u1ed9t khoa h\u1ecdc tri\u1ebft h\u1ecdc, m\u1ef9 h\u1ecdc c\u00f3 quan h\u1ec7 tr\u01b0\u1edbc nh\u1ea5t v\u1edbi g\u00ec?",
-    answers: ["A. S\u1eed h\u1ecdc", "B. Khoa h\u1ecdc", "C. Tri\u1ebft h\u1ecdc", "D. M\u1ef9 h\u1ecdc"],
-    correct: 2
+    id: "CH244",
+    question: "Là một khoa học triết học, mỹ học có quan hệ trước nhất với gì?",
+    answers: ["Sử học", "Khoa học", "Triết học", "Mỹ học"],
+    correct: [2]
   },
   {
-    question: "M\u1ef9 h\u1ecdc c\u00f3 quan h\u1ec7 m\u1eadt thi\u1ebft v\u1edbi c\u00e1c m\u00f4n khoa h\u1ecdc kh\u00e1c hay kh\u00f4ng?",
-    answers: ["A. C\u00f3", "B. Kh\u00f4ng", "C. T\u01b0\u01a1ng \u0111\u1ed1i", "D. Ho\u00e0n to\u00e0n kh\u00f4ng"],
-    correct: 0
+    id: "CH245",
+    question: "Mỹ học có quan hệ mật thiết với các môn khoa học khác hay không?",
+    answers: ["Có", "Không", "Tương đối", "Hoàn toàn không"],
+    correct: [0]
   },
   {
-    question: "C\u00e1c t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc Hy L\u1ea1p c\u1ed5 \u0111\u1ea1i ban \u0111\u1ea7u h\u00ecnh th\u00e0nh \u1edf \u0111\u00e2u?",
-    answers: ["A. D\u1ea3i \u0111\u1ea5t I\u00f4ni, ph\u00eda t\u00e2y \u0110\u1ecba Trung H\u1ea3i", "B. D\u1ea3i \u0111\u1ea5t I\u00f4ni, ph\u00eda \u0111\u00f4ng \u0110\u1ecba Trung H\u1ea3i", "C. D\u1ea3i \u0111\u1ea5t I\u00f4ni, ph\u00eda nam \u0110\u1ecba Trung H\u1ea3i", "D. D\u1ea3i \u0111\u1ea5t I\u00f4ni, ph\u00eda b\u1eafc \u0110\u1ecba Trung H\u1ea3i"],
-    correct: 1
+    id: "CH246",
+    question: "Các tư tưởng mỹ học Hy Lạp cổ đại ban đầu hình thành ở đâu?",
+    answers: ["Dải đất Iôni, phía tây Địa Trung Hải", "Dải đất Iôni, phía đông Địa Trung Hải", "Dải đất Iôni, phía nam Địa Trung Hải", "Dải đất Iôni, phía bắc Địa Trung Hải"],
+    correct: [1]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi \u0111\u00e3 ch\u1ee9ng minh b\u1eb1ng hi\u1ec7n t\u01b0\u1ee3ng ch\u1ea5t l\u01b0\u1ee3ng \u00e2m thanh ph\u1ee5 thu\u1ed9c v\u00e0o chi\u1ec1u d\u00e0i d\u00e2y \u0111\u00e0n v\u00e0 t\u00ecm ra quan h\u1ec7 s\u1ed1 l\u01b0\u1ee3ng trong \u00e2m nh\u1ea1c nh\u01b0 qu\u00e3ng t\u00e1m: 1:2; qu\u00e3ng n\u0103m: 2:3; qu\u00e3ng b\u1ed1n: 3:4?",
-    answers: ["A. Pitago", "B. Trecneexpkki", "C. Platon", "D. Kant"],
-    correct: 0
+    id: "CH247",
+    question: "Ai là người đã chứng minh bằng hiện tượng chất lượng âm thanh phụ thuộc vào chiều dài dây đàn và tìm ra quan hệ số lượng trong âm nhạc như quãng tám: 1:2; quãng năm: 2:3; quãng bốn: 3:4?",
+    answers: ["Pitago", "Trecneexpkki", "Platon", "Kant"],
+    correct: [0]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi cho r\u1eb1ng l\u1eeda l\u00e0 kh\u1edfi nguy\u00ean c\u1ee7a v\u0169 tr\u1ee5, th\u1ebf gi\u1edbi t\u1ed3n t\u1ea1i l\u00e0 do ng\u1ecdn l\u1eeda v\u1eadn \u0111\u1ed9ng v\u0129nh c\u1eedu?",
-    answers: ["A. Trecneexpkki", "B. Platon", "C. Kant", "D. H\u00earaclit"],
-    correct: 3
+    id: "CH248",
+    question: "Ai là người cho rằng lửa là khởi nguyên của vũ trụ, thế giới tồn tại là do ngọn lửa vận động vĩnh cửu?",
+    answers: ["Trecneexpkki", "Platon", "Kant", "Hêraclit"],
+    correct: [3]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: H\u00earaclit \u0111\u01b0\u1ee3c coi l\u00e0 m\u1ed9t trong nh\u1eefng \u2026.. gi\u1ea3i th\u00edch c\u00e1c kh\u00e1i ni\u1ec7m th\u1ea9m m\u1ef9 theo xu h\u01b0\u1edbng duy v\u1eadt v\u00e0 c\u00f3 t\u00ednh ch\u1ea5t bi\u1ec7n ch\u1ee9ng s\u01a1 khai?",
-    answers: ["A. \u0110\u1ea1i bi\u1ec3u trung gian", "B. \u0110\u1ea1i bi\u1ec3u g\u01b0\u01a1ng m\u1eabu", "C. \u0110\u1ea1i bi\u1ec3u s\u1edbm nh\u1ea5t", "D. \u0110\u1ea1i bi\u1ec3u sau c\u00f9ng"],
-    correct: 2
+    id: "CH249",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Hêraclit được coi là một trong những ….. giải thích các khái niệm thẩm mỹ theo xu hướng duy vật và có tính chất biện chứng sơ khai?",
+    answers: ["Đại biểu trung gian", "Đại biểu gương mẫu", "Đại biểu sớm nhất", "Đại biểu sau cùng"],
+    correct: [2]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi coi ngh\u1ec7 thu\u1eadt nh\u01b0 m\u1ed9t ph\u01b0\u01a1ng di\u1ec7n quan tr\u1ecdng c\u1ee7a \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i?",
-    answers: ["A. X\u1ed1c Xocratpyyp", "B. Xocrattpor", "C. X\u00f4crat", "D. Xitp\u00f4crat"],
-    correct: 2
+    id: "CH250",
+    question: "Ai là người coi nghệ thuật như một phương diện quan trọng của đời sống xã hội?",
+    answers: ["Xốc Xocratpyyp", "Xocrattpor", "Xôcrat", "Xitpôcrat"],
+    correct: [2]
   },
   {
-    question: "Plat\u00f4n cho r\u1eb1ng, c\u00e1c v\u1eadt th\u1ee5 c\u1ea3m thay \u0111\u1ed5i, tho\u00e1ng qua, n\u00f3 xu\u1ea5t hi\u1ec7n r\u1ed3i ti\u00eau bi\u1ebfn, v\u00ec th\u1ebf n\u00f3 c\u00f3 t\u1ed3n t\u1ea1i \u0111\u00edch th\u1ef1c hay kh\u00f4ng?",
-    answers: ["A. Kh\u00f4ng", "B. C\u00f3", "C. Kh\u00f4ng ch\u1eafc ch\u1eafn", "D. Kh\u00f4ng bi\u1ebft"],
-    correct: 0
+    id: "CH251",
+    question: "Platôn cho rằng, các vật thụ cảm thay đổi, thoáng qua, nó xuất hiện rồi tiêu biến, vì thế nó có tồn tại đích thực hay không?",
+    answers: ["Không", "Có", "Không chắc chắn", "Không biết"],
+    correct: [0]
   },
   {
-    question: "Tri\u1ebft h\u1ecdc c\u1ed5 \u0111i\u1ec3n \u0110\u1ee9c, ai l\u00e0 nh\u00e0 tri\u1ebft h\u1ecdc v\u0129 \u0111\u1ea1i nh\u1ea5t c\u1ee7a l\u1ecbch s\u1eed tri\u1ebft h\u1ecdc tr\u01b0\u1edbc M\u00e1c?",
-    answers: ["A. Xecvantec (1547\u20131616)", "B. Uyliam S\u1ebfchxpia (1564\u20131616)", "C. Kant (1724\u20131804)", "D. L\u00ea\u00f4na \u0111\u01a1 Vanhxi (1452\u20131529)"],
-    correct: 2
+    id: "CH252",
+    question: "Triết học cổ điển Đức, ai là nhà triết học vĩ đại nhất của lịch sử triết học trước Mác?",
+    answers: ["Xecvantec (1547–1616)", "Uyliam Sếchxpia (1564–1616)", "Kant (1724–1804)", "Lêôna đơ Vanhxi (1452–1529)"],
+    correct: [2]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi ph\u00e2n bi\u1ec7t ngh\u1ec7 thu\u1eadt l\u00e0 ho\u1ea1t \u0111\u1ed9ng t\u1ef1 do, th\u1ee7 c\u00f4ng l\u00e0 ho\u1ea1t \u0111\u1ed9ng \u0111\u1ec3 ki\u1ebfm s\u1ed1ng?",
-    answers: ["A. Arixtot", "B. X\u00f4crat", "C. Kant", "D. \u0110\u00ea-m\u00f4-cr\u00edt"],
-    correct: 2
+    id: "CH253",
+    question: "Ai là người phân biệt nghệ thuật là hoạt động tự do, thủ công là hoạt động để kiếm sống?",
+    answers: ["Arixtot", "Xôcrat", "Kant", "Đê-mô-crít"],
+    correct: [2]
   },
   {
-    question: "M\u00e1c \u2013 \u0102ngghen \u0111\u01b0a ra m\u1ea5y b\u1ea3n ch\u1ea5t c\u1ee7a ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. 2", "B. 3", "C. 4", "D. 5"],
-    correct: 0
+    id: "CH254",
+    question: "Mác – Ăngghen đưa ra mấy bản chất của nghệ thuật?",
+    answers: ["2", "3", "4", "5"],
+    correct: [0]
   },
   {
-    question: "S\u1ef1 c\u1ed1ng hi\u1ebfn c\u01a1 b\u1ea3n c\u1ee7a c\u00e1c nh\u00e0 tri\u1ebft h\u1ecdc n\u00e0o m\u00e0 h\u1ecd \u0111\u00e3 t\u00ecm c\u00e1ch l\u00fd gi\u1ea3i b\u1eb1ng ph\u00e9p bi\u1ec7n ch\u1ee9ng nh\u1eefng v\u1ea5n \u0111\u1ec1 ch\u1ee7 y\u1ebfu nh\u1ea5t c\u1ee7a m\u1ef9 h\u1ecdc?",
-    answers: ["A. Duy t\u00e2m Ph\u00e1p", "B. Duy v\u1eadt \u0110\u1ee9c", "C. Duy t\u00e2m \u0110\u1ee9c", "D. Duy t\u00e2m Nga"],
-    correct: 2
+    id: "CH255",
+    question: "Sự cống hiến cơ bản của các nhà triết học nào mà họ đã tìm cách lý giải bằng phép biện chứng những vấn đề chủ yếu nhất của mỹ học?",
+    answers: ["Duy tâm Pháp", "Duy vật Đức", "Duy tâm Đức", "Duy tâm Nga"],
+    correct: [2]
   },
   {
-    question: "C\u00e2u \u0111\u1ecbnh ngh\u0129a n\u1ed5i ti\u1ebfng n\u00e0o l\u00e0 \u0111\u1ec9nh cao c\u1ee7a t\u01b0 t\u01b0\u1edfng m\u1ef9 h\u1ecdc th\u1ebf k\u1ef7 XIX?",
-    answers: ["A. \u201cC\u00e1i \u0111\u1eb9p l\u00e0 l\u00fd t\u01b0\u1edfng\u201d", "B. \u201cC\u00e1i \u0111\u1eb9p l\u00e0 cu\u1ed9c s\u1ed1ng\u201d", "C. \u201cC\u00e1i \u0111\u1eb9p l\u00e0 thi\u00ean nhi\u00ean\u201d", "D. \u201cC\u00e1i \u0111\u1eb9p l\u00e0 x\u00e3 h\u1ed9i\u201d"],
-    correct: 1
+    id: "CH256",
+    question: "Câu định nghĩa nổi tiếng nào là đỉnh cao của tư tưởng mỹ học thế kỷ XIX?",
+    answers: ["“Cái đẹp là lý tưởng”", "“Cái đẹp là cuộc sống”", "“Cái đẹp là thiên nhiên”", "“Cái đẹp là xã hội”"],
+    correct: [1]
   },
   {
-    question: "Lao \u0111\u1ed9ng c\u00f3 y\u1ebfu t\u1ed1 n\u00e0o c\u1ee7a con ng\u01b0\u1eddi \u0111\u00e3 g\u1eafn li\u1ec1n v\u1edbi quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p?",
-    answers: ["A. M\u1ee5c ti\u00eau, c\u00f3 s\u00e1ng t\u1ea1o", "B. M\u1ee5c \u0111\u00edch, c\u00f3 s\u00e1ng t\u1ea1o", "C. M\u1ee5c \u0111\u00edch, kh\u00f4ng s\u00e1ng t\u1ea1o", "D. M\u1ee5c \u0111\u00edch ho\u1eb7c c\u00f3 s\u00e1ng t\u1ea1o","E. Ho\u1ea1t \u0111\u1ed9ng gi\u1ea3i tr\u00ed"],
-    correct: 1
+    id: "CH257",
+    question: "Lao động có yếu tố nào của con người đã gắn liền với quy luật của cái đẹp? E. Hoạt động giải trí",
+    answers: ["Mục tiêu, có sáng tạo", "Mục đích, có sáng tạo", "Mục đích, không sáng tạo", "Mục đích hoặc có sáng tạo"],
+    correct: [1]
   },
   {
-    question: "Lao \u0111\u1ed9ng gi\u00fap con ng\u01b0\u1eddi \u0111\u01b0\u1ee3c t\u1ef1 do v\u1ec1 kinh t\u1ebf, v\u1ec1 ch\u00ednh tr\u1ecb, m\u1edbi c\u00f3 th\u1ec3 t\u1ef1 do v\u1ec1 g\u00ec?",
-    answers: ["A. T\u1ef1 do v\u1ec1 kinh t\u1ebf m\u1edbi c\u00f3 th\u1ec3 t\u1ef1 do v\u1ec1 s\u00e1ng t\u1ea1o", "B. T\u1ef1 do v\u1ec1 kinh t\u1ebf, v\u1ec1 ch\u00ednh tr\u1ecb", "C. T\u1ef1 do v\u1ec1 ch\u00ednh tr\u1ecb, m\u1edbi c\u00f3 th\u1ec3 t\u1ef1 do v\u1ec1 s\u00e1ng t\u1ea1o", "D. T\u1ef1 do v\u1ec1 s\u00e1ng t\u1ea1o v\u00e0 h\u01b0\u1edfng th\u1ee5 c\u00e1i \u0111\u1eb9p v\u00e0 ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH258",
+    question: "Lao động giúp con người được tự do về kinh tế, về chính trị, mới có thể tự do về gì?",
+    answers: ["Tự do về kinh tế mới có thể tự do về sáng tạo", "Tự do về kinh tế, về chính trị", "Tự do về chính trị, mới có thể tự do về sáng tạo", "Tự do về sáng tạo và hưởng thụ cái đẹp và nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "\u201c\u0110\u1eb9p l\u00e0 coi c\u00e1i \u0111\u1eb9p nh\u01b0 s\u1ef1 b\u1eaft ch\u01b0\u1edbc t\u1ef1 nhi\u00ean\u201d l\u00e0 l\u00fd thuy\u1ebft \u0111\u01a1n gi\u1ea3n v\u1ec1 c\u00e1i g\u00ec trong m\u1ef9 h\u1ecdc?",
-    answers: ["A. C\u00e1i cao c\u1ea3", "B. C\u00e1i \u0111\u1eb9p", "C. C\u00e1i h\u00e0i", "D. C\u00e1i bi"],
-    correct: 1
+    id: "CH259",
+    question: "“Đẹp là coi cái đẹp như sự bắt chước tự nhiên” là lý thuyết đơn giản về cái gì trong mỹ học?",
+    answers: ["Cái cao cả", "Cái đẹp", "Cái hài", "Cái bi"],
+    correct: [1]
   },
   {
-    question: "L\u00fd thuy\u1ebft n\u00e0o v\u1ec1 c\u00e1i \u0111\u1eb9p th\u00ec cho r\u1eb1ng m\u1ed9t v\u1eadt ch\u1ec9 \u0111\u1eb9p khi c\u00f3 h\u00ecnh th\u1ee9c ph\u00f9 h\u1ee3p v\u1edbi c\u00f4ng d\u1ee5ng c\u1ee7a n\u00f3?",
-    answers: ["A. \u201cHi\u1ec7n \u0111\u1ea1i\u201d", "B. \u201cC\u1ed5 \u0111i\u1ec3n\u201d", "C. \u201cPh\u1ee5c h\u01b0ng\u201d", "D. \u201cGiai c\u1ea5p\u201d"],
-    correct: 0
+    id: "CH260",
+    question: "Lý thuyết nào về cái đẹp thì cho rằng một vật chỉ đẹp khi có hình thức phù hợp với công dụng của nó?",
+    answers: ["“Hiện đại”", "“Cổ điển”", "“Phục hưng”", "“Giai cấp”"],
+    correct: [0]
   },
   {
-    question: "L\u00fd thuy\u1ebft n\u00e0o ho\u00e0n to\u00e0n tr\u00e1i ng\u01b0\u1ee3c v\u1edbi quan \u0111i\u1ec3m c\u1ee7a Oscar Wilde?",
-    answers: ["A. L\u00fd thuy\u1ebft \u201chi\u1ec7n \u0111\u1ea1i\u201d v\u1ec1 c\u00e1i h\u00e0i", "B. L\u00fd thuy\u1ebft \u201chi\u1ec7n \u0111\u1ea1i\u201d v\u1ec1 c\u00e1i bi", "C. L\u00fd thuy\u1ebft \u201chi\u1ec7n \u0111\u1ea1i\u201d v\u1ec1 c\u00e1i x\u1ea5u", "D. L\u00fd thuy\u1ebft \u201chi\u1ec7n \u0111\u1ea1i\u201d v\u1ec1 c\u00e1i \u0110\u1eb9p"],
-    correct: 3
+    id: "CH261",
+    question: "Lý thuyết nào hoàn toàn trái ngược với quan điểm của Oscar Wilde?",
+    answers: ["Lý thuyết “hiện đại” về cái hài", "Lý thuyết “hiện đại” về cái bi", "Lý thuyết “hiện đại” về cái xấu", "Lý thuyết “hiện đại” về cái đẹp"],
+    correct: [3]
   },
   {
-    question: "C\u00f3 m\u1ea5y b\u00ecnh di\u1ec7n trong c\u00e1i \u0111\u1eb9p c\u1ee7a m\u1ef9 h\u1ecdc?",
-    answers: ["A. 2", "B. 3", "C. 4", "D. 5"],
-    correct: 2
+    id: "CH262",
+    question: "Có mấy bình diện trong cái đẹp của mỹ học?",
+    answers: ["2", "3", "4", "5"],
+    correct: [2]
   },
   {
-    question: "M\u1ef9 h\u1ecdc n\u00e0o gi\u1ea3i th\u00edch t\u00e1c \u0111\u1ed9ng c\u1ee7a c\u00e1i \u0111\u1eb9p \u0111\u1ebfn con ng\u01b0\u1eddi b\u1eb1ng quan ni\u1ec7m cho r\u1eb1ng \u1edf c\u00e1i \u0111\u1eb9p b\u1ed9c l\u1ed9 nh\u1eefng s\u1ee9c m\u1ea1nh t\u00e2m linh si\u00eau nhi\u00ean?",
-    answers: ["A. Duy v\u1eadt bi\u1ec7n ch\u1ee9ng", "B. Duy v\u1eadt", "C. Duy \u00fd ch\u00ed", "D. Duy t\u00e2m"],
-    correct: 3
+    id: "CH263",
+    question: "Mỹ học nào giải thích tác động của cái đẹp đến con người bằng quan niệm cho rằng ở cái đẹp bộc lộ những sức mạnh tâm linh siêu nhiên?",
+    answers: ["Duy vật biện chứng", "Duy vật", "Duy ý chí", "Duy tâm"],
+    correct: [3]
   },
   {
-    question: "Trong th\u1ef1c t\u1ebf l\u1ecbch s\u1eed m\u1ef9 h\u1ecdc n\u00f3i ri\u00eang v\u00e0 tri\u1ebft h\u1ecdc n\u00f3i chung, quan ni\u1ec7m v\u1ec1 c\u00e1i \u0111\u1eb9p c\u00f3 th\u1ed1ng nh\u1ea5t hay kh\u00f4ng?",
-    answers: ["A. Th\u1ed1ng nh\u1ea5t", "B. Kh\u00f4ng th\u1ed1ng nh\u1ea5t", "C. Kh\u00f4ng quan \u0111i\u1ec3m", "D. Kh\u00f4ng \u0111\u1ed3ng nh\u1ea5t"],
-    correct: 1
+    id: "CH264",
+    question: "Trong thực tế lịch sử mỹ học nói riêng và triết học nói chung, quan niệm về cái đẹp có thống nhất hay không?",
+    answers: ["Thống nhất", "Không thống nhất", "Không quan điểm", "Không đồng nhất"],
+    correct: [1]
   },
   {
-    question: "M\u1ef9 h\u1ecdc duy v\u1eadt th\u1ec3 hi\u1ec7n m\u1ea5y xu h\u01b0\u1edbng nh\u00ecn nh\u1eadn c\u00e1i \u0111\u1eb9p?",
-    answers: ["A. 2", "B. 3", "C. 4", "D. 5"],
-    correct: 0
+    id: "CH265",
+    question: "Mỹ học duy vật thể hiện mấy xu hướng nhìn nhận cái đẹp?",
+    answers: ["2", "3", "4", "5"],
+    correct: [0]
   },
   {
-    question: "Ai l\u00e0 ng\u01b0\u1eddi n\u00eau \u0111\u1ecbnh \u0111\u1ec1 n\u1ed5i ti\u1ebfng \u201ccon ng\u01b0\u1eddi c\u0169ng s\u00e1ng t\u1ea1o theo quy lu\u1eadt c\u1ee7a c\u00e1i \u0111\u1eb9p\u201d?",
-    answers: ["A. Kal - Marx", "B. Marx", "C. Karl", "D. Karl Marx"],
-    correct: 3
+    id: "CH266",
+    question: "Ai là người nêu định đề nổi tiếng “con người cũng sáng tạo theo quy luật của cái đẹp”?",
+    answers: ["Kal - Marx", "Marx", "Karl", "Karl Marx"],
+    correct: [3]
   },
   {
-    question: "V\u00ec sao H\u00eaghen \u2013 nh\u00e0 duy t\u00e2m kh\u00e1ch quan ng\u01b0\u1eddi \u0110\u1ee9c m\u1eb7c d\u00f9 th\u1eeba nh\u1eadn c\u00e1i \u0111\u1eb9p c\u1ee7a t\u1ef1 nhi\u00ean, nh\u01b0ng \u00f4ng l\u1ea1i lo\u1ea1i tr\u1eeb n\u00f3 ra kh\u1ecfi \u0111\u1ed1i t\u01b0\u1ee3ng nghi\u00ean c\u1ee9u c\u1ee7a m\u1ef9 h\u1ecdc?",
-    answers: ["A. V\u00ec cho r\u1eb1ng c\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean kh\u00f4ng ph\u1ea3n \u00e1nh c\u00e1i \u0111\u1eb9p thu\u1ed9c v\u1ec1 tinh th\u1ea7n", "B. V\u00ec cho r\u1eb1ng c\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean ch\u1ec9 l\u00e0 ph\u1ea3n \u00e1nh c\u00e1i \u0111\u1eb9p thu\u1ed9c v\u1ec1 tinh th\u1ea7n", "C. V\u00ec cho r\u1eb1ng c\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean ch\u1ec9 l\u00e0 ph\u1ea3n \u00e1nh c\u00e1i \u0111\u1eb9p thu\u1ed9c v\u1ec1 v\u1eadt ch\u1ea5t", "D. V\u00ec cho r\u1eb1ng c\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean ch\u1ec9 l\u00e0 ph\u1ea3n \u00e1nh c\u00e1i \u0111\u1eb9p thu\u1ed9c v\u1ec1 nhu c\u1ea7u s\u1eed d\u1ee5ng"],
-    correct: 1
+    id: "CH267",
+    question: "Vì sao Hêghen – nhà duy tâm khách quan người Đức mặc dù thừa nhận cái đẹp của tự nhiên, nhưng ông lại loại trừ nó ra khỏi đối tượng nghiên cứu của mỹ học?",
+    answers: ["Vì cho rằng cái đẹp trong tự nhiên không phản ánh cái đẹp thuộc về tinh thần", "Vì cho rằng cái đẹp trong tự nhiên chỉ là phản ánh cái đẹp thuộc về tinh thần", "Vì cho rằng cái đẹp trong tự nhiên chỉ là phản ánh cái đẹp thuộc về vật chất", "Vì cho rằng cái đẹp trong tự nhiên chỉ là phản ánh cái đẹp thuộc về nhu cầu sử dụng"],
+    correct: [1]
   },
   {
-    question: " Ai l\u00e0 ng\u01b0\u1eddi kh\u1eb3ng \u0111\u1ecbnh c\u00e1i \u0111\u1eb9p trong t\u1ef1 nhi\u00ean h\u1ea5p d\u1eabn h\u01a1n c\u00e1i \u0111\u1eb9p trong ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. H\u00earaclit", "B. Platon", "C. H\u00eaghen", "D. Kant"],
-    correct: 2
+    id: "CH268",
+    question: " Ai là người khẳng định cái đẹp trong tự nhiên hấp dẫn hơn cái đẹp trong nghệ thuật?",
+    answers: ["Hêraclit", "Platon", "Hêghen", "Kant"],
+    correct: [2]
   },
   {
-    question: "Arixxtot \u0111\u00e3 b\u1ed5 sung c\u00e1c d\u1ea5u hi\u1ec7u c\u1ee7a c\u00e1i \u0111\u1eb9p bao g\u1ed3m nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. H\u00f2a nh\u1ecbp, c\u00e2n x\u1ee9ng, x\u00e1c \u0111\u1ecbnh", "B. H\u00f2a nh\u1ecbp, x\u00e1c \u0111\u1ecbnh, ch\u00ednh th\u1ec3", "C. C\u00e2n x\u1ee9ng, x\u00e1c \u0111\u1ecbnh, ch\u00ednh th\u1ec3", "D. H\u00f2a nh\u1ecbp, c\u00e2n x\u1ee9ng, x\u00e1c \u0111\u1ecbnh, ch\u00ednh th\u1ec3"],
-    correct: 3
+    id: "CH269",
+    question: "Arixxtot đã bổ sung các dấu hiệu của cái đẹp bao gồm những yếu tố nào?",
+    answers: ["Hòa nhịp, cân xứng, xác định", "Hòa nhịp, xác định, chính thể", "Cân xứng, xác định, chính thể", "Hòa nhịp, cân xứng, xác định, chính thể"],
+    correct: [3]
   },
   {
-    question: "Tr\u01b0\u1edbc \u0111\u1ed1i t\u01b0\u1ee3ng h\u00e0i, t\u00f9y quy m\u00f4 v\u00e0 m\u1ee9c \u0111\u1ed9 vi ph\u1ea1m c\u1ee7a n\u00f3 v\u00e0o chu\u1ea9n m\u1ef1c th\u1ea9m m\u1ef9 t\u00edch c\u1ef1c, ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9 x\u1eed l\u00fd b\u1eb1ng c\u00e1c h\u00ecnh th\u1ee9c n\u00e0o?",
-    answers: ["A. \u0110\u1ea3 k\u00edch; M\u1ec9a mai, ch\u00e2m bi\u1ebfm; B\u00f4ng \u0111\u00f9a h\u00e0i h\u01b0\u1edbc", "B. M\u1ec9a mai, ch\u00e2m bi\u1ebfm; B\u00f4ng \u0111\u00f9a h\u00e0i h\u01b0\u1edbc", "C. \u0110\u1ea3 k\u00edch; B\u00f4ng \u0111\u00f9a h\u00e0i h\u01b0\u1edbc", "D. \u0110\u1ea3 k\u00edch; M\u1ec9a mai, ch\u00e2m bi\u1ebfm"],
-    correct: 0
+    id: "CH270",
+    question: "Trước đối tượng hài, tùy quy mô và mức độ vi phạm của nó vào chuẩn mực thẩm mỹ tích cực, chủ thể thẩm mỹ xử lý bằng các hình thức nào?",
+    answers: ["Đả kích; Mỉa mai, châm biếm; Bông đùa hài hước", "Mỉa mai, châm biếm; Bông đùa hài hước", "Đả kích; Bông đùa hài hước", "Đả kích; Mỉa mai, châm biếm"],
+    correct: [0]
   },
   {
-    question: "\u0110\u1ec3 tr\u1edf th\u00e0nh ch\u1ee7 th\u1ec3 th\u1ea9m m\u1ef9, th\u00f4ng th\u01b0\u1eddng ch\u1ee7 th\u1ec3 x\u00e3 h\u1ed9i ph\u1ea3i v\u01b0\u1ee3t qua tr\u1ea1ng th\u00e1i g\u00ec?",
-    answers: ["A. \u1ee8ng d\u1ee5ng", "B. Th\u1ef1c thi", "C. Th\u1ef1c d\u1ee5ng", "D. Th\u1ef1c v\u1eadt"],
-    correct: 2
+    id: "CH271",
+    question: "Để trở thành chủ thể thẩm mỹ, thông thường chủ thể xã hội phải vượt qua trạng thái gì?",
+    answers: ["Ứng dụng", "Thực thi", "Thực dụng", "Thực vật"],
+    correct: [2]
   },
   {
-    question: "C\u01a1 s\u1edf kh\u00e1ch quan c\u1ee7a \u0111\u1ed1i t\u01b0\u1ee3ng th\u1ea9m m\u1ef9 l\u00e0 g\u00ec?",
-    answers: ["A. Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9", "B. C\u1ea3m x\u00fac th\u1ea9m m\u1ef9", "C. Nhu c\u1ea7u th\u1ea9m m\u1ef9", "D. C\u1ea3m t\u00ednh th\u1ea9m m\u1ef9"],
-    correct: 1
+    id: "CH272",
+    question: "Cơ sở khách quan của đối tượng thẩm mỹ là gì?",
+    answers: ["Thị hiếu thẩm mỹ", "Cảm xúc thẩm mỹ", "Nhu cầu thẩm mỹ", "Cảm tính thẩm mỹ"],
+    correct: [1]
   },
   {
-    question: "So v\u1edbi c\u1ea3m x\u00fac th\u1ea9m m\u1ef9, th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Kh\u00f4ng \u1ed5n \u0111\u1ecbnh v\u00e0 b\u1ec1n v\u1eefng h\u01a1n", "B. Ki\u00ean \u0111\u1ecbnh v\u00e0 b\u1ec1n v\u1eefng h\u01a1n", "C. \u1ed4n \u0111\u1ecbnh v\u00e0 ch\u1eb7t ch\u1ebd h\u01a1n", "D. \u1ed4n \u0111\u1ecbnh v\u00e0 b\u1ec1n v\u1eefng h\u01a1n"],
-    correct: 3
+    id: "CH273",
+    question: "So với cảm xúc thẩm mỹ, thị hiếu thẩm mỹ như thế nào?",
+    answers: ["Không ổn định và bền vững hơn", "Kiên định và bền vững hơn", "Ổn định và chặt chẽ hơn", "Ổn định và bền vững hơn"],
+    correct: [3]
   },
   {
-    question: "Th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 nghi\u00eang v\u1ec1 ph\u00eda t\u00ednh c\u1ea3m s\u1ebd nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. Thay \u0111\u1ed5i nhanh", "B. Thay \u0111\u1ed5i v\u1eeba", "C. Thay \u0111\u1ed5i ch\u1eadm", "D. Thay \u0111\u1ed5i c\u1ef1c nhanh"],
-    correct: 0
+    id: "CH274",
+    question: "Thị hiếu thẩm mỹ nghiêng về phía tính cảm sẽ như thế nào?",
+    answers: ["Thay đổi nhanh", "Thay đổi vừa", "Thay đổi chậm", "Thay đổi cực nhanh"],
+    correct: [0]
   },
   {
-    question: "Ng\u01b0\u1eddi c\u00f3 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 ph\u00e1t tri\u1ec3n cao, m\u1ed9t m\u1eb7t do xu\u1ea5t ph\u00e1t t\u1eeb \u0111\u00e2u?",
-    answers: ["A. B\u1ea3n n\u0103ng nh\u1ea1y c\u1ea3m kh\u00e1c nhau \u0111\u1ed1i v\u1edbi th\u1ebf gi\u1edbi", "B. B\u1ea3n n\u0103ng nh\u1ea1y c\u1ea3m kh\u00e1c nhau \u0111\u1ed1i v\u1edbi th\u1ebf gi\u1edbi h\u00f2a b\u00ecnh", "C. B\u1ea3n n\u0103ng nh\u1ea1y c\u1ea3m kh\u00e1c nhau \u0111\u1ed1i v\u1edbi th\u1ebf gi\u1edbi xung quanh", "D. B\u1ea3n n\u0103ng kh\u00f4ng nh\u1ea1y c\u1ea3m kh\u00e1c nhau \u0111\u1ed1i v\u1edbi th\u1ebf gi\u1edbi xung quanh"],
-    correct: 2
+    id: "CH275",
+    question: "Người có thị hiếu thẩm mỹ phát triển cao, một mặt do xuất phát từ đâu?",
+    answers: ["Bản năng nhạy cảm khác nhau đối với thế giới", "Bản năng nhạy cảm khác nhau đối với thế giới hòa bình", "Bản năng nhạy cảm khác nhau đối với thế giới xung quanh", "Bản năng không nhạy cảm khác nhau đối với thế giới xung quanh"],
+    correct: [2]
   },
   {
-    question: "S\u1ef1 th\u1ea5p k\u00e9m v\u1ec1 th\u1ecb hi\u1ebfu th\u1ea9m m\u1ef9 c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c kh\u1eafc ph\u1ee5c m\u1ed9t m\u1ee9c \u0111\u1ed9 l\u1edbn b\u1edfi s\u1ef1 thay \u0111\u1ed5i nh\u1eefng \u0111i\u1ec1u ki\u1ec7n n\u00e0o?",
-    answers: ["A. Ch\u00ednh tr\u1ecb \u2013 x\u00e3 h\u1ed9i", "B. Kinh t\u1ebf \u2013 x\u00e3 h\u1ed9i", "C. Kinh t\u1ebf \u2013 cu\u1ed9c s\u1ed1ng", "D. X\u00e3 h\u1ed9i \u2013 cu\u1ed9c s\u1ed1ng"],
-    correct: 1
+    id: "CH276",
+    question: "Sự thấp kém về thị hiếu thẩm mỹ có thể được khắc phục một mức độ lớn bởi sự thay đổi những điều kiện nào?",
+    answers: ["Chính trị – xã hội", "Kinh tế – xã hội", "Kinh tế – cuộc sống", "Xã hội – cuộc sống"],
+    correct: [1]
   },
   {
-    question: "Trong m\u1ef9 h\u1ecdc m\u1ed1t c\u00f3 li\u00ean h\u1ec7 ch\u1eb7t ch\u1ebd v\u1edbi g\u00ec?",
-    answers: ["A. Truy\u1ec1n th\u1ed1ng v\u0103n ngh\u1ec7", "B. Truy\u1ec1n th\u1ed1ng v\u0103n h\u00f3a", "C. Truy\u1ec1n th\u1ed1ng c\u1ed5 x\u01b0a", "D. Truy\u1ec1n th\u1ed1ng m\u1ef9 h\u1ecdc"],
-    correct: 1
+    id: "CH277",
+    question: "Trong mỹ học mốt có liên hệ chặt chẽ với gì?",
+    answers: ["Truyền thống văn nghệ", "Truyền thống văn hóa", "Truyền thống cổ xưa", "Truyền thống mỹ học"],
+    correct: [1]
   },
   {
-    question: "H\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: \u0110\u00e1nh gi\u00e1 th\u1ea9m m\u1ef9 c\u00f3 c\u00e1c chu\u1ea9n m\u1ef1c \u0111\u00e1nh gi\u00e1 c\u00f3 th\u1ec3 \u2026., c\u00f3 th\u1ec3 \u2026.?",
-    answers: ["A. N\u1eb7ng v\u1ec1 c\u1ea3m t\u00ednh/ N\u1eb7ng v\u1ec1 l\u00fd t\u00ednh", "B. N\u1eb7ng v\u1ec1 suy ngh\u0129/ N\u1eb7ng v\u1ec1 tinh th\u1ea7n", "C. N\u1eb7ng v\u1ec1 t\u00ecnh c\u1ea3m/ N\u1eb7ng v\u1ec1 c\u1ea3m x\u00fac", "D. N\u1eb7ng v\u1ec1 c\u1ea3m nh\u1eadn/ N\u1eb7ng v\u1ec1 c\u1ea3m t\u00ednh"],
-    correct: 0
+    id: "CH278",
+    question: "Hãy điền tiếp vào nội dung còn thiếu sau: Đánh giá thẩm mỹ có các chuẩn mực đánh giá có thể …., có thể ….?",
+    answers: ["Nặng về cảm tính/ Nặng về lý tính", "Nặng về suy nghĩ/ Nặng về tinh thần", "Nặng về tình cảm/ Nặng về cảm xúc", "Nặng về cảm nhận/ Nặng về cảm tính"],
+    correct: [0]
   },
   {
-    question: "Trong c\u00e1c chu\u1ea9n m\u1ef1c c\u1ee7a m\u1ef9 h\u1ecdc, chu\u1ea9n m\u1ef1c n\u00e0o cao nh\u1ea5t?",
-    answers: ["A. L\u00fd t\u01b0\u1edfng c\u00e1 nh\u00e2n", "B. L\u00fd t\u01b0\u1edfng m\u1ef9 h\u1ecdc", "C. L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9", "D. L\u00fd t\u01b0\u1edfng cu\u1ed9c s\u1ed1ng"],
-    correct: 2
+    id: "CH279",
+    question: "Trong các chuẩn mực của mỹ học, chuẩn mực nào cao nhất?",
+    answers: ["Lý tưởng cá nhân", "Lý tưởng mỹ học", "Lý tưởng thẩm mỹ", "Lý tưởng cuộc sống"],
+    correct: [2]
   },
   {
-    question: "L\u00fd t\u01b0\u1edfng th\u1ea9m m\u1ef9 \u1edf m\u1ed7i th\u1eddi \u0111\u1ea1i, m\u1ed7i x\u00e3 h\u1ed9i th\u1ec3 hi\u1ec7n r\u00f5 r\u1ec7t nh\u1ea5t qua h\u00ecnh th\u1ee9c n\u00e0o?",
-    answers: ["A. \u00c2m nh\u1ea1c", "B. Ngh\u1ec7 thu\u1eadt", "C. H\u1ed9i h\u1ecda", "D. V\u0103n h\u1ecdc"],
-    correct: 1
+    id: "CH280",
+    question: "Lý tưởng thẩm mỹ ở mỗi thời đại, mỗi xã hội thể hiện rõ rệt nhất qua hình thức nào?",
+    answers: ["Âm nhạc", "Nghệ thuật", "Hội họa", "Văn học"],
+    correct: [1]
   },
   {
-    question: "Nh\u00f3m n\u00e0o bao g\u1ed3m c\u00e1c th\u00e0nh vi\u00ean nh\u01b0 c\u00e1c nh\u00e0 qu\u1ea3n l\u00fd v\u0103n h\u00f3a ngh\u1ec7 thu\u1eadt, gi\u1edbi nghi\u00ean c\u1ee9u m\u1ef9 h\u1ecdc, c\u00e1c nh\u00e0 ph\u00ea b\u00ecnh v\u00e0 l\u00fd lu\u1eadn ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. Nh\u00f3m \u0111\u1ecbnh h\u01b0\u1edbng c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "B. Nh\u00f3m th\u01b0\u1edfng th\u1ee9c c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "C. Nh\u00f3m c\u1ea3m nh\u1eadn c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9", "D. Nh\u00f3m th\u1ea9m \u0111\u1ecbnh c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9"],
-    correct: 0
+    id: "CH281",
+    question: "Nhóm nào bao gồm các thành viên như các nhà quản lý văn hóa nghệ thuật, giới nghiên cứu mỹ học, các nhà phê bình và lý luận nghệ thuật?",
+    answers: ["Nhóm định hướng các giá trị thẩm mỹ", "Nhóm thưởng thức các giá trị thẩm mỹ", "Nhóm cảm nhận các giá trị thẩm mỹ", "Nhóm thẩm định các giá trị thẩm mỹ"],
+    correct: [0]
   },
   {
-    question: "\u0110\u1eb7c \u0111i\u1ec3m c\u01a1 b\u1ea3n th\u1ee9 m\u1ea5y c\u1ee7a s\u1ef1 th\u1ee5 c\u1ea3m bi\u1ebfn \u0111\u1ed5i trong ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o l\u00e0 bi\u1ebft r\u00fat ra t\u1eeb \u0111\u1ed1i t\u01b0\u1ee3ng nh\u1eefng n\u00e9t b\u1ea3n ch\u1ea5t?",
-    answers: ["A. \u0110\u1ea7u ti\u00ean", "B. Th\u1ee9 hai", "C. Th\u1ee9 ba", "D. Th\u1ee9 t\u01b0"],
-    correct: 0
+    id: "CH282",
+    question: "Đặc điểm cơ bản thứ mấy của sự thụ cảm biến đổi trong chủ thể sáng tạo là biết rút ra từ đối tượng những nét bản chất?",
+    answers: ["Đầu tiên", "Thứ hai", "Thứ ba", "Thứ tư"],
+    correct: [0]
   },
   {
-    question: "Vi\u1ec7c quan s\u00e1t c\u1ee7a ch\u1ee7 th\u1ec3 s\u00e1ng t\u1ea1o c\u00f3 ph\u1ea3i l\u00e0 nh\u1eadn th\u1ee9c \u0111\u01a1n thu\u1ea7n hay kh\u00f4ng?",
-    answers: ["A. Ph\u1ea3i", "B. Kh\u00f4ng ph\u1ea3i", "C. G\u1ea7n nh\u01b0", "D. H\u00ecnh nh\u01b0"],
-    correct: 1
+    id: "CH283",
+    question: "Việc quan sát của chủ thể sáng tạo có phải là nhận thức đơn thuần hay không?",
+    answers: ["Phải", "Không phải", "Gần như", "Hình như"],
+    correct: [1]
   },
   {
-    question: "Ph\u01b0\u01a1ng ti\u1ec7n th\u1ef1c hi\u1ec7n v\u00e0 th\u1ec3 hi\u1ec7n c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ea9m m\u1ef9 c\u1ee7a nh\u00f3m ch\u1ee7 th\u1ec3 t\u1ed5ng h\u1ee3p c\u00e1c gi\u00e1 tr\u1ecb th\u1ea9m m\u1ef9 r\u1ed9ng l\u1edbn hay kh\u00f4ng?",
-    answers: ["A. C\u00f3", "B. Kh\u00f4ng", "C. V\u1eeba", "D. Nh\u1ecf"],
-    correct: 0
+    id: "CH284",
+    question: "Phương tiện thực hiện và thể hiện các hoạt động thẩm mỹ của nhóm chủ thể tổng hợp các giá trị thẩm mỹ rộng lớn hay không?",
+    answers: ["Có", "Không", "Vừa", "Nhỏ"],
+    correct: [0]
   },
   {
-    question: "T\u00ednh g\u00ec trong gi\u00e1o d\u1ee5c th\u1ea9m m\u1ef9 mang n\u1ed9i dung x\u00e3 h\u1ed9i s\u00e2u s\u1eafc tr\u01b0\u1edbc ti\u00ean?",
-    answers: ["A. T\u00ednh d\u00e2n ch\u1ee7", "B. T\u00ednh giai c\u1ea5p", "C. T\u00ednh d\u00e2n t\u1ed9c", "D. T\u00ednh x\u00e3 h\u1ed9i"],
-    correct: 2
+    id: "CH285",
+    question: "Tính gì trong giáo dục thẩm mỹ mang nội dung xã hội sâu sắc trước tiên?",
+    answers: ["Tính dân chủ", "Tính giai cấp", "Tính dân tộc", "Tính xã hội"],
+    correct: [2]
   },
   {
-    question: "Ch\u1ee9c n\u0103ng x\u00e3 h\u1ed9i c\u01a1 b\u1ea3n \u0111\u1ea7u ti\u00ean c\u1ee7a ngh\u1ec7 thu\u1eadt l\u00e0 g\u00ec?",
-    answers: ["A. Ch\u1ee9c n\u0103ng th\u1ecfa m\u00e3n nhu c\u1ea7u l\u00e0m \u0111\u1eb9p", "B. Ch\u1ee9c n\u0103ng th\u1ecfa m\u00e3n nhu c\u1ea7u th\u1ea9m \u0111\u1ecbnh", "C. Ch\u1ee9c n\u0103ng th\u1ecfa m\u00e3n nhu c\u1ea7u \u0111\u00e1nh gi\u00e1", "D. Ch\u1ee9c n\u0103ng th\u1ecfa m\u00e3n nhu c\u1ea7u th\u1ea9m m\u1ef9"],
-    correct: 3
+    id: "CH286",
+    question: "Chức năng xã hội cơ bản đầu tiên của nghệ thuật là gì?",
+    answers: ["Chức năng thỏa mãn nhu cầu làm đẹp", "Chức năng thỏa mãn nhu cầu thẩm định", "Chức năng thỏa mãn nhu cầu đánh giá", "Chức năng thỏa mãn nhu cầu thẩm mỹ"],
+    correct: [3]
   },
   {
-    question: "H\u00ecnh th\u00e1i n\u00e0o c\u00f9ng ph\u1ea3n \u00e1nh hi\u1ec7n th\u1ef1c kh\u00e1ch quan, nh\u01b0ng khoa h\u1ecdc l\u00e0 h\u00ecnh th\u1ee9c ho\u1ea1t \u0111\u1ed9ng l\u00fd lu\u1eadn cao nh\u1ea5t \u0111\u1ed3ng th\u1eddi c\u0169ng l\u00e0 k\u1ebft qu\u1ea3 c\u1ee7a h\u00ecnh th\u00e1i \u0111\u00f3?",
-    answers: ["A. Ngh\u1ec7 thu\u1eadt v\u00e0 m\u1ef9 h\u1ecdc", "B. Ngh\u1ec7 thu\u1eadt v\u00e0 tri\u1ebft h\u1ecdc", "C. Ngh\u1ec7 thu\u1eadt v\u00e0 \u0111\u1ea1o \u0111\u1ee9c", "D. Ngh\u1ec7 thu\u1eadt v\u00e0 khoa h\u1ecdc"],
-    correct: 3
+    id: "CH287",
+    question: "Hình thái nào cùng phản ánh hiện thực khách quan, nhưng khoa học là hình thức hoạt động lý luận cao nhất đồng thời cũng là kết quả của hình thái đó?",
+    answers: ["Nghệ thuật và mỹ học", "Nghệ thuật và triết học", "Nghệ thuật và đạo đức", "Nghệ thuật và khoa học"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt v\u00e0 ch\u00ednh tr\u1ecb l\u00e0 hai l\u0129nh v\u1ef1c tinh th\u1ea7n kh\u00e1c nhau c\u1ee7a \u0111\u1eddi s\u1ed1ng x\u00e3 h\u1ed9i nh\u01b0ng n\u00f3 c\u00f3 s\u1ef1 t\u00e1c \u0111\u1ed9ng l\u1eabn nhau nh\u01b0 th\u1ebf n\u00e0o?",
-    answers: ["A. M\u1ed9t c\u00e1ch t\u00edch c\u1ef1c", "B. M\u1ed9t c\u00e1ch ti\u00eau c\u1ef1c", "C. M\u1ed9t c\u00e1ch \u0111a d\u1ea1ng", "D. M\u1ed9t c\u00e1ch l\u00fd t\u01b0\u1edfng"],
-    correct: 0
+    id: "CH288",
+    question: "Nghệ thuật và chính trị là hai lĩnh vực tinh thần khác nhau của đời sống xã hội nhưng nó có sự tác động lẫn nhau như thế nào?",
+    answers: ["Một cách tích cực", "Một cách tiêu cực", "Một cách đa dạng", "Một cách lý tưởng"],
+    correct: [0]
   },
   {
-    question: "Nh\u1eefng nguy\u00ean t\u1eafc n\u00e0o m\u00e0 ng\u01b0\u1eddi ngh\u1ec7 s\u0129 th\u1ea5m \u0111\u01b0\u1ee3m s\u1ebd gi\u00fap \u0111i s\u00e2u, m\u1ed5 x\u1ebb t\u00e2m l\u00fd h\u00e0nh vi nh\u00e2n v\u1eadt c\u1ee7a m\u00ecnh \u0111\u01b0\u1ee3c s\u00e2u s\u1eafc h\u01a1n?",
-    answers: ["A. Khoa h\u1ecdc", "B. C\u00e1i \u0111\u1eb9p", "C. Cu\u1ed9c s\u1ed1ng", "D. \u0110\u1ea1o \u0111\u1ee9c"],
-    correct: 3
+    id: "CH289",
+    question: "Những nguyên tắc nào mà người nghệ sĩ thấm đượm sẽ giúp đi sâu, mổ xẻ tâm lý hành vi nhân vật của mình được sâu sắc hơn?",
+    answers: ["Khoa học", "Cái đẹp", "Cuộc sống", "Đạo đức"],
+    correct: [3]
   },
   {
-    question: "Ngh\u1ec7 thu\u1eadt ph\u1ea3n \u00e1nh th\u1ea9m m\u1ef9 t\u1eeb cu\u1ed9c s\u1ed1ng hi\u1ec7n th\u1ef1c qua h\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt. Ng\u01b0\u1ee3c l\u1ea1i, t\u00f4n gi\u00e1o l\u1ea1i ph\u1ea3n \u00e1nh c\u00e1i g\u00ec?",
-    answers: ["A. Th\u1ef1c tr\u1ea1ng m\u1ed9t c\u00e1ch h\u01b0 \u1ea3o hoang \u0111\u01b0\u1eddng", "B. Hi\u1ec7n th\u1ef1c m\u1ed9t c\u00e1ch h\u01b0 \u1ea3o hoang \u0111\u01b0\u1eddng", "C. X\u00e3 h\u1ed9i m\u1ed9t c\u00e1ch h\u01b0 \u1ea3o hoang \u0111\u01b0\u1eddng", "D. Tr\u00e0o l\u01b0u m\u1ed9t c\u00e1ch h\u01b0 \u1ea3o hoang \u0111\u01b0\u1eddng"],
-    correct: 1
+    id: "CH290",
+    question: "Nghệ thuật phản ánh thẩm mỹ từ cuộc sống hiện thực qua hình tượng nghệ thuật. Ngược lại, tôn giáo lại phản ánh cái gì?",
+    answers: ["Thực trạng một cách hư ảo hoang đường", "Hiện thực một cách hư ảo hoang đường", "Xã hội một cách hư ảo hoang đường", "Trào lưu một cách hư ảo hoang đường"],
+    correct: [1]
   },
   {
-    question: "Nguy\u00ean l\u00fd n\u00e0o \u0111\u00e3 l\u00e0m c\u01a1 s\u1edf cho ch\u1ee7 ngh\u0129a duy v\u1eadt c\u1ee7a m\u1ef9 h\u1ecdc?",
-    answers: ["A. Nguy\u00ean l\u00fd b\u1eaft ch\u01b0\u1edbc", "B. Nguy\u00ean l\u00fd m\u1ef9 h\u1ecdc", "C. Nguy\u00ean l\u00fd cu\u1ed9c s\u1ed1ng", "D. Nguy\u00ean l\u00fd x\u00e3 h\u1ed9i"],
-    correct: 0
+    id: "CH291",
+    question: "Nguyên lý nào đã làm cơ sở cho chủ nghĩa duy vật của mỹ học?",
+    answers: ["Nguyên lý bắt chước", "Nguyên lý mỹ học", "Nguyên lý cuộc sống", "Nguyên lý xã hội"],
+    correct: [0]
   },
   {
-    question: "H\u00eaghen trong \u2026 c\u1ee7a m\u00ecnh c\u0169ng \u0111\u00e3 b\u00e1o tr\u01b0\u1edbc r\u1eb1ng: ngh\u1ec7 thu\u1eadt hi\u1ec7n th\u1ef1c ch\u1ee7 ngh\u0129a c\u1ea7n ph\u1ea3i \u0111\u1ec1 ph\u00f2ng s\u1ef1 t\u00ecm t\u00f2i h\u00ecnh th\u1ee9c ch\u1ee7 ngh\u0129a \u201cc\u00e1i thi\u00ean t\u00e0i th\u1ea7n linh\u201d?",
-    answers: ["A. \u201cNh\u1eefng b\u00e0i gi\u1ea3ng v\u0103n h\u1ecdc\u201d", "B. \u201cNh\u1eefng b\u00e0i gi\u1ea3ng tri\u1ebft h\u1ecdc\u201d", "C. \u201cNh\u1eefng b\u00e0i gi\u1ea3ng khoa h\u1ecdc\u201d", "D. \u201cNh\u1eefng b\u00e0i gi\u1ea3ng m\u1ef9 h\u1ecdc\u201d"],
-    correct: 3
+    id: "CH292",
+    question: "Hêghen trong … của mình cũng đã báo trước rằng: nghệ thuật hiện thực chủ nghĩa cần phải đề phòng sự tìm tòi hình thức chủ nghĩa “cái thiên tài thần linh”?",
+    answers: ["“Những bài giảng văn học”", "“Những bài giảng triết học”", "“Những bài giảng khoa học”", "“Những bài giảng mỹ học”"],
+    correct: [3]
   },
   {
-    question: "L\u00e0 m\u1ed9t h\u00ecnh th\u00e1i \u00fd th\u1ee9c x\u00e3 h\u1ed9i \u0111\u1eb7c th\u00f9, ngh\u1ec7 thu\u1eadt ph\u1ea3n \u00e1nh th\u1ebf gi\u1edbi hi\u1ec7n th\u1ef1c b\u1eb1ng c\u00e1c h\u00ecnh t\u01b0\u1ee3ng g\u00ec?",
-    answers: ["A. C\u00e1c h\u00ecnh t\u01b0\u1ee3ng trong t\u00ednh to\u00e0n v\u1eb9n, b\u1ea3o \u0111\u1ea3m s\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa n\u1ed9i dung v\u00e0 h\u00ecnh th\u1ee9c, v\u1edbi h\u00ecnh th\u00e1i \u0111\u1eb7c tr\u01b0ng l\u00e0 t\u00ednh c\u1ea3m t\u00ednh", "B. C\u00e1c h\u00ecnh t\u01b0\u1ee3ng trong t\u00ednh to\u00e0n v\u1eb9n, h\u00ecnh th\u00e1i \u0111\u1eb7c tr\u01b0ng l\u00e0 t\u00ednh c\u1ea3m t\u00ednh", "C. C\u00e1c h\u00ecnh t\u01b0\u1ee3ng trong t\u00ednh to\u00e0n v\u1eb9n v\u00e0 h\u00ecnh th\u00e1i \u0111\u1eb7c tr\u01b0ng l\u00e0 t\u00ednh c\u1ea3m t\u00ednh", "D. B\u1ea3o \u0111\u1ea3m s\u1ef1 th\u1ed1ng nh\u1ea5t gi\u1eefa n\u1ed9i dung v\u00e0 h\u00ecnh th\u1ee9c, v\u1edbi h\u00ecnh th\u00e1i \u0111\u1eb7c tr\u01b0ng l\u00e0 t\u00ednh c\u1ea3m t\u00ednh"],
-    correct: 0
+    id: "CH293",
+    question: "Là một hình thái ý thức xã hội đặc thù, nghệ thuật phản ánh thế giới hiện thực bằng các hình tượng gì?",
+    answers: ["Các hình tượng trong tính toàn vẹn, bảo đảm sự thống nhất giữa nội dung và hình thức, với hình thái đặc trưng là tính cảm tính", "Các hình tượng trong tính toàn vẹn, hình thái đặc trưng là tính cảm tính", "Các hình tượng trong tính toàn vẹn và hình thái đặc trưng là tính cảm tính", "Bảo đảm sự thống nhất giữa nội dung và hình thức, với hình thái đặc trưng là tính cảm tính"],
+    correct: [0]
   },
   {
-    question: "H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt l\u00e0 s\u1ef1 t\u1ed5ng h\u1ee3p c\u1ee7a c\u00e1c y\u1ebfu t\u1ed1 n\u00e0o?",
-    answers: ["A. C\u1ea3 l\u00fd tr\u00ed, c\u1ea3m t\u00ednh v\u00e0 l\u00fd t\u00ednh", "B. C\u1ea3 t\u00ecnh c\u1ea3m, c\u1ea3m t\u00ednh v\u00e0 l\u00fd t\u00ednh", "C. C\u1ea3 c\u1ea3m t\u00ednh v\u00e0 l\u00fd t\u00ednh", "D. C\u1ea3 t\u00ecnh c\u1ea3m v\u00e0 l\u00fd tr\u00ed"],
-    correct: 1
+    id: "CH294",
+    question: "Hình tượng nghệ thuật là sự tổng hợp của các yếu tố nào?",
+    answers: ["Cả lý trí, cảm tính và lý tính", "Cả tình cảm, cảm tính và lý tính", "Cả cảm tính và lý tính", "Cả tình cảm và lý trí"],
+    correct: [1]
   },
   {
-    question: "H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt d\u1ef1a tr\u00ean hai ph\u1ea9m ch\u1ea5t quan tr\u1ecdng n\u00e0o?",
-    answers: ["A. T\u00ednh x\u00e3 h\u1ed9i v\u00e0 t\u00ednh v\u0103n h\u00f3a", "B. T\u00ednh nh\u00e2n v\u0103n v\u00e0 t\u00ednh th\u1ea9m m\u1ef9", "C. T\u00ednh t\u1ed5ng th\u1ec3 v\u00e0 t\u00ednh c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh", "D. T\u00ednh tr\u1eebu t\u01b0\u1ee3ng v\u00e0 t\u00ednh c\u1ee5 th\u1ec3 c\u1ea3m t\u00ednh"],
-    correct: 3
+    id: "CH295",
+    question: "Hình tượng nghệ thuật dựa trên hai phẩm chất quan trọng nào?",
+    answers: ["Tính xã hội và tính văn hóa", "Tính nhân văn và tính thẩm mỹ", "Tính tổng thể và tính cụ thể cảm tính", "Tính trừu tượng và tính cụ thể cảm tính"],
+    correct: [3]
   },
   {
-    question: "H\u00ecnh t\u01b0\u1ee3ng ngh\u1ec7 thu\u1eadt sau khi h\u00ecnh th\u00e0nh n\u00f3 l\u1ea1i t\u1ed3n t\u1ea1i nh\u01b0 th\u1ebf n\u00e0o \u0111\u1ed1i v\u1edbi ng\u01b0\u1eddi s\u00e1ng t\u1ea1o?",
-    answers: ["A. T\u1ed5ng th\u1ec3 kh\u00e1ch quan", "B. T\u1ef1 ch\u1ee7 kh\u00e1ch quan", "C. C\u00e1 nh\u00e2n kh\u00e1ch quan", "D. \u0110\u1ed9c l\u1eadp kh\u00e1ch quan"],
-    correct: 3
+    id: "CH296",
+    question: "Hình tượng nghệ thuật sau khi hình thành nó lại tồn tại như thế nào đối với người sáng tạo?",
+    answers: ["Tổng thể khách quan", "Tự chủ khách quan", "Cá nhân khách quan", "Độc lập khách quan"],
+    correct: [3]
   },
   {
-    question: "T\u01b0 t\u01b0\u1edfng c\u1ee7a c\u00e1i g\u00ec \u0111\u01b0\u1ee3c to\u00e1t l\u00ean m\u1ed9t c\u00e1ch kh\u00e1ch quan t\u1eeb b\u1ea3n th\u00e2n t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt ch\u1ee9 kh\u00f4ng ph\u1ea3i \u00fd \u0111\u1ed3 hay t\u01b0 t\u01b0\u1edfng ch\u1ee7 quan c\u1ee7a t\u00e1c gi\u1ea3?",
-    answers: ["A. T\u00e1c ph\u1ea9m \u0111\u1ed3 h\u1ecda", "B. T\u00e1c ph\u1ea9m th\u1eddi trang", "C. T\u00e1c ph\u1ea9m v\u0103n h\u1ecdc", "D. T\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt"],
-    correct: 3
+    id: "CH297",
+    question: "Tư tưởng của cái gì được toát lên một cách khách quan từ bản thân tác phẩm nghệ thuật chứ không phải ý đồ hay tư tưởng chủ quan của tác giả?",
+    answers: ["Tác phẩm đồ họa", "Tác phẩm thời trang", "Tác phẩm văn học", "Tác phẩm nghệ thuật"],
+    correct: [3]
   },
   {
-    question: "Trong c\u00e1c lo\u1ea1i h\u00ecnh ngh\u1ec7 thu\u1eadt th\u1eddi gian (v\u0103n ch\u01b0\u01a1ng, \u00e2m nh\u1ea1c), y\u1ebfu t\u1ed1 g\u00ec chuy\u1ec3n h\u00f3a th\u00e0nh n\u1ed9i dung gi\u00e1n ti\u1ebfp?",
-    answers: ["A. Th\u1eddi gian", "B. Trung gian", "C. Kh\u00f4ng gian", "D. C\u1ea3 A, B \u0111\u1ec1u \u0111\u00fang"],
-    correct: 2
+    id: "CH298",
+    question: "Trong các loại hình nghệ thuật thời gian (văn chương, âm nhạc), yếu tố gì chuyển hóa thành nội dung gián tiếp?",
+    answers: ["Thời gian", "Trung gian", "Không gian", "Cả A, B đều đúng"],
+    correct: [2]
   },
   {
-    question: "Vi\u1ec7c s\u1eed d\u1ee5ng ch\u1ea5t li\u1ec7u ngh\u1ec7 thu\u1eadt ph\u1ee5 thu\u1ed9c v\u00e0o \u0111\u00e2u?",
-    answers: ["A. Thi\u00ean h\u01b0\u1edbng, phong c\u00e1ch c\u1ee7a ngh\u1ec7 s\u0129", "B. V\u00e0o \u00fd \u0111\u1ed3, phong c\u00e1ch c\u1ee7a ngh\u1ec7 s\u0129", "C. V\u00e0o \u00fd \u0111\u1ed3, thi\u00ean h\u01b0\u1edbng", "D. V\u00e0o \u00fd \u0111\u1ed3, thi\u00ean h\u01b0\u1edbng, phong c\u00e1ch c\u1ee7a ngh\u1ec7 s\u0129"],
-    correct: 3
+    id: "CH299",
+    question: "Việc sử dụng chất liệu nghệ thuật phụ thuộc vào đâu?",
+    answers: ["Thiên hướng, phong cách của nghệ sĩ", "Vào ý đồ, phong cách của nghệ sĩ", "Vào ý đồ, thiên hướng", "Vào ý đồ, thiên hướng, phong cách của nghệ sĩ"],
+    correct: [3]
   },
   {
-    question: "N\u1ed9i dung ngh\u1ec7 thu\u1eadt \u0111\u00f3ng vai tr\u00f2 g\u00ec, quy\u1ebft \u0111\u1ecbnh \u0111\u1ed1i v\u1edbi h\u00ecnh th\u1ee9c ngh\u1ec7 thu\u1eadt?",
-    answers: ["A. Thi\u1ebft y\u1ebfu", "B. Quan tr\u1ecdng", "C. Ch\u1ee7 \u0111\u1ea1o", "D. Th\u00e0nh ph\u1ea7n"],
-    correct: 2
+    id: "CH300",
+    question: "Nội dung nghệ thuật đóng vai trò gì, quyết định đối với hình thức nghệ thuật?",
+    answers: ["Thiết yếu", "Quan trọng", "Chủ đạo", "Thành phần"],
+    correct: [2]
   },
 ];

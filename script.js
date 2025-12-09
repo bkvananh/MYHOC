@@ -48,33 +48,38 @@ function checkAnswer(index, el) {
 
   all.forEach(a => a.style.pointerEvents = "none");
 
-  let isCorrect = false;
+  const correctSet = new Set(q.correct);
+  let isCorrect = correctSet.has(index);
 
-  if (index === q.correct) {
+  if (isCorrect) {
     el.classList.add("correct");
     score++;
-    isCorrect = true;
   } else {
     el.classList.add("wrong");
-    all[q.correct].classList.add("correct");
   }
 
-  // Lưu câu đã làm vào HISTORY
+  // Highlight tất cả đáp án đúng
+  q.correct.forEach(i => {
+    all[i].classList.add("correct");
+  });
+
   history.push({
     question: q.question,
     answers: q.answers,
     correct: q.correct,
-    chosen: index,
+    chosen: [index],
     isCorrect: isCorrect
   });
+
   if (!isCorrect) {
-  wrongList.push({
-    question: q.question,
-    answers: q.answers,
-    correct: q.correct
-  });
+    wrongList.push({
+      question: q.question,
+      answers: q.answers,
+      correct: q.correct
+    });
+  }
 }
-}
+
 
 
 document.getElementById("next-btn").onclick = () => {
@@ -202,8 +207,9 @@ function renderReviewList(list) {
           ${item.answers
             .map((ans, idx) => {
               let color = "";
-              if (idx === item.correct) color = "style='color:green; font-weight:bold;'";
-              if (idx === item.chosen && !item.isCorrect) color = "style='color:red; font-weight:bold;'";
+              if (item.correct.includes(idx)) color = "style='color:green; font-weight:bold;'";
+              if (item.chosen.includes(idx) && !item.correct.includes(idx))
+                color = "style='color:red; font-weight:bold;'";
               return `<li ${color}>${ans}</li>`;
             })
             .join("")}
