@@ -13,7 +13,7 @@ const QUESTIONS = [
     question: "h\u00e3y \u0111i\u1ec1n ti\u1ebfp v\u00e0o n\u1ed9i dung c\u00f2n thi\u1ebfu sau: Tri\u1ebft gia Alexander Baumgarten ng\u01b0\u1eddi \u0110\u1ee9c \u0111\u00e3 d\u00f9ng t\u1eeb \u201cm\u1ef9 h\u1ecdc\u201d cho l\u00fd thuy\u1ebft v\u1ec1\u2026?",
     answers: ["A. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c", "B. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c", "C. Ngh\u1ec7 thu\u1eadt t\u1ef1 do hay khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p", "D. Khoa h\u1ecdc v\u1ec1 c\u00e1i \u0111\u1eb9p nh\u1eadn th\u1ee9c \u0111\u01b0\u1ee3c"],
     correct: 1,
-    correct: 2
+    correct: 0
   },
   {
     question: "N\u0103m 1750, Baumgacten \u0111\u00e3 cho xu\u1ea5t b\u1ea3n cu\u1ed1n s\u00e1ch g\u00ec?",
@@ -796,7 +796,8 @@ const QUESTIONS = [
   {
     question: "Bi h\u00f9ng ph\u1ea3n \u00e1nh c\u00e1i g\u00ec?",
     answers: ["A. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch th\u1ea5p h\u00e8n", "B. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch cao c\u1ea3", "C. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch", "D. S\u1ef1 hy sinh cho c\u00e1i m\u1edbi m\u1ed9t c\u00e1ch cao c\u1ea3"],
-    correct: 1
+    correct: 3,
+    correct: 3
   },
   {
     question: "C\u00e1i h\u00e0i l\u00e0 m\u1ed9t ph\u1ea1m tr\u00f9 m\u1ef9 h\u1ecdc ph\u1ea3n \u00e1nh m\u1ed9t thu\u1ed9c t\u00ednh th\u1ea9m m\u1ef9 c\u1ee7a nh\u1eefng hi\u1ec7n t\u01b0\u1ee3ng v\u00e0 kh\u00e1ch th\u1ec3 c\u00f3 t\u00ednh ch\u1ea5t n\u00e0o?",
